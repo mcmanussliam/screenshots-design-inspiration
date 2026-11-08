@@ -32,6 +32,8 @@ jobs:
             /mcp/
             /data/
             /scripts/normalize-repository.mjs
+            /scripts/scan-image-dimensions.mjs
+            /scripts/scan-image-dimensions-test.mjs
             /.github/
             /**/index.html
             /**/tags.json
