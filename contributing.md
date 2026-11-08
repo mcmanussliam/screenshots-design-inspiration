@@ -29,7 +29,7 @@ Screenshots must not contain unredacted private data or credentials. Only contri
 
 ```sh
 node scripts/normalize-repository.mjs --check
-node --test site/scripts/generate-catalog.test.mjs
+node --test site/scripts/generate-catalog-test.mjs
 npm install --prefix site
 npm run build --prefix site
 ```

@@ -41,7 +41,7 @@ jobs:
           node-version: '22'
       - name: Validate catalogue and MCP source
         run: |
-          node --test site/scripts/generate-catalog.test.mjs
+          node --test site/scripts/generate-catalog-test.mjs
           node --check mcp/server.mjs
           node scripts/normalize-repository.mjs --check
       - name: Install site dependencies
