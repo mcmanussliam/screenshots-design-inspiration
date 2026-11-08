@@ -33,7 +33,7 @@ export function measureImage(buffer){
    if(offset+2>buffer.length)break;
    const length=buffer.readUInt16BE(offset);
    if(length<2||offset+length>buffer.length)break;
-   if(frames.has(type)&&length>=7)return checked(buffer.readUInt16BE(offset+3),buffer.readUInt16BE(offset+5));
+   if(frames.has(type)&&length>=7)return checked(buffer.readUInt16BE(offset+5),buffer.readUInt16BE(offset+3));
    offset+=length;
   }
  }

@@ -3,9 +3,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scripts/scan-image-dimensions.mjs'
       - '.github/workflows/image-audit.yml'
   workflow_dispatch:
+concurrency:
+  group: image-dimension-audit
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
