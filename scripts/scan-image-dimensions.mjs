@@ -14,8 +14,8 @@ function readHead(path,bytes=256*1024){
  finally{closeSync(fd);}
 }
 export function measureImage(buffer){
- if(buffer.length<24)return null;
- if(buffer.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))){
+ if(buffer.length<10)return null;
+ if(buffer.length>=24&&buffer.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))){
   if(buffer.toString('ascii',12,16)!=='IHDR')return null;
   return checked(buffer.readUInt32BE(16),buffer.readUInt32BE(20));
  }
