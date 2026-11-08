@@ -37,11 +37,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install dependencies
+      - name: Validate catalogue and MCP source
+        run: |
+          node --test site/scripts/generate-catalog.test.mjs
+          node --check mcp/server.mjs
+      - name: Install site dependencies
         run: npm install --prefix site --no-audit --no-fund
       - name: Generate catalogue and build
         run: npm run build --prefix site
-      - uses: actions/configure-pages@v5
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/dist

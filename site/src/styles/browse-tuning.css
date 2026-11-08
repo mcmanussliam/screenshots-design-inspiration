@@ -1,0 +1,10 @@
+/* The browse page mirrors the visual hierarchy of a screenshot reference library,
+   without copying another product's branding or code. */
+.taxonomy-landing{padding-top:91px;padding-bottom:89px}
+.taxonomy-landing .taxonomy-col{gap:7px}
+.taxonomy-landing .taxonomy-col button{font-size:clamp(16px,1.52vw,21px)}
+.product-grid.sites-mode{grid-template-columns:repeat(3,minmax(0,1fr))}
+.product-grid.sites-mode .product-cover.wide{height:380px}
+.product-grid.sites-mode .product-cover:not(.wide){height:380px}
+@media(max-width:1100px){.product-grid.sites-mode{grid-template-columns:repeat(2,minmax(0,1fr))}.product-grid.sites-mode .product-cover.wide{height:280px}}
+@media(max-width:750px){.taxonomy-landing{padding-top:46px;padding-bottom:56px}.taxonomy-landing .taxonomy-col button{font-size:17px}.product-grid.sites-mode .product-cover.wide{height:185px}}
