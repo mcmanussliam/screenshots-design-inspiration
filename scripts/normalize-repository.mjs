@@ -3,7 +3,7 @@
  * Rename Git paths by rewriting trees, not screenshot blobs.
  *
  * Works with Git's partial clone: binary blob objects are never downloaded.
- * Usage: node scripts/normalize-repository.mjs --check | --migrate
+ * Usage: node scripts/normalize-repository.mjs --check | --migrate | --api-migrate
  * `--migrate` creates a new commit descending from HEAD and pushes it to main.
  */
 import { readFileSync, existsSync } from 'node:fs';
@@ -12,8 +12,8 @@ import { resolve, dirname, basename, extname } from 'node:path';
 
 const ROOT = process.cwd();
 const mode = process.argv[2];
-if (!['--check', '--migrate'].includes(mode)) {
-  console.error('Usage: node scripts/normalize-repository.mjs --check|--migrate');
+if (!['--check', '--migrate', '--api-migrate'].includes(mode)) {
+  console.error('Usage: node scripts/normalize-repository.mjs --check|--migrate|--api-migrate');
   process.exit(2);
 }
 
@@ -192,6 +192,7 @@ function transformText(oldPath,content){
 }
 
 const fileRows=[];
+const changedContents=new Map();
 let changedMetadata=0;
 for(const entry of entries){
   const newPath=mapping.get(entry.path);
@@ -206,6 +207,7 @@ for(const entry of entries){
     const after=transformText(entry.path,before);
     if(before!==after){
       sha=command(['hash-object','-w','--stdin'],{input:after}); changedMetadata++;
+      changedContents.set(newPath,after);
     }
   }
   fileRows.push({path:newPath,mode:entry.mode,sha});
@@ -224,7 +226,7 @@ for(const file of fileRows){
   }
   const name=segments.at(-1);
   if(node.children.has(name))throw new Error('Final path collision at '+file.path);
-  node.children.set(name,{sha:file.sha,mode:file.mode,type:'blob'});
+  node.children.set(name,{sha:file.sha,mode:file.mode,type:'blob',content:changedContents.get(file.path)});
 }
 let treeCount=0;
 function writeTree(node){
@@ -238,6 +240,73 @@ function writeTree(node){
   const sha=command(['mktree','-z','--missing'],{input:payload});
   treeCount++;
   return sha;
+}
+const apiRoot = `https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}`;
+const apiToken = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+let activeRequests=0, createdTrees=0;
+const waiters=[];
+async function limitedFetch(path,method,body){
+  if(activeRequests>=5)await new Promise(resolve=>waiters.push(resolve));
+  activeRequests++;
+  try{
+    const url=apiRoot+path;
+    for(let attempt=0;attempt<5;attempt++){
+      const response=await fetch(url,{
+        method,
+        headers:{
+          'Authorization':'Bearer '+apiToken,
+          'Accept':'application/vnd.github+json',
+          'X-GitHub-Api-Version':'2022-11-28',
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify(body),
+        signal:AbortSignal.timeout(60000)
+      });
+      if(response.ok)return await response.json();
+      const detail=(await response.text()).slice(0,800);
+      if((response.status>=500||response.status===429||response.status===403 && /secondary rate limit/i.test(detail)) && attempt<4){
+        const retryAfter=Number(response.headers.get('retry-after'))||0;
+        await new Promise(resolve=>setTimeout(resolve,Math.max(retryAfter*1000,1500*(attempt+1)**2)));
+        continue;
+      }
+      throw new Error(`${method} ${path} returned ${response.status}: ${detail}`);
+    }
+  }finally{
+    activeRequests--;
+    waiters.shift()?.();
+  }
+}
+async function writeRemoteTree(node){
+  const tree=await Promise.all([...node.children].map(async ([name,child])=>{
+    if(child.children){
+      return {path:name,mode:'040000',type:'tree',sha:await writeRemoteTree(child)};
+    }
+    if(typeof child.content==='string')return {path:name,mode:child.mode,type:'blob',content:child.content};
+    return {path:name,mode:child.mode,type:'blob',sha:child.sha};
+  }));
+  const obj=await limitedFetch('/git/trees','POST',{tree});
+  if(!/^[a-f0-9]{40}$/.test(obj.sha||''))throw new Error('Unexpected tree response');
+  createdTrees++;
+  if(createdTrees%50===0)console.log(`Published ${createdTrees} directory trees through GitHub API`);
+  return obj.sha;
+}
+
+if(mode==='--api-migrate'){
+  if(!apiToken||!process.env.GITHUB_REPOSITORY)throw new Error('GITHUB_TOKEN and GITHUB_REPOSITORY required');
+  console.log(`Preparing remote Git trees for ${fileRows.length} files (${changedMetadata} metadata updates) without uploading screenshot blobs...`);
+  const remoteTree=await writeRemoteTree(root);
+  const localTree=writeTree(root);
+  if(remoteTree!==localTree)throw new Error(`Remote tree mismatch: ${remoteTree} !== ${localTree}`);
+  console.log(`Verified remote root tree: ${remoteTree} (${createdTrees} directories)`);
+  const parent=command(['rev-parse','HEAD']);
+  const newCommit=await limitedFetch('/git/commits','POST',{
+    message:'refactor: normalize all paths to kebab-case',tree:remoteTree,parents:[parent]
+  });
+  console.log('Remote commit:',newCommit.sha);
+  const ref=await limitedFetch('/git/refs/heads/main','PATCH',{sha:newCommit.sha,force:false});
+  if(ref?.object?.sha!==newCommit.sha)throw new Error('Unexpected branch update result');
+  console.log('Updated main branch:',newCommit.sha);
+  process.exit(0);
 }
 const newTree=writeTree(root);
 if(!newTree||!/^[0-9a-f]{40}$/.test(newTree))throw new Error('Invalid git tree '+newTree);
