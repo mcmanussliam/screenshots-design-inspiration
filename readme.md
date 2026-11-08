@@ -1,45 +1,41 @@
 # Open Screens
 
-A community-maintained design reference library for real-world apps and websites. The website is a static Astro build hosted on GitHub Pages. No accounts, database, subscription, or hosted API are required.
+A community-maintained UI screenshot library powered by Astro, GitHub Pages, and a local read-only MCP server. No account or hosted database is required.
 
-## Project layout
+## Repository structure
 
-- `site/` — Astro frontend and static catalogue generator.
-- `mcp/` — local, read-only MCP server using the public catalogue.
-- `android/`, `ios/` — mobile screenshots, grouped by product.
-- `web/`, `email/`, `marketing/` — other source screenshots.
-- `data/screenshot-tags.csv` — reference vocabulary for screenshot tags.
-- `scripts/normalize-repository.mjs` — path convention checker (`--check`).
-- `.github/workflows/pages.yml` — GitHub Pages build and deployment.
+    design/
+      ios/
+      android/
+      web/
+      email/
+      marketing/
+    data/
+      product-metadata.json
+      image-dimensions.json
+    site/
+      scripts/
+      src/
+    mcp/
+    scripts/
+    .github/workflows/
+
+All design images and recordings live under design/ with kebab-case paths. The original image blobs are not altered. A single Git tree move avoids re-uploading gigabytes of files.
+
+## Sizing and tagging
+
+Original source dimensions and Git byte sizes are distinct from the site's consistent preview frame size. Images keep their complete aspect ratio (no destructive cropping). After browser image load, the site displays the original pixel resolution. The optional dimension inventory in data/image-dimensions.json provides verified width/height for catalog.json and MCP. To scan a full clone, run node scripts/scan-image-dimensions.mjs --scan.
+
+Product category and descriptions come only from explicit data/product-metadata.json entries, not UI styling tags. Per-screen tags are grouped as screen type, UI element, flow, visual style or unreviewed. See contributing.md for the canonical tag vocabulary and data-quality standards.
 
 ## Local development
 
-```sh
-npm install --prefix site
-npm run build --prefix site
-npm run dev --prefix site
-```
+    npm install --prefix site
+    npm run build --prefix site
+    npm run dev --prefix site
 
-The catalogue generator enumerates the Git tree and publishes `site/public/catalog.json`, with image URLs pointing to this repository. It does **not** copy gigabytes of screenshot files into the GitHub Pages artifact.
+The Pages deployment builds only source metadata, linking actual image files through immutable GitHub paths without bundling the archive. The public catalog.json is version 2; dataset-report.json summarises tag and dimension coverage. Local bookmarks and collections stay in browser localStorage. Export or import them on the Saved page.
 
-Set **Settings → Pages → Build and deployment → GitHub Actions**. The site for this fork is https://mcmanussliam.github.io/screenshots-design-inspiration/.
+The MCP package under mcp/ runs locally in an AI client; GitHub Pages is only the static website and public catalogue.
 
-## MCP
-
-```sh
-cd mcp
-npm install
-npm start
-```
-
-See [mcp/readme.md](mcp/readme.md) to connect an AI client. GitHub Pages serves a catalogue; the MCP server runs locally on your machine, not on GitHub Pages.
-
-## Contributing
-
-Read [contributing.md](contributing.md). All repository file and directory names use kebab-case, except required Git files and Astro's dynamic-route syntax. Each product directory contains `index.html` for the display name and tags, with optional `tags.json` for per-image tags. Screenshots have third-party intellectual property implications: retain provenance, check rights, and respect removal requests.
-
-## Saved collections and privacy
-
-Saved collections live in the visitor's browser localStorage, not a server. Export your data before clearing browser storage. No authentication or analytics are required.
-
-Open Screens is independent of Mobbin. Product interfaces and illustrations may belong to their respective companies.
+This project is independent and not affiliated with Mobbin or any referenced app. Copyright in third-party designs may belong to the original creators.

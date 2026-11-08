@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "products": {
+    "ios:airbnb": {
+      "category": "Travel & Transportation",
+      "description": "Homes, experiences and services",
+      "domain": "airbnb.com"
+    },
+    "web:airbnb": {
+      "category": "Travel & Transportation",
+      "description": "Homes, experiences and services",
+      "domain": "airbnb.com"
+    },
+    "android:amazon": {
+      "category": "Shopping",
+      "description": "Shopping and everyday essentials",
+      "domain": "amazon.com"
+    },
+    "ios:amazon": {
+      "category": "Shopping",
+      "description": "Shopping and everyday essentials",
+      "domain": "amazon.com"
+    },
+    "ios:chatgpt": {
+      "category": "Productivity",
+      "description": "AI assistant",
+      "domain": "chatgpt.com"
+    },
+    "android:chatgpt": {
+      "category": "Productivity",
+      "description": "AI assistant",
+      "domain": "chatgpt.com"
+    },
+    "web:chatgpt": {
+      "category": "Productivity",
+      "description": "AI assistant",
+      "domain": "chatgpt.com"
+    },
+    "web:linear": {
+      "category": "Productivity",
+      "description": "Project and issue tracking",
+      "domain": "linear.app"
+    },
+    "ios:spotify": {
+      "category": "Music & Audio",
+      "description": "Music and podcasts",
+      "domain": "spotify.com"
+    },
+    "web:spotify": {
+      "category": "Music & Audio",
+      "description": "Music and podcasts",
+      "domain": "spotify.com"
+    },
+    "web:figma": {
+      "category": "Design Tools",
+      "description": "Collaborative design",
+      "domain": "figma.com"
+    },
+    "web:github": {
+      "category": "Developer Tools",
+      "description": "Code hosting and collaboration",
+      "domain": "github.com"
+    },
+    "ios:instagram": {
+      "category": "Social",
+      "description": "Photos and social sharing",
+      "domain": "instagram.com"
+    },
+    "web:instagram": {
+      "category": "Social",
+      "description": "Photos and social sharing",
+      "domain": "instagram.com"
+    },
+    "web:slack": {
+      "category": "Productivity",
+      "description": "Team messaging",
+      "domain": "slack.com"
+    },
+    "ios:slack": {
+      "category": "Productivity",
+      "description": "Team messaging",
+      "domain": "slack.com"
+    },
+    "web:notion": {
+      "category": "Productivity",
+      "description": "Notes, wikis and projects",
+      "domain": "notion.so"
+    },
+    "web:stripe": {
+      "category": "Finance",
+      "description": "Payments infrastructure",
+      "domain": "stripe.com"
+    },
+    "ios:coinbase": {
+      "category": "Finance",
+      "description": "Cryptocurrency trading",
+      "domain": "coinbase.com"
+    },
+    "ios:uber": {
+      "category": "Travel & Transportation",
+      "description": "Rides and transportation",
+      "domain": "uber.com"
+    },
+    "ios:ubereats": {
+      "category": "Food & Drink",
+      "description": "Food delivery",
+      "domain": "ubereats.com"
+    },
+    "web:reddit": {
+      "category": "Social",
+      "description": "Community conversations",
+      "domain": "reddit.com"
+    },
+    "ios:wikipedia": {
+      "category": "Education",
+      "description": "The free encyclopedia",
+      "domain": "wikipedia.org"
+    },
+    "web:wikipedia": {
+      "category": "Education",
+      "description": "The free encyclopedia",
+      "domain": "wikipedia.org"
+    },
+    "web:youtube": {
+      "category": "Entertainment",
+      "description": "Video and creators",
+      "domain": "youtube.com"
+    }
+  }
+}

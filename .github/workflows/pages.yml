@@ -5,11 +5,9 @@ on:
     paths:
       - 'site/**'
       - 'mcp/**'
-      - 'android/**'
-      - 'ios/**'
-      - 'web/**'
-      - 'email/**'
-      - 'marketing/**'
+      - 'design/**'
+      - 'data/**'
+      - 'scripts/scan-image-dimensions.mjs'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 permissions:
@@ -32,6 +30,7 @@ jobs:
           sparse-checkout: |
             /site/
             /mcp/
+            /data/
             /scripts/normalize-repository.mjs
             /.github/
             /**/index.html
@@ -42,12 +41,15 @@ jobs:
       - name: Validate catalogue and MCP source
         run: |
           node --test site/scripts/generate-catalog-test.mjs
+          node --test scripts/scan-image-dimensions-test.mjs
           node --check mcp/server.mjs
           node scripts/normalize-repository.mjs --check
       - name: Install site dependencies
         run: npm install --prefix site --no-audit --no-fund
       - name: Generate catalogue and build
-        run: npm run build --prefix site
+        run: |
+          npm run build --prefix site
+          node site/scripts/validate-dataset.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

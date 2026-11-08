@@ -1,6 +1,6 @@
 # Open Screens MCP
 
-Read-only, local [Model Context Protocol](https://modelcontextprotocol.io/) server. Uses the [official TypeScript SDK v2](https://ts.sdk.modelcontextprotocol.io/v2/) and a public, versioned JSON catalogue published by GitHub Pages. No accounts or hosted MCP server are required.
+Read-only, local [Model Context Protocol](https://modelcontextprotocol.io/) server. Uses the [official TypeScript SDK v2](https://ts.sdk.modelcontextprotocol.io/v2/) and a public, version 2 JSON catalogue with tagged screen types, UI elements, source byte sizes and optional verified dimensions published by GitHub Pages. No accounts or hosted MCP server are required.
 
 ```bash
 cd mcp

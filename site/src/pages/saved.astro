@@ -4,8 +4,15 @@ import ProductCard from '../components/product-card.astro';
 import {products} from '../lib/catalog';
 ---
 <Layout title="Saved collections">
- <section class="saved-heading"><h1>Saved</h1><p>Your private collection, stored only in this browser.</p></section>
- <div class="saved-toolbar"><div class="pill-group" id="collection-tabs"><button type="button" data-collection="default" class="selected">All saved</button></div><button type="button" id="create-collection" class="ghost-button">+ Create collection</button><button type="button" id="export-collections" class="ghost-button">Export</button><label class="ghost-button upload-label">Import<input type="file" id="import-collections" accept="application/json,.json" hidden/></label></div>
+ <section class="saved-heading"><h1>Saved</h1></section>
+ <div class="saved-toolbar">
+  <div class="pill-group" id="collection-tabs"><button type="button" data-collection="default" class="selected">All saved</button></div>
+  <span class="toolbar-sep"></span>
+  <button type="button" id="create-collection" class="ghost-button">+ Create collection</button>
+  <button type="button" id="export-collections" class="ghost-button">Export</button>
+  <label class="ghost-button upload-label">Import<input type="file" id="import-collections" accept="application/json,.json" hidden/></label>
+ </div>
  <div class="saved-grid" id="saved-products">{products.map(p=><div data-saved-id={p.id} hidden><ProductCard product={p}/><div class="saved-card-controls"><label>Collection <select data-assign={p.id} aria-label={'Add '+p.name+' to collection'}><option value="">Select collection</option></select></label><button type="button" data-unsave={p.id}>Remove</button></div></div>)}</div>
- <div id="empty-saved" class="empty-state"><div class="empty-illustration">▤</div><h2>Gather your inspiration</h2><p>Save apps and sites you like, then organise them into collections.</p><a class="white-button" href={import.meta.env.BASE_URL}>Explore interfaces</a></div>
+ <div id="empty-saved" class="empty-state"><div class="empty-illustration">▤</div><h2>Gather your inspiration</h2><p>Save any app or website and organise it into collections. Everything stays in this browser.</p>
+  <a class="white-button" href={import.meta.env.BASE_URL}>Explore interfaces</a></div>
 </Layout>

@@ -14,7 +14,7 @@ async function catalog() {
     const response = await fetch(CATALOG_URL, { signal: AbortSignal.timeout(15000), headers:{accept:'application/json'} });
     if (!response.ok) throw new Error('Catalogue is unavailable ('+response.status+').');
     const body = await response.json();
-    if (!body || !Array.isArray(body.products) || body.version !== 1) throw new Error('Unexpected catalogue format.');
+    if (!body || !Array.isArray(body.products) || body.version !== 2) throw new Error('Unexpected catalogue format.');
     snapshot = body; expires = Date.now()+TTL; return body;
   })();
   try { return await inflight; } finally { inflight = undefined; }
@@ -25,7 +25,7 @@ const run = async fn => { try {return reply(await fn());}catch(err){return error
 const platform = z.enum(['ios','android','web','email','marketing']);
 serveStdio(() => {
  const server = new McpServer({name:'open-screens',version:'1.0.0'},{
-  instructions:'Read-only design reference catalogue. Use search_products to find products, search_screenshots for UI patterns and get_product for screenshot image URLs. Images belong to their respective owners; this MCP does not alter or redistribute the source files.'
+  instructions:'Read-only design reference catalogue. Use search_products to find products, search_screenshots for UI patterns and get_product for screenshot image URLs. Screen tag groups and original image dimensions (when verified) are included. Images belong to their respective owners; this MCP does not alter or redistribute the source files.'
  });
  server.registerTool('search_products',{
   description:'Search products by name, platform, tags or screenshot design patterns.',

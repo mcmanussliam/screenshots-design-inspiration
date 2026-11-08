@@ -80,7 +80,7 @@ function setupBrowse(){
   const grid=document.getElementById('product-grid');
   if(!grid)return;
   const cards=[...grid.querySelectorAll<HTMLElement>('[data-product]')];
-  let kind='all',platform='all',sort='featured',tag='',query='';
+  let kind='app',platform='all',sort='featured',tag='',query='';
   const url=new URL(location.href);
   if(url.searchParams.get('view')==='apps')kind='app';
   if(url.searchParams.get('view')==='sites')kind='site';
@@ -104,7 +104,7 @@ function setupBrowse(){
     }
     const order=sort==='alpha'?
       [...cards].sort((a,b)=>(a.dataset.name||'').localeCompare(b.dataset.name||'')):
-      cards;
+      sort==='screens'?[...cards].sort((a,b)=>Number(b.dataset.screens||0)-Number(a.dataset.screens||0)):cards;
     for(const card of order)grid.append(card);
     const counter=document.getElementById('results-counter');
     if(counter)counter.textContent=count+' product'+(count===1?'':'s');
@@ -190,6 +190,33 @@ function setupScreens(){
     const no=document.getElementById('no-screens');
     if(no)no.hidden=count>0;
   });
+  const typeSelect=document.querySelector<HTMLSelectElement>('#screen-type-filter');
+  function filterScreens(){
+    const term=filter?.value.toLowerCase().trim()||'';
+    const type=typeSelect?.value.toLowerCase().trim()||'';
+    let matched=0;
+    document.querySelectorAll<HTMLElement>('[data-shot-text]').forEach(item=>{
+      const show=(!term||(item.dataset.shotText||'').includes(term))&&
+        (!type||(item.dataset.screenTypes||'').split('|').includes(type));
+      item.hidden=!show;if(show)matched++;
+    });
+    const empty=document.getElementById('no-screens');
+    if(empty)empty.hidden=matched>0;
+  }
+  filter?.addEventListener('input',filterScreens);
+  typeSelect?.addEventListener('change',filterScreens);
+  document.querySelectorAll<HTMLImageElement>('img.shot-img').forEach(img=>{
+    const update=()=>{
+      const width=Number(img.dataset.width)||img.naturalWidth;
+      const height=Number(img.dataset.height)||img.naturalHeight;
+      if(!width||!height)return;
+      const label=img.closest('.screen-item')?.querySelector<HTMLElement>('[data-size-label]');
+      if(label){label.textContent=width.toLocaleString('en')+' × '+height.toLocaleString('en')+' px';
+       label.title='Original image resolution';}
+    };
+    img.addEventListener('load',update,{once:true});
+    if(img.complete)update();
+  });
   const dialog=document.querySelector<HTMLDialogElement>('#preview');
   document.querySelectorAll<HTMLButtonElement>('[data-preview]').forEach(btn=>btn.addEventListener('click',()=>{
     const img=document.querySelector<HTMLImageElement>('#preview-image');
@@ -213,4 +240,53 @@ const globalSearch=document.querySelector<HTMLInputElement>('#global-search');
 if(!document.getElementById('product-grid')){
   globalSearch?.addEventListener('keydown',event=>{if(event.key==='Enter')goSearch(globalSearch.value);});
 }
-setupBrowse();setupSaved();setupScreens();renderSaved();
+
+function setupScrollPreviews(){
+  const reduceMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches||false;
+  const slowConnection=(navigator as Navigator & {connection?:{saveData?:boolean}}).connection?.saveData;
+  if(reduceMotion||slowConnection)return;
+  const cards=[...document.querySelectorAll<HTMLElement>('[data-gallery-card]')];
+  const visible=new Set<HTMLElement>();
+  const frames=new WeakMap<HTMLElement,string[]>();
+  const positions=new WeakMap<HTMLElement,number>();
+  for(const card of cards){
+    try{frames.set(card,JSON.parse(card.dataset.scrollImages||'[]'));}catch{frames.set(card,[]);}
+  }
+  const observer=new IntersectionObserver(entries=>{
+    for(const entry of entries){
+      const card=entry.target as HTMLElement;
+      if(entry.isIntersecting&&entry.intersectionRatio>=0.6){
+        if((frames.get(card)||[]).length>=3)visible.add(card);
+      }else{
+        visible.delete(card);
+        const img=card.querySelector<HTMLImageElement>('.cover-link img');
+        const list=frames.get(card)||[];
+        if(img&&list[0]&&img.src!==list[0])img.src=list[0];
+        positions.set(card,0);
+      }
+    }
+  },{threshold:[0,0.6,1]});
+  for(const card of cards)observer.observe(card);
+  // Only cards actually on-screen advance; no fake recordings or heavy autoplay downloads.
+  window.setInterval(()=>{
+    if(document.hidden)return;
+    for(const card of visible){
+      const shots=frames.get(card)||[];
+      const img=card.querySelector<HTMLImageElement>('.cover-link img');
+      if(!img||shots.length<3)continue;
+      const index=((positions.get(card)||0)+1)%shots.length;
+      positions.set(card,index);img.src=shots[index];
+    }
+  },2100);
+  const videoObserver=new IntersectionObserver(entries=>{
+    for(const entry of entries){
+      const video=entry.target as HTMLVideoElement;
+      if(entry.isIntersecting&&video.closest('details')?.open){
+        video.play().catch(()=>{});
+      }else video.pause();
+    }
+  },{threshold:0.65});
+  document.querySelectorAll<HTMLVideoElement>('video[data-scroll-video]').forEach(video=>videoObserver.observe(video));
+}
+
+setupBrowse();setupSaved();setupScreens();setupScrollPreviews();renderSaved();
