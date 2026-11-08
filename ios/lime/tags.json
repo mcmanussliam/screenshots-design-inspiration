@@ -1,0 +1,47 @@
+{
+  "20180809-123139000-ios.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180809-123150000-ios.png": [
+    "Verification",
+    "Button",
+    "Text Field",
+    "Keyboard Key"
+  ],
+  "20180809-123159000-ios.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Banner",
+    "Map Pin",
+    "Loading Indicator"
+  ],
+  "20180809-123202000-ios.png": [
+    "Permission",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Link",
+    "Page Control",
+    "Segmented Control"
+  ],
+  "20180809-123207000-ios.png": [
+    "Permission",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "20180809-123211000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Map Pin",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Badge",
+    "Avatar"
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "0fe1ef967c4f370e468c4e09b6354bbbc1ba8048a35e161b0a3db0255afeb0ee.png": [
+    "Settings & Preferences",
+    "Radio Button",
+    "Checkbox",
+    "Button"
+  ],
+  "203f32089913ef71c424477ffda5e84eaac7d7dbd982fa0be5d8b5ec91a1717a.png": [
+    "Dashboard",
+    "Search Bar",
+    "Table",
+    "Avatar",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "26ef934a600dab1b8f3b398ccfa13f8071dcbde381c6fe3e316101ce03044894.png": [
+    "Dashboard",
+    "Table",
+    "Text Field",
+    "Button",
+    "Divider",
+    "Icon"
+  ],
+  "40a7ab632e8355e990ccc7139415722271210e6439ec8d36af83d85beaa77a93.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Text Field",
+    "Button"
+  ],
+  "4286675b342d17862ea1f68749234f561cb6d849616d72b33e18129ed74cf705.png": [
+    "Browse & Discover",
+    "Accordion",
+    "Text Field",
+    "Checkbox",
+    "Button",
+    "Link"
+  ],
+  "5ab4d751f4b5f1fb698db211bdca8280e7952cdea86373b1ae5300179004bc4c.png": [
+    "Article Detail",
+    "Accordion",
+    "Button",
+    "Text Field",
+    "Dropdown Menu",
+    "Tile",
+    "Banner"
+  ],
+  "5be4b4be17c9ce2c4c3ee42d-transcripts-small.jpg": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Accordion"
+  ],
+  "5be4b56b723c05fad619831d-transcripts-mid.jpg": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Badge",
+    "Table",
+    "Avatar"
+  ],
+  "5be4b5a9620c1d5b425c1cef-dashboard-small.jpg": [
+    "Dashboard",
+    "Table",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Divider"
+  ],
+  "5be4b5b517c9ce4eab3ee48f-dashboard-expand-zoom-small.jpg": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "5be4b5ca7f4582e34c4b27a1-transcripts-zoom-small.jpg": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Divider",
+    "Table"
+  ],
+  "5be4b610723c0528c4198367-transcripts-edit-small-1.jpg": [
+    "Dashboard",
+    "Accordion",
+    "Text Field",
+    "Button",
+    "Dropdown Menu",
+    "Toast"
+  ],
+  "5be4b610723c0528c4198367-transcripts-edit-small.jpg": [
+    "Dashboard",
+    "Accordion",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Dropdown Menu",
+    "Toast"
+  ],
+  "5c18d1de2b500752a4e6212f-dashboard-template.jpg": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Text Field",
+    "Button",
+    "Card",
+    "Badge"
+  ],
+  "76a1110a886ec0e9ef51369ed87f6d10c09233b59ee2322eb84f553ed2b2392c.png": [
+    "Dashboard",
+    "Accordion",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Dropdown Menu"
+  ],
+  "7afac5029a18ab2423261fbcd8868951c6bae499b834f5c0ec5cf7d0a170302b.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Avatar",
+    "Icon"
+  ],
+  "82b33005a865f191df5963aa1798755cc414125beb4f26caacb539d8d315dd32.png": [
+    "Browse & Discover",
+    "Accordion",
+    "Text Field",
+    "Checkbox",
+    "Button",
+    "Table"
+  ],
+  "889fd320493d3fd3e7a67972bf7cca4b76491cf01bcd3925a8dcaccce665ccc0.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Button",
+    "Avatar",
+    "Icon",
+    "Text Field"
+  ],
+  "8ffc7fe5a3f32c4f789dfb1fbcb8df4534eb3168f188245e7a4de8a00917c4b5.png": [
+    "Dashboard",
+    "Search Bar",
+    "Table",
+    "Avatar",
+    "Icon",
+    "Text Field",
+    "Dropdown Menu"
+  ],
+  "99db1ffe1c0b9b136f8fb34fdccd5174c27ea46c72326561ca585005a3821ae7.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Badge",
+    "Card",
+    "Text Field",
+    "Button"
+  ],
+  "screen-shot-2019-10-07-at-10-15-59-pm.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "screen-shot-2019-10-07-at-10-16-10-pm.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "screen-shot-2019-10-07-at-10-16-29-pm.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Avatar",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "screen-shot-2019-10-07-at-10-16-50-pm.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Dropdown Menu",
+    "Table",
+    "Avatar",
+    "Icon"
+  ],
+  "screen-shot-2019-10-07-at-10-17-16-pm.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Avatar",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "screen-shot-2019-10-07-at-10-18-34-pm.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Search Bar",
+    "Avatar",
+    "Icon",
+    "Text Field"
+  ],
+  "screen-shot-2019-10-07-at-10-20-02-pm.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "screen-shot-2019-10-07-at-10-20-35-pm.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "screen-shot-2019-10-07-at-10-21-05-pm.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Divider"
+  ],
+  "screen-shot-2019-10-07-at-10-22-39-pm.png": [
+    "Home",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Banner",
+    "Card",
+    "Divider"
+  ],
+  "screen-shot-2019-10-07-at-10-23-00-pm.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Banner",
+    "Icon",
+    "Tab"
+  ],
+  "screen-shot-2019-10-07-at-10-23-26-pm.png": [
+    "Dashboard",
+    "Banner",
+    "Card",
+    "Text Field",
+    "Button",
+    "Toast"
+  ],
+  "screen-shot-2019-10-08-at-8-29-27-am.png": [
+    "Dashboard",
+    "Accordion",
+    "Text Field",
+    "Button",
+    "Table",
+    "Badge",
+    "Avatar"
+  ],
+  "screen-shot-2019-10-08-at-8-29-36-am.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Avatar",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "screen-shot-2019-10-08-at-8-30-05-am.png": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Table",
+    "Badge"
+  ],
+  "screen-shot-2019-10-08-at-8-30-17-am.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Divider"
+  ],
+  "screen-shot-2019-10-08-at-8-30-42-am.png": [
+    "Article Detail",
+    "Accordion",
+    "Text Field",
+    "Button",
+    "Link",
+    "Table",
+    "Avatar"
+  ],
+  "screen-shot-2019-10-08-at-8-31-15-am.png": [
+    "Article Detail",
+    "Avatar",
+    "Text Field",
+    "Button",
+    "Link",
+    "Table",
+    "Divider"
+  ],
+  "screen-shot-2019-10-08-at-8-31-34-am.png": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Button",
+    "Avatar",
+    "Icon",
+    "Table"
+  ],
+  "screen-shot-2019-10-08-at-8-31-50-am.png": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Table",
+    "Avatar",
+    "Icon",
+    "Badge"
+  ],
+  "screen-shot-2019-10-08-at-8-32-03-am.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Tab"
+  ],
+  "screen-shot-2019-10-08-at-8-41-16-am.png": [
+    "Article Detail",
+    "Accordion",
+    "Button",
+    "Checkbox",
+    "Text Field",
+    "Table",
+    "Avatar"
+  ],
+  "screen-shot-2019-10-08-at-8-41-35-am.png": [
+    "Article Detail",
+    "Button",
+    "Text Field",
+    "Accordion",
+    "Dropdown Menu",
+    "Toast"
+  ],
+  "screen-shot-2019-10-08-at-8-42-01-am.png": [
+    "Add & Create",
+    "Button",
+    "Text Field",
+    "Dropdown Menu",
+    "Dialog",
+    "Checkbox"
+  ],
+  "screen-shot-2019-10-08-at-8-42-22-am.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Table",
+    "Avatar",
+    "Icon"
+  ],
+  "screen-shot-2019-10-08-at-9-28-10-am.png": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Button",
+    "Divider",
+    "Icon",
+    "Badge"
+  ],
+  "screen-shot-2019-10-08-at-9-29-10-am.png": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Button",
+    "Divider",
+    "Icon"
+  ],
+  "screen-shot-2019-10-08-at-9-29-24-am.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Badge",
+    "Card",
+    "Divider",
+    "Text Field"
+  ],
+  "screen-shot-2019-10-08-at-9-29-53-am.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Search Bar",
+    "Text Field",
+    "Button",
+    "Divider"
+  ],
+  "screen-shot-2019-10-08-at-9-30-06-am.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Divider"
+  ],
+  "screen-shot-2019-10-08-at-9-30-33-am.png": [
+    "Dashboard",
+    "Accordion",
+    "Text Field",
+    "Card",
+    "Divider",
+    "Icon"
+  ],
+  "screen-shot-2019-10-08-at-9-30-49-am.png": [
+    "Article Detail",
+    "Accordion",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Card",
+    "Divider"
+  ],
+  "a3deedd3f357e657905068bce194bf99b6af40bf7f100f675e3c920b71355460.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Checkbox",
+    "Table",
+    "Avatar"
+  ],
+  "ba93b6c76303f964febd15328be0e0525e533ff19165b6767e58fc8c6eee7b20.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Button",
+    "Avatar",
+    "Icon",
+    "Text Field"
+  ],
+  "c7f79509319c092571ee74ee12e73b57da1b08f05788713c5b04273375c3cc81.png": [
+    "Login",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Link"
+  ],
+  "c869d7a632a9f3d5a0d75440e3ddcd6e3092a45dd762f909e7cde284e0f1eed0.png": [
+    "Dashboard",
+    "Table",
+    "Search Bar",
+    "Button",
+    "Badge",
+    "Divider",
+    "Avatar"
+  ],
+  "c9b5edf6752f0cfb32eb8a5978fa7abffb30e7f6a47555d7f0d106ef5a3d28b2.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Table"
+  ],
+  "ce904cca9f27dbd6180d4ec48ff540ca9dcf05d70dded6b41dbb21847f312ae7.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Text Field",
+    "Button",
+    "Badge"
+  ],
+  "d322b0c30e8ee28e859da9bf6c4e994f8d30401bda631aedb3195d79e0cfc0ab.png": [
+    "News Feed",
+    "Accordion",
+    "Text Field",
+    "Table",
+    "Avatar",
+    "Icon"
+  ],
+  "db731f85962a72cbc1666617892baa22eba3c2e6c5518c4d8015a1b9d63f4353.png": [
+    "Browse & Discover",
+    "Table",
+    "Text Field",
+    "Icon",
+    "Badge"
+  ],
+  "e10877d0e148ce1716af76314fdb9450d51b515017b16ebae894c52468dd8f91.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Avatar",
+    "Icon"
+  ],
+  "eb28a7f7361c30cdcba745ef4064ec7eb98424b9f42618d96dc37706ca4ebafb.png": [
+    "Filter & Sort",
+    "Checkbox",
+    "Button",
+    "Text Field"
+  ],
+  "ec9df78af955651275090491099f37c9da0de225cf467fe3e77085b8f3efc7d6.png": [
+    "Select",
+    "Radio Button",
+    "Button",
+    "Text Field"
+  ],
+  "f3659f0b74fddabb451d1b1475f5a5d11026d46c2e796fd87fd4f3536bc15c12.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "f71efba309fb9a566a4a02c6bd2d261495be4f0740a5cba0242880fbffadc482.png": [
+    "Dashboard",
+    "Card",
+    "Text Field",
+    "Table",
+    "Badge",
+    "Divider"
+  ],
+  "screencapture-help-amenityanalytics-hc-en-us-articles-360024289574-deception-defintions-and-glossary-2019-10-08-09-52-15.png": [
+    "Browse & Discover",
+    "Table",
+    "Text Field",
+    "Button",
+    "Link",
+    "Avatar",
+    "Icon"
+  ]
+}

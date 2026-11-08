@@ -1,0 +1,219 @@
+{
+  "rectangle-1.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Checkbox",
+    "Button",
+    "Table"
+  ],
+  "rectangle-2.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Link",
+    "Checkbox",
+    "Table"
+  ],
+  "rectangle-3.png": [
+    "Dashboard",
+    "Card",
+    "Progress Indicator",
+    "Table",
+    "Avatar",
+    "Icon",
+    "Badge"
+  ],
+  "rectangle-4.png": [
+    "Dashboard",
+    "Map Pin",
+    "Avatar",
+    "Icon",
+    "Progress Indicator"
+  ],
+  "rectangle-5.png": [
+    "Browse & Discover",
+    "Badge",
+    "Card",
+    "Divider",
+    "Text Field"
+  ],
+  "rectangle-6.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Divider",
+    "Icon"
+  ],
+  "rectangle-7.png": [
+    "Code Editor",
+    "Text Field",
+    "Checkbox",
+    "Button",
+    "Accordion",
+    "Table",
+    "Progress Indicator"
+  ],
+  "rectangle-8.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Checkbox",
+    "Link",
+    "Divider"
+  ],
+  "rectangle.png": [
+    "Dashboard",
+    "Progress Indicator",
+    "Badge",
+    "Table",
+    "Card",
+    "Tile",
+    "Icon"
+  ],
+  "ai-driven-negotiation.png": [
+    "Home",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Tab"
+  ],
+  "automated-compliance.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Table",
+    "Badge",
+    "Divider"
+  ],
+  "autopilot.png": [
+    "Code Editor",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Tab",
+    "Search Bar",
+    "Checkbox"
+  ],
+  "bespoke-concepts.png": [
+    "Code Editor",
+    "Button",
+    "Text Field",
+    "Dropdown Menu",
+    "Toast",
+    "Icon"
+  ],
+  "business-wide-automation.png": [
+    "Home",
+    "Card",
+    "Progress Indicator",
+    "Table",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "conceptual-understanding.png": [
+    "Dashboard",
+    "Card",
+    "Grid List",
+    "Progress Indicator"
+  ],
+  "corporate.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Badge",
+    "Icon",
+    "Text Field"
+  ],
+  "diligence.png": [
+    "Dashboard",
+    "Accordion",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Map Pin",
+    "Badge"
+  ],
+  "discovery.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Avatar",
+    "Icon",
+    "Text Field"
+  ],
+  "early-case-assessment.png": [
+    "Dashboard",
+    "Card",
+    "Progress Indicator",
+    "Table",
+    "Text Field",
+    "Badge",
+    "Icon"
+  ],
+  "legal-grade-chatbot.png": [
+    "Home",
+    "Text Field",
+    "Button",
+    "Accordion",
+    "Card",
+    "Banner",
+    "Toast"
+  ],
+  "ms-word-integrated.png": [
+    "Home",
+    "Text Field",
+    "Button",
+    "Checkbox",
+    "Table",
+    "Accordion",
+    "Tab"
+  ],
+  "pii-detection.png": [
+    "Home",
+    "Text Field",
+    "Button",
+    "Tab",
+    "Segmented Control",
+    "Icon",
+    "Banner"
+  ],
+  "repository.png": [
+    "Dashboard",
+    "Card",
+    "Table",
+    "Progress Indicator",
+    "Badge",
+    "Text Field",
+    "Accordion"
+  ],
+  "technology-assisted-review.png": [
+    "Dashboard",
+    "Table",
+    "Progress Indicator",
+    "Badge",
+    "Card",
+    "Text Field",
+    "Accordion"
+  ],
+  "workflow-editor.png": [
+    "Canvas",
+    "Card",
+    "Divider",
+    "Grid List",
+    "Icon",
+    "Text Field"
+  ],
+  "workflow-tool.png": [
+    "Settings & Preferences",
+    "Dropdown Menu",
+    "Text Field",
+    "Button",
+    "Checkbox",
+    "Tile"
+  ]
+}

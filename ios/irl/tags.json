@@ -1,0 +1,435 @@
+{
+  "20180622-130929000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button",
+    "Logo"
+  ],
+  "20180622-130933000-ios.png": [
+    "Verification",
+    "Text Field",
+    "Button",
+    "Keyboard Key"
+  ],
+  "20180622-130944000-ios.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Keyboard Key"
+  ],
+  "20180622-130950000-ios.png": [
+    "Verification",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131001000-ios.png": [
+    "Signup",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131010000-ios.png": [
+    "Signup",
+    "Text Field",
+    "Button",
+    "Date Picker"
+  ],
+  "20180622-131018000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Checkbox",
+    "Text Field"
+  ],
+  "20180622-131023000-ios.png": [
+    "Permission",
+    "Dialog",
+    "Button",
+    "Text Field"
+  ],
+  "20180622-131028000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Checkbox",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131031000-ios.png": [
+    "Permission",
+    "Dialog",
+    "Button",
+    "Text Field"
+  ],
+  "20180622-131034000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Segmented Control",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131045000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Segmented Control"
+  ],
+  "20180622-131050000-ios.png": [
+    "Signup",
+    "Search Bar",
+    "Button",
+    "Text Field"
+  ],
+  "20180622-131056000-ios.png": [
+    "Search",
+    "Search Bar",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131100000-ios.png": [
+    "Account Setup",
+    "Search Bar",
+    "Button",
+    "Text Field",
+    "Checkbox"
+  ],
+  "20180622-131105000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Radio Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131110000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Radio Button",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131117000-ios.png": [
+    "Account Setup",
+    "Text Field",
+    "Button",
+    "Keyboard Key"
+  ],
+  "20180622-131152000-ios.png": [
+    "Account Setup",
+    "Text Field",
+    "Button",
+    "Keyboard Key"
+  ],
+  "20180622-131202000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131214000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Illustration",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131220000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Illustration",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131225000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Illustration",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131230000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131241000-ios.png": [
+    "Quiz",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Avatar",
+    "Illustration"
+  ],
+  "20180622-131357000-ios.png": [
+    "Feature Info",
+    "Illustration",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131401000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Progress Indicator"
+  ],
+  "20180622-131407000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field"
+  ],
+  "20180622-131413000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131420000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131428000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Progress Indicator"
+  ],
+  "20180622-131432000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131436000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field"
+  ],
+  "20180622-131440000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20180622-131531000-ios.png": [
+    "Error",
+    "Dialog",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-131553000-ios.png": [
+    "Browse & Discover",
+    "Banner",
+    "Card",
+    "Icon",
+    "Text Field"
+  ],
+  "20180622-131602000-ios.png": [
+    "Confirmation",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Toast"
+  ],
+  "20180622-131635000-ios.png": [
+    "Home",
+    "Avatar",
+    "Button",
+    "Card",
+    "Checkbox",
+    "Icon",
+    "Text Field"
+  ],
+  "20180622-131643000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Icon",
+    "Text Field",
+    "Button",
+    "Divider"
+  ],
+  "20180622-131648000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Icon",
+    "Text Field",
+    "Button",
+    "Divider"
+  ],
+  "20180622-131656000-ios.png": [
+    "Invite & Refer Friends",
+    "Avatar",
+    "Button",
+    "Text Field",
+    "Tile",
+    "Search Bar",
+    "Icon"
+  ],
+  "20180622-131704000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "20180622-131725000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Icon",
+    "Text Field",
+    "Avatar",
+    "Badge",
+    "Divider"
+  ],
+  "20180622-131740000-ios.png": [
+    "Action Option",
+    "Text Field",
+    "Button",
+    "Toast"
+  ],
+  "20180622-131750000-ios.png": [
+    "Action Option",
+    "Text Field",
+    "Keyboard Key",
+    "Button"
+  ],
+  "20180622-131805000-ios.png": [
+    "Goal & Task",
+    "Text Field",
+    "Button",
+    "Keyboard Key",
+    "Dropdown Menu"
+  ],
+  "20180622-131817000-ios.png": [
+    "Event Detail",
+    "Button",
+    "Text Field",
+    "Switch"
+  ],
+  "20180622-131825000-ios.png": [
+    "Calendar",
+    "Button",
+    "Date Picker",
+    "Text Field",
+    "Switch"
+  ],
+  "20180622-131830000-ios.png": [
+    "Calendar",
+    "Button",
+    "Date Picker",
+    "Text Field",
+    "Tile",
+    "Switch"
+  ],
+  "20180622-131832000-ios.png": [
+    "Goal & Task",
+    "Button",
+    "Text Field",
+    "Switch",
+    "Tile"
+  ],
+  "20180622-131840000-ios.png": [
+    "Goal & Task",
+    "Button",
+    "Checkbox",
+    "Segmented Control",
+    "Text Field",
+    "Switch"
+  ],
+  "20180622-131854000-ios.png": [
+    "Browse & Discover",
+    "Avatar",
+    "Checkbox",
+    "Text Field",
+    "Button",
+    "Divider",
+    "Icon"
+  ],
+  "20180622-131932000-ios.png": [
+    "Add & Create",
+    "Checkbox",
+    "Button",
+    "Text Field",
+    "Avatar",
+    "Icon",
+    "Toast"
+  ],
+  "20180622-131938000-ios.png": [
+    "Chat Detail",
+    "Button",
+    "Icon",
+    "Text Field",
+    "Tab",
+    "Badge",
+    "Divider"
+  ],
+  "20180622-132013000-ios.png": [
+    "Social Feed",
+    "Avatar",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Divider",
+    "Toast"
+  ],
+  "20180622-132017000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Badge",
+    "Card",
+    "Divider"
+  ],
+  "20180622-132025000-ios.png": [
+    "My Account & Profile",
+    "Avatar",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Badge",
+    "Card"
+  ],
+  "20180622-132029000-ios.png": [
+    "Browse & Discover",
+    "Avatar",
+    "Button",
+    "Icon",
+    "Text Field",
+    "Toast"
+  ],
+  "20180622-132038000-ios.png": [
+    "Account Setup",
+    "Avatar",
+    "Button",
+    "Text Field",
+    "Search Bar",
+    "Tile"
+  ],
+  "20180622-132053000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Icon",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Avatar"
+  ],
+  "20180622-132101000-ios.png": [
+    "Acknowledgement & Success",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20180622-132121000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Icon",
+    "Text Field",
+    "Tile"
+  ],
+  "20180622-132127000-ios.png": [
+    "Settings & Preferences",
+    "Button",
+    "Checkbox",
+    "Text Field",
+    "Switch",
+    "Tab"
+  ]
+}

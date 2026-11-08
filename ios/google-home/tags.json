@@ -1,0 +1,56 @@
+{
+  "20190822-022913000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "20190822-022916000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Link"
+  ],
+  "20190822-022919000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Checkbox",
+    "Text Field",
+    "Link",
+    "Tab"
+  ],
+  "20190822-022921000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Text Field"
+  ],
+  "20190822-022924000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Checkbox",
+    "Text Field"
+  ],
+  "20190822-022927000-ios.png": [
+    "Loading",
+    "Loading Indicator",
+    "Text Field",
+    "Button"
+  ],
+  "20190822-022938000-ios.png": [
+    "Empty State",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Loading Indicator"
+  ],
+  "20190822-022942000-ios.png": [
+    "Home",
+    "Button",
+    "Icon",
+    "Text Field",
+    "Tile",
+    "Tab",
+    "Badge"
+  ]
+}

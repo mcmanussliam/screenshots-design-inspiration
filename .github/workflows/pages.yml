@@ -5,11 +5,11 @@ on:
     paths:
       - 'site/**'
       - 'mcp/**'
-      - 'Android/**'
-      - 'iOS/**'
-      - 'Web/**'
-      - 'Email/**'
-      - 'Marketing/**'
+      - 'android/**'
+      - 'ios/**'
+      - 'web/**'
+      - 'email/**'
+      - 'marketing/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 permissions:
@@ -32,6 +32,7 @@ jobs:
           sparse-checkout: |
             /site/
             /mcp/
+            /scripts/normalize-repository.mjs
             /.github/
             /**/index.html
             /**/tags.json
@@ -42,6 +43,7 @@ jobs:
         run: |
           node --test site/scripts/generate-catalog.test.mjs
           node --check mcp/server.mjs
+          node scripts/normalize-repository.mjs --check
       - name: Install site dependencies
         run: npm install --prefix site --no-audit --no-fund
       - name: Generate catalogue and build

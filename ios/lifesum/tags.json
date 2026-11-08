@@ -1,0 +1,316 @@
+{
+  "20190114-011246000-ios.png": [
+    "Login",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20190114-011257000-ios.png": [
+    "Signup",
+    "Checkbox",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-011306000-ios.png": [
+    "Confirmation",
+    "Checkbox",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-011323000-ios.png": [
+    "Goal & Task",
+    "Button",
+    "Text Field"
+  ],
+  "20190114-011336000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field"
+  ],
+  "20190114-011346000-ios.png": [
+    "Account Setup",
+    "Text Field",
+    "Keyboard Key",
+    "Button",
+    "Segmented Control"
+  ],
+  "20190114-011354000-ios.png": [
+    "Account Setup",
+    "Text Field",
+    "Stepper",
+    "Button"
+  ],
+  "20190114-011420000-ios.png": [
+    "Account Setup",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20190114-011424000-ios.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20190114-011427000-ios.png": [
+    "Signup",
+    "Text Field",
+    "Button",
+    "Keyboard Key"
+  ],
+  "20190114-011447000-ios.png": [
+    "Signup",
+    "Text Field",
+    "Button",
+    "Keyboard Key",
+    "Icon"
+  ],
+  "20190114-011455000-ios.png": [
+    "Home",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Hero Image"
+  ],
+  "20190114-011503000-ios.png": [
+    "Subscription & Paywall",
+    "Button",
+    "Text Field",
+    "Card",
+    "Badge",
+    "Icon"
+  ],
+  "20190114-011521000-ios.png": [
+    "Feature Info",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-011528000-ios.png": [
+    "Permission",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "20190114-011545000-ios.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Text Field",
+    "Keyboard Key",
+    "Button",
+    "Icon"
+  ],
+  "20190114-011554000-ios.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Text Field",
+    "Button",
+    "Card",
+    "Divider"
+  ],
+  "20190114-011559000-ios.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Text Field",
+    "Button",
+    "Tile",
+    "Tab",
+    "Icon"
+  ],
+  "20190114-011607000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Avatar",
+    "Button",
+    "Text Field",
+    "Toast"
+  ],
+  "20190114-011613000-ios.png": [
+    "Permission",
+    "Checkbox",
+    "Text Field",
+    "Switch"
+  ],
+  "20190114-011624000-ios.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Text Field",
+    "Keyboard Key",
+    "Button",
+    "Icon"
+  ],
+  "20190114-011653000-ios.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Text Field",
+    "Button",
+    "Tile",
+    "Badge",
+    "Divider"
+  ],
+  "20190114-011658000-ios.png": [
+    "Home",
+    "Badge",
+    "Card",
+    "Carousel",
+    "Divider",
+    "Icon",
+    "Progress Indicator"
+  ],
+  "20190114-011719000-ios.png": [
+    "Dashboard",
+    "Text Field",
+    "Slider"
+  ],
+  "20190114-011742000-ios.png": [
+    "Home",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Badge",
+    "Card",
+    "Divider"
+  ],
+  "20190114-011750000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field"
+  ],
+  "20190114-011755000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Checkbox"
+  ],
+  "20190114-011801000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Segmented Control"
+  ],
+  "20190114-011808000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field",
+    "Segmented Control"
+  ],
+  "20190114-012705000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-012709000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Illustration",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-012712000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Illustration",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-012717000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-012725000-ios.png": [
+    "Home",
+    "Text Field"
+  ],
+  "20190114-012821000-ios.png": [
+    "Browse & Discover",
+    "Search Bar",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "20190114-012857000-ios.png": [
+    "Quiz",
+    "Text Field",
+    "Button",
+    "Segmented Control"
+  ],
+  "20190114-012911000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field",
+    "Segmented Control"
+  ],
+  "20190114-012934000-ios.png": [
+    "Quiz",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Segmented Control"
+  ],
+  "20190114-012958000-ios.png": [
+    "Quiz",
+    "Button",
+    "Checkbox",
+    "Text Field",
+    "Tile",
+    "Accordion",
+    "Segmented Control"
+  ],
+  "20190114-013006000-ios.png": [
+    "Home",
+    "Button",
+    "Text Field",
+    "Avatar",
+    "Icon",
+    "Hero Image"
+  ],
+  "20190114-013011000-ios.png": [
+    "Article Detail",
+    "Avatar",
+    "Text Field",
+    "Button"
+  ],
+  "20190114-013026000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Avatar",
+    "Badge"
+  ],
+  "20190114-013032000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Icon",
+    "Avatar",
+    "Badge"
+  ],
+  "20190114-013052000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Icon",
+    "Badge",
+    "Button",
+    "Divider"
+  ],
+  "20190114-013128000-ios.png": [
+    "Browse & Discover",
+    "Segmented Control",
+    "Text Field",
+    "Checkbox"
+  ],
+  "20190114-013142000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Search Bar",
+    "Avatar",
+    "Icon",
+    "Text Field",
+    "Button"
+  ]
+}

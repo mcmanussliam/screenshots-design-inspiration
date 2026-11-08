@@ -1,0 +1,66 @@
+{
+  "5c0978e3a482feb699b18a70-autopilot-step-1-p-1080.png": [
+    "Signup",
+    "Avatar",
+    "Button",
+    "Checkbox",
+    "Text Field",
+    "Toast"
+  ],
+  "5c0978e67b3820e04babc8f8-autopilot-step-2-p-1080.png": [
+    "Signup",
+    "Text Field",
+    "Button"
+  ],
+  "5c0978e98aad60eb1210c6c2-autopilot-step-3-p-1080.png": [
+    "Guided Tour & Tutorial",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "5c0978ed6e75a0bc8d464a27-autopilot-step-4-p-1080.png": [
+    "Signup",
+    "Text Field",
+    "Button",
+    "Dropdown Menu"
+  ],
+  "5c0978ef19c6a50a2cbc297b-autopilot-step-5-p-1080.png": [
+    "Guided Tour & Tutorial",
+    "Card",
+    "Icon",
+    "Text Field"
+  ],
+  "5c0978f37fe166d07d3133ad-autopilot-step-6-p-1080.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Icon",
+    "Text Field"
+  ],
+  "5c0978f7368c338cba9e2b94-autopilot-step-7.png": [
+    "Guided Tour & Tutorial",
+    "Accordion",
+    "Button",
+    "Card",
+    "Checkbox",
+    "Combobox",
+    "Date Picker"
+  ],
+  "5c0978fae4eab10dfbaa2c41-autopilot-step-8.png": [
+    "Pricing",
+    "Button",
+    "Text Field",
+    "Checkbox",
+    "Radio Button",
+    "Slider",
+    "Dropdown Menu"
+  ],
+  "5c0978fe368c3387319e2b96-autopilot-step-9.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Accordion",
+    "Checkbox",
+    "Radio Button",
+    "Slider"
+  ]
+}

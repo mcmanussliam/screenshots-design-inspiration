@@ -1,0 +1,55 @@
+{
+  "20190608-194817000-ios.png": [
+    "Permission",
+    "Button",
+    "Text Field",
+    "Switch"
+  ],
+  "20190608-194822000-ios.png": [
+    "Permission",
+    "Switch",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "20190608-194829000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20190608-194833000-ios.png": [
+    "Permission",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "20190608-194928000-ios.png": [
+    "Social Feed",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "20190608-194932000-ios.png": [
+    "Goal & Task",
+    "Button",
+    "Text Field",
+    "Switch",
+    "Icon",
+    "Badge"
+  ],
+  "20190608-194953000-ios.png": [
+    "Home",
+    "Button",
+    "Text Field"
+  ],
+  "20190608-195053000-ios.png": [
+    "Product Detail",
+    "Icon",
+    "Progress Indicator",
+    "Text Field",
+    "Badge",
+    "Card",
+    "Table"
+  ]
+}

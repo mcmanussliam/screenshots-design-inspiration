@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)));
-const platforms = new Set(['iOS', 'Android', 'Web', 'Email', 'Marketing']);
+const platforms = new Set(['ios', 'android', 'web', 'email', 'marketing']);
 const imageRE = /\.(?:png|jpe?g|gif|webp|avif)$/i;
 const repo = process.env.GITHUB_REPOSITORY || 'mcmanussliam/screenshots-design-inspiration';
 const revision = process.env.GITHUB_SHA || 'main';

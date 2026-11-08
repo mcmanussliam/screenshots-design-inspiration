@@ -1,0 +1,38 @@
+{
+  "20180511-233041000-ios.png": [
+    "Permission",
+    "Dialog",
+    "Button",
+    "Text Field"
+  ],
+  "20180511-233045000-ios.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Loading Indicator",
+    "Avatar"
+  ],
+  "20180511-233114000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Tab",
+    "Icon"
+  ],
+  "20180511-233125000-ios.png": [
+    "Subscription & Paywall",
+    "Button",
+    "Text Field",
+    "Card",
+    "Segmented Control"
+  ],
+  "20180511-233142000-ios.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Avatar",
+    "Icon",
+    "Hero Image"
+  ]
+}

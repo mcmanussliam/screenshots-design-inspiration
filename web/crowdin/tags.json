@@ -1,0 +1,158 @@
+{
+  "all-conversations.png": [
+    "Chat Detail",
+    "Avatar",
+    "Button",
+    "Text Field"
+  ],
+  "base-html-editor.png": [
+    "Product Detail",
+    "Text Field",
+    "Button",
+    "Link",
+    "Accordion"
+  ],
+  "change-user-role.png": [
+    "Settings & Preferences",
+    "Avatar",
+    "Checkbox",
+    "Text Field",
+    "Table",
+    "Button",
+    "Toast"
+  ],
+  "download-invoice.png": [
+    "Settings & Preferences",
+    "Button",
+    "Text Field",
+    "Table",
+    "Badge",
+    "Icon"
+  ],
+  "invite-dialog-1.png": [
+    "Invite Teammates",
+    "Button",
+    "Dropdown Menu",
+    "Text Field",
+    "Link",
+    "Toast"
+  ],
+  "invite-dialog.png": [
+    "Invite Teammates",
+    "Dropdown Menu",
+    "Text Field",
+    "Button",
+    "Link"
+  ],
+  "managers-menu.png": [
+    "Multi-Column Layout",
+    "Dropdown Menu",
+    "Text Field",
+    "Button",
+    "Avatar",
+    "Icon"
+  ],
+  "organization-manager.png": [
+    "Settings & Preferences",
+    "Checkbox",
+    "Text Field",
+    "Button",
+    "Tab",
+    "Dialog"
+  ],
+  "pre-translate-via-tm.png": [
+    "Settings & Preferences",
+    "Checkbox",
+    "Dropdown Menu",
+    "Text Field",
+    "Button",
+    "Radio Button",
+    "Segmented Control"
+  ],
+  "project-langauges.png": [
+    "Select",
+    "Checkbox",
+    "Dropdown Menu",
+    "Text Field",
+    "Button"
+  ],
+  "project-settings-export-section.png": [
+    "Settings & Preferences",
+    "Checkbox",
+    "Text Field",
+    "Radio Button",
+    "Button"
+  ],
+  "project-visibility.png": [
+    "Signup",
+    "Text Field",
+    "Checkbox",
+    "Radio Button"
+  ],
+  "reports-general.png": [
+    "Dashboard",
+    "Progress Indicator",
+    "Text Field",
+    "Table",
+    "Card",
+    "Badge"
+  ],
+  "screenshots-on-translation-page.png": [
+    "Account Setup",
+    "Button",
+    "Text Field",
+    "Card"
+  ],
+  "start-project.png": [
+    "Home",
+    "Avatar",
+    "Button",
+    "Text Field",
+    "Tab",
+    "Badge",
+    "Icon"
+  ],
+  "tasks-create.png": [
+    "Dashboard",
+    "Tab",
+    "Badge",
+    "Card",
+    "Icon",
+    "Text Field",
+    "Avatar"
+  ],
+  "upload-files.png": [
+    "Settings & Preferences",
+    "Button",
+    "Text Field",
+    "Tab",
+    "Badge",
+    "Icon"
+  ],
+  "upload-translations-2.png": [
+    "Settings & Preferences",
+    "Button",
+    "Dropdown Menu",
+    "Text Field",
+    "Table",
+    "Icon"
+  ],
+  "upload-translations-editor.png": [
+    "Browse & Discover",
+    "Button",
+    "Dropdown Menu",
+    "Text Field",
+    "Icon",
+    "Badge",
+    "Divider"
+  ],
+  "upload-translations-project-page.png": [
+    "Browse & Discover",
+    "Dropdown Menu",
+    "Progress Indicator",
+    "Button",
+    "Text Field",
+    "Icon",
+    "Avatar"
+  ]
+}

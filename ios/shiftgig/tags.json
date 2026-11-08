@@ -1,0 +1,443 @@
+{
+  "ios-20180401-140038000.png": [
+    "Home",
+    "Banner",
+    "Text Field",
+    "Button",
+    "Toast"
+  ],
+  "ios-20180413-121433000.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Divider",
+    "Tile"
+  ],
+  "ios-20180511-220942000.png": [
+    "Permission",
+    "Dialog",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180511-220946000.png": [
+    "Guided Tour & Tutorial",
+    "Banner",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180511-220949000.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180511-220956000.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20180511-220959000.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20180511-221009000.png": [
+    "Home",
+    "Banner",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20180620-173639000.png": [
+    "Other Content",
+    "Button",
+    "Text Field",
+    "Divider",
+    "Icon"
+  ],
+  "ios-20180620-173649000.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Link"
+  ],
+  "ios-20180620-173655000.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Link"
+  ],
+  "ios-20180620-173659000.png": [
+    "Article Detail",
+    "Text Field",
+    "Button",
+    "Divider"
+  ],
+  "ios-20180814-175641000.png": [
+    "Chat Detail",
+    "Text Field",
+    "Button",
+    "Link",
+    "Toast",
+    "Avatar"
+  ],
+  "ios-20180814-175700000.png": [
+    "Chat Detail",
+    "Text Field",
+    "Button",
+    "Link",
+    "Avatar"
+  ],
+  "ios-20180907-160309000.png": [
+    "Guided Tour & Tutorial",
+    "Dialog",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180907-160314000.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20180907-160319000.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180907-160325000.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20180907-160329000.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button",
+    "Avatar",
+    "Divider"
+  ],
+  "ios-20180907-160336000.png": [
+    "Home",
+    "Button",
+    "Text Field",
+    "Avatar",
+    "Icon",
+    "Hero Image"
+  ],
+  "ios-20180907-160339000.png": [
+    "Login",
+    "Button",
+    "Text Field",
+    "Link"
+  ],
+  "ios-20180907-160507000.png": [
+    "Guided Tour & Tutorial",
+    "Icon",
+    "Text Field",
+    "Button",
+    "Toast"
+  ],
+  "ios-20180907-160513000.png": [
+    "Guided Tour & Tutorial",
+    "Icon",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20180907-160708000.png": [
+    "Home",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180907-160722000.png": [
+    "Permission",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20180907-160737000.png": [
+    "Permission",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "ios-20180907-160834000.png": [
+    "Action Option",
+    "Button",
+    "Text Field",
+    "Dialog",
+    "Slider"
+  ],
+  "ios-20180907-161332000.png": [
+    "Action Option",
+    "Button",
+    "Text Field",
+    "Loading Indicator"
+  ],
+  "ios-20180907-161348000.png": [
+    "Home",
+    "Button",
+    "Text Field",
+    "Badge",
+    "Card"
+  ],
+  "ios-20180907-161421000.png": [
+    "Action Option",
+    "Time Picker",
+    "Button",
+    "Text Field",
+    "Dialog"
+  ],
+  "ios-20180907-161606000.png": [
+    "Home",
+    "Button",
+    "Text Field",
+    "Loading Indicator",
+    "Avatar",
+    "Icon",
+    "Badge"
+  ],
+  "ios-20180907-161722000.png": [
+    "Home",
+    "Avatar",
+    "Text Field",
+    "Tab",
+    "Icon"
+  ],
+  "ios-20181211-005531000.png": [
+    "Settings & Preferences",
+    "Button",
+    "Text Field",
+    "Tab"
+  ],
+  "ios-20181211-010314000.png": [
+    "Home",
+    "Map Pin",
+    "Text Field",
+    "Button",
+    "Divider"
+  ],
+  "ios-20181211-212823000.png": [
+    "Error",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20181211-212846000.png": [
+    "Settings & Preferences",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20181211-212855000.png": [
+    "Error",
+    "Dialog",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20181221-170150000.png": [
+    "Chat Detail",
+    "Text Field",
+    "Button",
+    "Link",
+    "Avatar"
+  ],
+  "ios-20181221-170155000.png": [
+    "Chat Detail",
+    "Text Field",
+    "Button",
+    "Link",
+    "Avatar"
+  ],
+  "ios-20181222-170037000.png": [
+    "Emails & Messages",
+    "Button",
+    "Text Field",
+    "Link",
+    "Avatar"
+  ],
+  "ios-20190224-040853000.png": [
+    "Notifications",
+    "Banner",
+    "Text Field",
+    "Button",
+    "Toast",
+    "Icon"
+  ],
+  "ios-20190225-131939000.png": [
+    "News Feed",
+    "Card",
+    "Text Field",
+    "Divider"
+  ],
+  "ios-20190226-205605000.png": [
+    "Signup",
+    "Button",
+    "Text Field",
+    "Checkbox"
+  ],
+  "ios-20190226-205621000.png": [
+    "Error",
+    "Dialog",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20190519-233232000.png": [
+    "Help & Support",
+    "Text Field",
+    "Button",
+    "Search Bar",
+    "Banner",
+    "Avatar",
+    "Icon"
+  ],
+  "ios-20190522-140711000.png": [
+    "Account Setup",
+    "Button",
+    "Text Field",
+    "Icon"
+  ],
+  "ios-20190522-140718000.png": [
+    "Guided Tour & Tutorial",
+    "Button",
+    "Text Field"
+  ],
+  "ios-20190522-140725000.png": [
+    "Browse & Discover",
+    "Button",
+    "Text Field",
+    "Tile",
+    "Segmented Control"
+  ],
+  "ios-20190522-140730000.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Button",
+    "Segmented Control",
+    "Tile"
+  ],
+  "ios-20190522-140738000.png": [
+    "Browse & Discover",
+    "Button",
+    "Text Field",
+    "Tile",
+    "Segmented Control",
+    "Date Picker",
+    "Time Picker"
+  ],
+  "ios-20190522-140922000.png": [
+    "Empty State",
+    "Text Field",
+    "Button",
+    "Icon"
+  ],
+  "ios-20190522-140927000.png": [
+    "Settings & Preferences",
+    "Text Field",
+    "Button",
+    "Segmented Control"
+  ],
+  "ios-20190522-140938000.png": [
+    "Settings & Preferences",
+    "Text Field",
+    "Button",
+    "Dropdown Menu"
+  ],
+  "ios-20190522-140952000.png": [
+    "Settings & Preferences",
+    "Text Field",
+    "Button",
+    "Slider",
+    "Tab",
+    "Search Bar"
+  ],
+  "ios-20190522-140955000.png": [
+    "Settings & Preferences",
+    "Text Field",
+    "Button",
+    "Slider"
+  ],
+  "ios-20190522-140958000.png": [
+    "Settings & Preferences",
+    "Text Field",
+    "Dropdown Menu",
+    "Time Picker",
+    "Button",
+    "Divider"
+  ],
+  "ios-20190522-141021000.png": [
+    "Action Option",
+    "Text Field",
+    "Keyboard Key",
+    "Button",
+    "Dialog"
+  ],
+  "ios-20190522-141025000.png": [
+    "Action Option",
+    "Button",
+    "Text Field",
+    "Segmented Control"
+  ],
+  "ios-20190522-141109000.png": [
+    "Error",
+    "Dialog",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20190609-040646000.png": [
+    "Settings & Preferences",
+    "Button",
+    "Text Field",
+    "Tab",
+    "Divider"
+  ],
+  "ios-20190610-155320000.png": [
+    "Home",
+    "Card",
+    "Text Field",
+    "Button",
+    "Divider",
+    "Tile",
+    "Icon"
+  ],
+  "ios-20190610-155337000.png": [
+    "Notifications",
+    "Text Field",
+    "Button",
+    "Badge",
+    "Divider",
+    "Toast"
+  ],
+  "ios-20190610-155344000.png": [
+    "Verification",
+    "Text Field",
+    "Keyboard Key",
+    "Button"
+  ],
+  "ios-20190610-155347000.png": [
+    "Guided Tour & Tutorial",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20190610-155350000.png": [
+    "Verification",
+    "Text Field",
+    "Keyboard Key",
+    "Button",
+    "Toast"
+  ],
+  "ios-20190610-155353000.png": [
+    "Action Option",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20190610-155401000.png": [
+    "Error",
+    "Avatar",
+    "Text Field",
+    "Button"
+  ],
+  "ios-20190610-155843000.png": [
+    "Browse & Discover",
+    "Card",
+    "Text Field",
+    "Divider",
+    "Button",
+    "Icon"
+  ]
+}
