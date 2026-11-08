@@ -31,6 +31,7 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /site/
+            /mcp/
             /.github/
             /**/index.html
             /**/tags.json
