@@ -1,0 +1,23 @@
+---
+import Layout from '../../../layouts/main.astro';
+import {products,base,platformName,type Product} from '../../../lib/catalog';
+export function getStaticPaths(){
+ return products.map(product=>({params:{kind:product.kind==='app'?'apps':'sites',platform:product.platform,slug:product.slug},props:{product}}));
+}
+const {product}=Astro.props as {product:Product};
+---
+<Layout title={product.name} description={'UI screenshots and patterns for '+product.name}>
+ <nav class="breadcrumbs"><a href={base('')}>Browse</a><span>/</span><span>{platformName(product.platform)}</span><span>/</span><strong>{product.name}</strong></nav>
+ <section class="detail-header"><div class="detail-app-icon">{product.name.charAt(0).toUpperCase()}</div><h1>{product.name}<span class="dash"> —</span><br/><span class="detail-subtitle">{product.category}</span></h1>
+  <dl class="detail-meta"><div><dt>Platform</dt><dd>{platformName(product.platform)}</dd></div><div><dt>Category</dt><dd>{product.category}</dd></div><div><dt>Screens</dt><dd>{product.screenshots.length}</dd></div></dl>
+  <div class="detail-actions"><button class="white-button" type="button" data-save={product.id}>♡ Save</button><a class="ghost-button" href={base('saved/')}>My collections</a></div>
+  {product.tags.length>0 && <div class="detail-tags">{product.tags.slice(0,16).map(t=><span>{t}</span>)}</div>}
+ </section>
+ <section class="screens-section">
+  <div class="screens-toolbar"><div class="screen-tabs"><span class="active">Screens</span><span class="screen-total">Showing {product.screenshots.length} screenshots</span></div><input id="screen-filter" type="search" placeholder="Filter screens or elements…" aria-label="Filter screenshots"/></div>
+  <div class:list={['screens-grid',{'screens-grid-wide':product.kind==='site'}]} id="screens-grid">
+   {product.screenshots.map((shot,i)=><div class="screen-item" data-shot-text={[shot.name,...shot.tags].join(' ').toLowerCase()}><button type="button" data-preview={shot.url} data-caption={product.name+' · Screen '+(i+1)} aria-label={'Preview screen '+(i+1)}><img loading="lazy" decoding="async" src={shot.url} alt={product.name+' screen '+(i+1)}/></button><div class="screen-caption"><span>{String(i+1).padStart(2,'0')}</span><span>{shot.tags.slice(0,2).join(' · ')||'Screen'}</span></div></div>)}
+  </div>
+  <div id="no-screens" class="empty-state" hidden><h2>No matching screens</h2><p>Try another pattern.</p></div>
+ </section>
+</Layout>

@@ -1,0 +1,21 @@
+{
+  "name": "open-screens-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local read-only MCP access to the Open Screens public catalogue",
+  "bin": {
+    "open-screens-mcp": "./server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.1.0"
+  }
+}

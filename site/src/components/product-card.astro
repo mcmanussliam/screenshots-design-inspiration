@@ -1,0 +1,14 @@
+---
+import { productUrl, platformName, type Product } from '../lib/catalog';
+const {product} = Astro.props as {product:Product};
+const screenshot = product.screenshots[0];
+const search = [product.name,product.category,product.platform,...product.tags,...product.screenshots.flatMap(s=>s.tags)].join(' ').toLowerCase();
+---
+<article class="product" data-product data-id={product.id} data-kind={product.kind} data-platform={product.platform} data-search={search} data-name={product.name.toLowerCase()}>
+ <div class:list={['product-cover',{wide:product.kind==='site'}]}>
+   <span class="platform-tag">{platformName(product.platform)}</span>
+   <button class="bookmark" type="button" data-save={product.id} aria-label={'Save '+product.name} aria-pressed="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg></button>
+   <a href={productUrl(product)} class="cover-link" aria-label={'View '+product.name}><img loading="lazy" decoding="async" src={screenshot?.url} alt={'Screenshot of '+product.name}/></a>
+ </div>
+ <div class="product-caption"><a href={productUrl(product)}>{product.name}</a><p>{product.screenshots.length} screens <span>·</span> {product.category}</p></div>
+</article>

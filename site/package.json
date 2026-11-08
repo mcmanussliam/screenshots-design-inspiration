@@ -1,0 +1,17 @@
+{
+  "name": "open-screens-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/generate-catalog.mjs && astro build",
+    "check": "node --check scripts/generate-catalog.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "astro": "^5.16.0"
+  }
+}

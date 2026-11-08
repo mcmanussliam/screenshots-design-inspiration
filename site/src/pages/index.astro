@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/main.astro';
+import ProductCard from '../components/product-card.astro';
+import {products, allTags} from '../lib/catalog';
+const columns=[
+ {title:'Categories',items:['Finance','Shopping','Productivity','Social','Health & Fitness']},
+ {title:'Screens',items:['Login','Dashboard','Onboarding','Signup','Settings']},
+ {title:'UI Elements',items:['Bottom Sheet','Dropdown Menu','Banner','Text Field','Modal']},
+ {title:'Flows',items:['Creating Account','Checkout','Filtering & Sorting','Search','Messaging']},
+];
+const patterns=allTags.filter(x=>/login|dashboard|onboarding|signup|filter|form|modal|setting|home|search|card|button/i.test(x)).slice(0,70);
+---
+<Layout title="Explore interfaces">
+ <div class="explore-hero">
+  <div><p class="eyebrow">OPEN SOURCE DESIGN LIBRARY</p><h1>Design inspiration,<br/><span>without the gatekeeping.</span></h1><p class="intro">Explore real interfaces and design patterns. Save what inspires you, right in your browser.</p></div>
+  <div class="hero-count"><strong>{products.length}</strong><span>products</span><strong>{products.reduce((total,p)=>total+p.screenshots.length,0).toLocaleString('en')}</strong><span>screens</span></div>
+ </div>
+ <section class="taxonomy" aria-label="Browse categories and patterns">
+  {columns.map(c=><div class="taxonomy-col"><p class="taxonomy-title">{c.title}</p>{c.items.map(item=><button type="button" data-quick-search={item}>{item}</button>)}</div>)}
+ </section>
+ <section class="browse-section" id="browse">
+  <div class="browse-toolbar">
+   <div class="browse-left"><div class="pill-group" role="group" aria-label="Type"><button type="button" data-kind="all" class="selected">All</button><button type="button" data-kind="app">Apps</button><button type="button" data-kind="site">Sites</button></div>
+    <div class="pill-group" role="group" aria-label="Platform"><button type="button" data-platform="all" class="selected">All platforms</button><button type="button" data-platform="ios">iOS</button><button type="button" data-platform="android">Android</button><button type="button" data-platform="web">Web</button><button type="button" data-platform="email">Email</button></div>
+    <span class="toolbar-sep"></span><button class="subtle-tab selected" type="button" data-sort="featured">Featured</button><button class="subtle-tab" type="button" data-sort="alpha">A–Z</button>
+   </div>
+   <button class="filter-button" type="button" id="toggle-filters" aria-expanded="false" aria-controls="filter-panel">☷ <span>Filter</span></button>
+  </div>
+  <div class="filter-panel" id="filter-panel" hidden><label for="tag-select">Screen or UI pattern</label><select id="tag-select"><option value="">All patterns</option>{patterns.map(tag=><option value={tag}>{tag}</option>)}</select><button type="button" id="reset-filters">Clear all filters</button></div>
+  <div class="browse-summary"><span id="results-counter">{products.length} products</span><span>Real interfaces. Community curated.</span></div>
+  <div class="product-grid" id="product-grid">{products.map(product=><ProductCard product={product}/>)}</div>
+  <div id="no-matches" class="empty-state" hidden><div class="empty-illustration">⌕</div><h2>No interfaces found</h2><p>Try another search term or filter.</p></div>
+ </section>
+</Layout>

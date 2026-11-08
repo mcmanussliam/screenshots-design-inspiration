@@ -1,0 +1,8 @@
+---
+import { base } from '../lib/catalog';
+---
+<header class="topbar">
+  <div class="topbar-left"><a class="brand" href={base('')} aria-label="Open Screens home"><span class="brand-mark"><i></i><i></i><i></i></span><span class="brand-name">openscreens</span></a><span class="topbar-divider"></span><a class="top-link" data-nav-apps href={base('')+'?view=apps'}>Apps</a><a class="top-link" data-nav-sites href={base('')+'?view=sites'}>Sites</a></div>
+  <label class="top-search" for="global-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="global-search" type="search" placeholder="Search apps, screens and patterns…" autocomplete="off" aria-label="Search the UI library"/><span class="shortcut">⌘ K</span></label>
+  <div class="topbar-right"><a class="saved-link" href={base('saved/')} title="Your saved collections"><svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.9"><path d="M6 3h12v18l-6-4.3L6 21z"/></svg><span>Saved</span></a><a class="github-link" href="https://github.com/mcmanussliam/screenshots-design-inspiration" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+</header>
