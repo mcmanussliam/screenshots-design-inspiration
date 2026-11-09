@@ -1,15 +1,16 @@
 ---
 import Layout from '../../../layouts/main.astro';
-import {products,base,platformName,formatBytes,type Product} from '../../../lib/catalog';
+import {products,base,platformName,formatBytes,galleryScreens,type Product} from '../../../lib/catalog';
 export function getStaticPaths(){
  return products.map(product=>({params:{kind:product.kind==='app'?'apps':'sites',platform:product.platform,slug:product.slug},props:{product}}));
 }
 const {product}=Astro.props as {product:Product};
 const isSite=product.kind==='site';
-const screenTypeOptions=[...new Set(product.screenshots.flatMap(s=>s.tagGroups.screen))].sort();
+const screens=galleryScreens(product);
+const screenTypeOptions=[...new Set(screens.flatMap(s=>s.tagGroups.screen))].sort();
 ---
 <Layout title={product.name} description={'UI screenshots and patterns for '+product.name}>
- <section class="detail-header">
+ <section class:list={['detail-header',{'mobile-app-header':!isSite}]}>
   <div class="detail-app-icon">
    {product.domain
     ?<img src={'https://www.google.com/s2/favicons?domain='+encodeURIComponent(product.domain)+'&sz=128'} alt={product.name+' icon'} loading="eager"/>
@@ -22,7 +23,7 @@ const screenTypeOptions=[...new Set(product.screenshots.flatMap(s=>s.tagGroups.s
    <dl class="detail-meta">
     <div><dt>Platform</dt><dd>{platformName(product.platform)}</dd></div>
     <div><dt>Category</dt><dd>{product.category}</dd></div>
-    <div><dt>Screens</dt><dd>{product.screenshots.length}</dd></div>
+    <div><dt>Screens</dt><dd>{screens.length}</dd></div>
    </dl>
    <div class="detail-actions"><button class="white-button" type="button" data-save={product.id}>♡ Save</button>
     <a class="ghost-button" href={base('saved/')}>My collections</a></div>
@@ -44,12 +45,12 @@ const screenTypeOptions=[...new Set(product.screenshots.flatMap(s=>s.tagGroups.s
    <div class="screen-tabs"><span class="active">Screens</span>
     {product.videos.length>0&&<span class="screen-total">{product.videos.length} source recording{product.videos.length===1?'':'s'}</span>}
    </div>
-   <div class="screen-toolbar-right">
+   {screens.length > 0 && <div class="screen-toolbar-right">
     {screenTypeOptions.length>0&&<select id="screen-type-filter" aria-label="Filter by screen type"><option value="">All screen types</option>
       {screenTypeOptions.map(t=><option value={t}>{t}</option>)}</select>}
     <input id="screen-filter" type="search" placeholder="Filter screens or elements…" aria-label="Filter screenshots"/>
-    <span class="screen-total">Showing {product.screenshots.length} screens</span>
-   </div>
+    <span class="screen-total">{screens.length} screens</span>
+   </div>}
   </div>
   {product.videos.length>0&&<details class="recordings-section"><summary>View original motion recordings ({product.videos.length})</summary>
     <div class="recordings-grid">{product.videos.slice(0,12).map(v=>
@@ -58,8 +59,8 @@ const screenTypeOptions=[...new Set(product.screenshots.flatMap(s=>s.tagGroups.s
      </video><p>{v.name.replace(/\.(mp4|webm|mov)$/i,'').replaceAll('-',' ')} · {formatBytes(v.sizeBytes)}</p></div>
     )}</div>
    </details>}
-  <div class:list={['screens-grid',{'screens-grid-wide':isSite}]} id="screens-grid">
-   {product.screenshots.map((shot,i)=><div class="screen-item" data-shot-text={[shot.name,...shot.tags].join(' ').toLowerCase()} data-screen-types={shot.tagGroups.screen.join('|').toLowerCase()}>
+  <div class:list={['screens-grid',{'screens-grid-wide':isSite,'screens-grid-phone':!isSite}]} id="screens-grid">
+   {screens.map((shot,i)=><div class="screen-item" data-shot-text={[shot.name,...shot.tags].join(' ').toLowerCase()} data-screen-types={shot.tagGroups.screen.join('|').toLowerCase()}>
     <button class="screen-open" type="button" data-preview={shot.url} data-caption={product.name+' · Screen '+(i+1)} aria-label={'Preview screen '+(i+1)}>
       <span class="screen-image-frame"><img class="shot-img" loading="lazy" decoding="async" src={shot.url} alt={product.name+' screen '+(i+1)} data-bytes={shot.sizeBytes??''} data-width={shot.width??''} data-height={shot.height??''}/></span>
     </button>
@@ -67,6 +68,7 @@ const screenTypeOptions=[...new Set(product.screenshots.flatMap(s=>s.tagGroups.s
     <div class="screen-extra">{formatBytes(shot.sizeBytes)}{shot.tagGroups.element[0]&&' · '+shot.tagGroups.element[0]}</div>
    </div>)}
   </div>
+  {!isSite && screens.length === 0 && <p class="empty-state">No phone-format screenshots are available for this app.</p>}
   <div id="no-screens" class="empty-state" hidden><h2>No matching screens</h2><p>Try another screen type or tag.</p></div>
  </section>
 </Layout>

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/main.astro';
 import ProductCard from '../components/product-card.astro';
-import {products, allTags} from '../lib/catalog';
+import {browseProducts, allTags} from '../lib/catalog';
 const appCategories=[
  {title:'Categories',items:['Finance','Shopping','Food & Drink','Health & Fitness','Lifestyle']},
  {title:'Screens',items:['Login','Notifications','Dashboard','Signup','My Account & Profile']},
@@ -32,8 +32,8 @@ const patterns=allTags.filter(x=>/login|dashboard|onboarding|signup|filter|form|
    <button class="filter-button" type="button" id="toggle-filters" aria-expanded="false" aria-controls="filter-panel">☷ <span>Filter</span></button>
   </div>
   <div class="filter-panel" id="filter-panel" hidden><label for="tag-select">Screen or UI pattern</label><select id="tag-select"><option value="">All patterns</option>{patterns.map(tag=><option value={tag}>{tag}</option>)}</select><button type="button" id="reset-filters">Clear all filters</button></div>
-  <div class="browse-summary"><span id="results-counter">{products.length} products</span><span>Browse every screenshot, free.</span></div>
-  <div class="product-grid" id="product-grid">{products.map(product=><ProductCard product={product}/>)}</div>
+  <div class="browse-summary"><span id="results-counter">{browseProducts.length} products</span><span>Browse interface screenshots.</span></div>
+  <div class="product-grid" id="product-grid">{browseProducts.map(product=><ProductCard product={product}/>)}</div>
   <div id="no-matches" class="empty-state" hidden><div class="empty-illustration">⌕</div><h2>No interfaces found</h2><p>Try another search term or filter.</p></div>
  </section>
 </Layout>
