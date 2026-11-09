@@ -1,0 +1,1218 @@
+{
+  "version": 2,
+  "description": "Controlled design research vocabulary derived from the prior repository's definitions, with explicit facets inspired by research navigation patterns.",
+  "source": "Internal dataset glossary (migrated from data/screenshot-tags.csv)",
+  "entries": [
+    {
+      "id": "screen-account-setup",
+      "type": "screen",
+      "group": "New User Experience",
+      "label": "Account Setup",
+      "description": "First-time setup flow where a new user configures their account (name, username, profile details, initial preferences) right after signing up."
+    },
+    {
+      "id": "screen-guided-tour-and-tutorial",
+      "type": "screen",
+      "group": "New User Experience",
+      "label": "Guided Tour & Tutorial",
+      "description": "Onboarding walkthrough, product tour, or step-by-step tutorial that explains features to a first-time user, often with coach marks, highlighted regions, or progress dots."
+    },
+    {
+      "id": "screen-signup",
+      "type": "screen",
+      "group": "New User Experience",
+      "label": "Signup",
+      "description": "Account creation screen with fields like email, password, name, or social sign-up buttons (Continue with Google/Apple)."
+    },
+    {
+      "id": "screen-verification",
+      "type": "screen",
+      "group": "New User Experience",
+      "label": "Verification",
+      "description": "Screens for verifying identity via email code, SMS OTP, phone number confirmation, CAPTCHA, or two-factor authentication challenge."
+    },
+    {
+      "id": "screen-delete-and-deactivate-account",
+      "type": "screen",
+      "group": "Account Management",
+      "label": "Delete & Deactivate Account",
+      "description": "Screens that let a user permanently delete or temporarily deactivate their account, usually with warnings and a final confirmation."
+    },
+    {
+      "id": "screen-forgot-password",
+      "type": "screen",
+      "group": "Account Management",
+      "label": "Forgot Password",
+      "description": "Password recovery flow: enter email, receive a reset link/code, and set a new password."
+    },
+    {
+      "id": "screen-login",
+      "type": "screen",
+      "group": "Account Management",
+      "label": "Login",
+      "description": "Sign-in screen with email/username and password fields, biometric prompt, or SSO buttons."
+    },
+    {
+      "id": "screen-my-account-and-profile",
+      "type": "screen",
+      "group": "Account Management",
+      "label": "My Account & Profile",
+      "description": "User-owned profile or account overview showing personal info, avatar, username, stats, and editable fields."
+    },
+    {
+      "id": "screen-settings-and-preferences",
+      "type": "screen",
+      "group": "Account Management",
+      "label": "Settings & Preferences",
+      "description": "App-wide settings hub: account, notifications, privacy, appearance, language, accessibility, and similar toggles organized in a list."
+    },
+    {
+      "id": "screen-acknowledgement-and-success",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Acknowledgement & Success",
+      "description": "Success or completion screen confirming an action was performed (e.g., 'Payment complete', 'Message sent'), often with a large checkmark or celebratory illustration."
+    },
+    {
+      "id": "screen-action-option",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Action Option",
+      "description": "Screen or sheet offering the user a set of choices before continuing, such as action sheets, option pickers, or 'What do you want to do?' menus."
+    },
+    {
+      "id": "screen-confirmation",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Confirmation",
+      "description": "A 'Are you sure?' screen or modal asking the user to confirm a destructive or important action before it is executed."
+    },
+    {
+      "id": "screen-empty-state",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Empty State",
+      "description": "Screen shown when there is no content to display yet (empty inbox, no search results, no items), usually with an illustration and a call to action."
+    },
+    {
+      "id": "screen-error",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Error",
+      "description": "Error screen or message indicating something went wrong (failed request, 404, crash, form validation summary) with an explanation and recovery option."
+    },
+    {
+      "id": "screen-feature-info",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Feature Info",
+      "description": "Informational screen describing a feature, often shown when it launches or is first opened, including 'What's new' and feature highlight screens."
+    },
+    {
+      "id": "screen-feedback",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Feedback",
+      "description": "Screens asking the user for feedback: rating the app, leaving a comment, NPS survey, or a 'How was your experience?' prompt."
+    },
+    {
+      "id": "screen-help-and-support",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Help & Support",
+      "description": "Help center, FAQ, contact support, chat-with-us, or troubleshooting screens."
+    },
+    {
+      "id": "screen-loading",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Loading",
+      "description": "A screen dominated by a loading indicator, spinner, progress bar, or skeleton placeholders while content is being fetched."
+    },
+    {
+      "id": "screen-permission",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Permission",
+      "description": "Screens or system prompts requesting permissions (notifications, camera, microphone, location, contacts, Bluetooth)."
+    },
+    {
+      "id": "screen-suggestions-and-similar-items",
+      "type": "screen",
+      "group": "Communication",
+      "label": "Suggestions & Similar Items",
+      "description": "Screen that recommends content to the user: 'You may also like', 'Recommended for you', related items, or personalized suggestions."
+    },
+    {
+      "id": "screen-billing",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Billing",
+      "description": "Billing and invoicing screens showing charges, invoices, receipts, or billing history for a subscription or account."
+    },
+    {
+      "id": "screen-cart-and-bag",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Cart & Bag",
+      "description": "Shopping cart or bag screen listing items the user has added, with quantities, price totals, and a checkout button."
+    },
+    {
+      "id": "screen-checkout",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Checkout",
+      "description": "Multi-step checkout flow: shipping address, delivery option, payment, and review-and-pay screens."
+    },
+    {
+      "id": "screen-order-confirmation",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Order Confirmation",
+      "description": "Post-purchase confirmation screen showing 'Thanks for your order', order number, summary, and estimated delivery."
+    },
+    {
+      "id": "screen-order-detail",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Order Detail",
+      "description": "Detail view for a single order showing items purchased, status, tracking, shipping address, and totals."
+    },
+    {
+      "id": "screen-order-history",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Order History",
+      "description": "List of the user's past orders or purchases, each with status and a link to details."
+    },
+    {
+      "id": "screen-payment-method",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Payment Method",
+      "description": "Screens for adding, editing, or selecting a payment method (credit card, PayPal, Apple Pay, bank account)."
+    },
+    {
+      "id": "screen-pricing",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Pricing",
+      "description": "Plan comparison or pricing tier screens showing feature-by-feature comparisons and prices."
+    },
+    {
+      "id": "screen-promotions-and-rewards",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Promotions & Rewards",
+      "description": "Screens showcasing coupons, promo codes, loyalty rewards, referral bonuses, or seasonal discounts."
+    },
+    {
+      "id": "screen-shop-and-storefront",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Shop & Storefront",
+      "description": "Storefront landing or browse screen showing products, categories, featured collections, or a branded shop."
+    },
+    {
+      "id": "screen-subscription-and-paywall",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Subscription & Paywall",
+      "description": "Upgrade, subscription, or paywall screens presenting plan options and a 'Subscribe' / 'Upgrade' call to action."
+    },
+    {
+      "id": "screen-wallet-and-balance",
+      "type": "screen",
+      "group": "Commerce & Finance",
+      "label": "Wallet & Balance",
+      "description": "Wallet overview showing account balance, points, credits, cards, or cryptocurrency holdings."
+    },
+    {
+      "id": "screen-achievements-and-awards",
+      "type": "screen",
+      "group": "Social",
+      "label": "Achievements & Awards",
+      "description": "Screens showing badges, trophies, streaks, or milestone awards earned by the user."
+    },
+    {
+      "id": "screen-chat-detail",
+      "type": "screen",
+      "group": "Social",
+      "label": "Chat Detail",
+      "description": "Conversation view inside a messaging app showing a thread of messages with one contact or group."
+    },
+    {
+      "id": "screen-comments",
+      "type": "screen",
+      "group": "Social",
+      "label": "Comments",
+      "description": "Comment thread on a post, article, video, or product showing replies, likes, and reply composer."
+    },
+    {
+      "id": "screen-followers-and-following",
+      "type": "screen",
+      "group": "Social",
+      "label": "Followers & Following",
+      "description": "List of users someone follows or is followed by, with follow/unfollow buttons."
+    },
+    {
+      "id": "screen-invite-teammates",
+      "type": "screen",
+      "group": "Social",
+      "label": "Invite Teammates",
+      "description": "Screens to invite people by email, link, or contact list to a team, workspace, or group."
+    },
+    {
+      "id": "screen-leaderboard",
+      "type": "screen",
+      "group": "Social",
+      "label": "Leaderboard",
+      "description": "Ranked list of users or teams by score, points, or activity, usually with position, avatar, and metric."
+    },
+    {
+      "id": "screen-notifications",
+      "type": "screen",
+      "group": "Social",
+      "label": "Notifications",
+      "description": "Notifications inbox listing alerts, activity, mentions, and system messages with unread indicators."
+    },
+    {
+      "id": "screen-reviews-and-ratings",
+      "type": "screen",
+      "group": "Social",
+      "label": "Reviews & Ratings",
+      "description": "Screens showing star ratings, reviews, or a form to leave a review for a product, place, or service."
+    },
+    {
+      "id": "screen-social-feed",
+      "type": "screen",
+      "group": "Social",
+      "label": "Social Feed",
+      "description": "Chronological or algorithmic feed of posts from followed users, including likes, comments, and share actions."
+    },
+    {
+      "id": "screen-user-group-profile",
+      "type": "screen",
+      "group": "Social",
+      "label": "User / Group Profile",
+      "description": "Profile page for another user or a group/community, showing avatar, bio, stats, and their content."
+    },
+    {
+      "id": "screen-article-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Article Detail",
+      "description": "Long-form article or blog post reading view with title, byline, body text, and inline images."
+    },
+    {
+      "id": "screen-browse-and-discover",
+      "type": "screen",
+      "group": "Content",
+      "label": "Browse & Discover",
+      "description": "Browse, explore, or discover screens with categories, curated sections, or search-driven discovery."
+    },
+    {
+      "id": "screen-class-and-lesson-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Class & Lesson Detail",
+      "description": "Detail screen for an online course, class, or lesson with description, chapters, and 'Start' or 'Resume' actions."
+    },
+    {
+      "id": "screen-code-editor",
+      "type": "screen",
+      "group": "Content",
+      "label": "Code Editor",
+      "description": "Screens showing a code editor, IDE, or code playground with syntax-highlighted code and file tree."
+    },
+    {
+      "id": "screen-emails-and-messages",
+      "type": "screen",
+      "group": "Content",
+      "label": "Emails & Messages",
+      "description": "Email inbox, message list, or email reading view (not 1-on-1 chat — think Gmail-style mail)."
+    },
+    {
+      "id": "screen-event-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Event Detail",
+      "description": "Detail view for an event: title, date/time, location, description, attendees, and RSVP button."
+    },
+    {
+      "id": "screen-goal-and-task",
+      "type": "screen",
+      "group": "Content",
+      "label": "Goal & Task",
+      "description": "Detail view for a goal, task, to-do, ticket, or project item with assignee, status, and description."
+    },
+    {
+      "id": "screen-home",
+      "type": "screen",
+      "group": "Content",
+      "label": "Home",
+      "description": "Primary landing or home screen of an app — the dashboard the user sees first after launch or login."
+    },
+    {
+      "id": "screen-news-feed",
+      "type": "screen",
+      "group": "Content",
+      "label": "News Feed",
+      "description": "News or article feed with headlines, thumbnails, and summaries (distinct from a social feed of user posts)."
+    },
+    {
+      "id": "screen-note-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Note Detail",
+      "description": "A single note or document view in a notes/notebook app with rich text, attachments, or markdown."
+    },
+    {
+      "id": "screen-other-content",
+      "type": "screen",
+      "group": "Content",
+      "label": "Other Content",
+      "description": "Catch-all for content detail screens that don't fit the other Content categories."
+    },
+    {
+      "id": "screen-post-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Post Detail",
+      "description": "Detail view for a social post showing the full post, media, author, likes, and comments."
+    },
+    {
+      "id": "screen-product-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Product Detail",
+      "description": "Product detail page: images, title, price, description, variants, reviews, and 'Add to cart' button."
+    },
+    {
+      "id": "screen-quiz",
+      "type": "screen",
+      "group": "Content",
+      "label": "Quiz",
+      "description": "Quiz, test, or question-and-answer screens with multiple-choice options, progress, and scoring."
+    },
+    {
+      "id": "screen-recipe-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Recipe Detail",
+      "description": "Detail view for a cooking recipe: ingredients, instructions, cook time, and hero photo."
+    },
+    {
+      "id": "screen-song-and-podcast-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "Song & Podcast Detail",
+      "description": "Now-playing or detail screen for a song, album, or podcast episode with artwork and playback controls."
+    },
+    {
+      "id": "screen-stories",
+      "type": "screen",
+      "group": "Content",
+      "label": "Stories",
+      "description": "Full-screen, tap-to-advance story viewer (Instagram/Snapchat-style) with progress bars at the top."
+    },
+    {
+      "id": "screen-tv-show-and-movie-detail",
+      "type": "screen",
+      "group": "Content",
+      "label": "TV Show & Movie Detail",
+      "description": "Detail page for a movie or show with poster, synopsis, cast, ratings, and a 'Play' button."
+    },
+    {
+      "id": "screen-add-and-create",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Add & Create",
+      "description": "Screens for creating something new: new post, new project, new file, 'Create' flows and forms."
+    },
+    {
+      "id": "screen-ban-and-block",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Ban & Block",
+      "description": "Screens to block, mute, or ban a user, with warnings or reason selectors."
+    },
+    {
+      "id": "screen-cancel",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Cancel",
+      "description": "Screens to cancel a subscription, order, booking, or in-progress action."
+    },
+    {
+      "id": "screen-delete",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Delete",
+      "description": "Screens focused on deleting an item, with a confirmation and usually a destructive red button."
+    },
+    {
+      "id": "screen-draw-and-annotate",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Draw & Annotate",
+      "description": "Drawing, sketching, markup, or annotation canvases with pen, brush, and shape tools."
+    },
+    {
+      "id": "screen-edit",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Edit",
+      "description": "Edit mode for an existing item (post, profile, document) with editable fields and Save/Cancel."
+    },
+    {
+      "id": "screen-favorite-and-pin",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Favorite & Pin",
+      "description": "Screens about favoriting, pinning, or starring items, or lists of the user's favorites."
+    },
+    {
+      "id": "screen-filter-and-sort",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Filter & Sort",
+      "description": "Filter and sort panels or sheets with multi-select options, ranges, and an 'Apply' button."
+    },
+    {
+      "id": "screen-flag-and-report",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Flag & Report",
+      "description": "Screens to report content or a user, usually with reason options and a text box."
+    },
+    {
+      "id": "screen-follow-and-subscribe",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Follow & Subscribe",
+      "description": "Screens to follow a user, channel, or topic, or subscribe to a feed, newsletter, or channel."
+    },
+    {
+      "id": "screen-import-and-export",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Import & Export",
+      "description": "Screens to import data from other services or export data to a file or another service."
+    },
+    {
+      "id": "screen-invite-and-refer-friends",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Invite & Refer Friends",
+      "description": "Referral screens: share invite link, earn rewards for invites, and track pending invites."
+    },
+    {
+      "id": "screen-like-and-upvote",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Like & Upvote",
+      "description": "Screens centered on liking, upvoting, or reacting to content with counts and reaction pickers."
+    },
+    {
+      "id": "screen-move",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Move",
+      "description": "Screens to move an item to a different folder, list, board, or category."
+    },
+    {
+      "id": "screen-other-action",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Other Action",
+      "description": "Catch-all for action-focused screens that don't fit the other Action categories."
+    },
+    {
+      "id": "screen-publish",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Publish",
+      "description": "Publish, post, or send flow: finalize content and push it live, often with visibility and scheduling options."
+    },
+    {
+      "id": "screen-reorder",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Reorder",
+      "description": "Screens or modes for reordering items in a list via drag handles or up/down controls."
+    },
+    {
+      "id": "screen-save",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Save",
+      "description": "Screens focused on saving something — save-to-collection, save as draft, or save-changes dialogs."
+    },
+    {
+      "id": "screen-schedule",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Schedule",
+      "description": "Scheduling screens: pick a date/time to post, send, book, or run something in the future."
+    },
+    {
+      "id": "screen-search",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Search",
+      "description": "Search entry screens, live search results, suggestions, and recent-search lists."
+    },
+    {
+      "id": "screen-select",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Select",
+      "description": "Multi-select or item-picker modes where the user taps to select one or many items, often with a bulk-action bar."
+    },
+    {
+      "id": "screen-set",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Set",
+      "description": "Screens for setting a value or configuration — alarms, reminders, goals, temperatures, thresholds."
+    },
+    {
+      "id": "screen-share",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Share",
+      "description": "Share sheets, share-to-social screens, and link-sharing screens with copy/share options."
+    },
+    {
+      "id": "screen-transfer-and-send-money",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Transfer & Send Money",
+      "description": "Money-movement screens: send, transfer, request, or receive funds, with amount, recipient, and confirmation."
+    },
+    {
+      "id": "screen-upload-and-download",
+      "type": "screen",
+      "group": "Actions",
+      "label": "Upload & Download",
+      "description": "Screens for uploading files or media, and screens showing download progress or managing downloads."
+    },
+    {
+      "id": "screen-charts",
+      "type": "screen",
+      "group": "Data",
+      "label": "Charts",
+      "description": "Screens where charts or graphs (line, bar, pie, area) are the primary content, often with filters and legends."
+    },
+    {
+      "id": "screen-dashboard",
+      "type": "screen",
+      "group": "Data",
+      "label": "Dashboard",
+      "description": "Analytics dashboard: KPI tiles, charts, and data summaries on one screen, often customizable."
+    },
+    {
+      "id": "screen-progress",
+      "type": "screen",
+      "group": "Data",
+      "label": "Progress",
+      "description": "Progress tracking screens: habit streaks, fitness progress, goal completion, XP bars, and milestones."
+    },
+    {
+      "id": "screen-bookmarks-and-collections",
+      "type": "screen",
+      "group": "User Collections",
+      "label": "Bookmarks & Collections",
+      "description": "User-saved items organized into folders, collections, or boards (saved posts, bookmarked articles, wishlists)."
+    },
+    {
+      "id": "screen-playlists",
+      "type": "screen",
+      "group": "User Collections",
+      "label": "Playlists",
+      "description": "Playlist screens for music, video, or podcasts showing ordered tracks and playback controls."
+    },
+    {
+      "id": "screen-trash-and-archive",
+      "type": "screen",
+      "group": "User Collections",
+      "label": "Trash & Archive",
+      "description": "Trash, recycle bin, or archive screens where deleted or archived items can be restored or purged."
+    },
+    {
+      "id": "screen-audio-player",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Audio Player",
+      "description": "Dedicated audio playback screen with artwork, scrubber, play/pause, next/previous, and volume."
+    },
+    {
+      "id": "screen-audio-and-video-recorder",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Audio & Video Recorder",
+      "description": "Recording screens for voice memos or video with a record button, waveform or viewfinder, and timer."
+    },
+    {
+      "id": "screen-calendar",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Calendar",
+      "description": "Calendar views: month, week, day, or agenda with events on a grid or timeline."
+    },
+    {
+      "id": "screen-call",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Call",
+      "description": "Voice or video call screens: incoming call, in-call UI with mute/hangup, and call history."
+    },
+    {
+      "id": "screen-canvas",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Canvas",
+      "description": "Infinite or bounded canvas workspaces — whiteboards, diagramming, Figma/Miro-like editing surfaces."
+    },
+    {
+      "id": "screen-chat-bot",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Chat Bot",
+      "description": "AI or rule-based chat bot screens with a prompt input and conversational reply bubbles."
+    },
+    {
+      "id": "screen-command-palette",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Command Palette",
+      "description": "Command palette or quick-action picker overlay (Cmd+K) with search and keyboard-driven actions."
+    },
+    {
+      "id": "screen-date-and-time",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Date & Time",
+      "description": "Dedicated date-and-time picking screens or clock/time-zone utilities."
+    },
+    {
+      "id": "screen-map",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Map",
+      "description": "Map-centric screens showing a map as primary content with pins, routes, search, or location picking."
+    },
+    {
+      "id": "screen-media-editor",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Media Editor",
+      "description": "Photo or video editor screens with filters, crop, adjustments, trimming, or layered edits."
+    },
+    {
+      "id": "screen-qr-code",
+      "type": "screen",
+      "group": "Utility",
+      "label": "QR Code",
+      "description": "Screens that display or scan a QR code, often with a scanner viewfinder or a generated QR code image."
+    },
+    {
+      "id": "screen-timeline-and-history",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Timeline & History",
+      "description": "Chronological history or activity log screens (audit log, version history, browsing history, timeline view)."
+    },
+    {
+      "id": "screen-timer-and-clock",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Timer & Clock",
+      "description": "Timer, stopwatch, or clock screens with large time display and start/stop controls."
+    },
+    {
+      "id": "screen-video-player",
+      "type": "screen",
+      "group": "Utility",
+      "label": "Video Player",
+      "description": "Video playback screens with video frame, scrubber, play/pause, volume, fullscreen, and captions."
+    },
+    {
+      "id": "screen-kanban-board",
+      "type": "screen",
+      "group": "Layouts",
+      "label": "Kanban Board",
+      "description": "Column-based board layout (To Do / Doing / Done) with draggable cards, like Trello or Jira boards."
+    },
+    {
+      "id": "screen-multi-column-layout",
+      "type": "screen",
+      "group": "Layouts",
+      "label": "Multi-Column Layout",
+      "description": "Layouts with two or more primary columns — dual-pane inbox, three-column Slack, master-detail-side layouts."
+    },
+    {
+      "id": "element-accordion",
+      "type": "element",
+      "group": "Control",
+      "label": "Accordion",
+      "description": "Collapsible section with a header that expands or collapses a content area when tapped, often with a chevron."
+    },
+    {
+      "id": "element-breadcrumbs",
+      "type": "element",
+      "group": "Control",
+      "label": "Breadcrumbs",
+      "description": "Horizontal trail of clickable path segments separated by '>' or '/' showing hierarchy and the current page."
+    },
+    {
+      "id": "element-button",
+      "type": "element",
+      "group": "Control",
+      "label": "Button",
+      "description": "Tappable action control with text and/or icon — primary, secondary, tertiary, or destructive filled/outlined buttons."
+    },
+    {
+      "id": "element-checkbox",
+      "type": "element",
+      "group": "Control",
+      "label": "Checkbox",
+      "description": "A small square that can be checked or unchecked to toggle a boolean option, often used in lists."
+    },
+    {
+      "id": "element-color-picker",
+      "type": "element",
+      "group": "Control",
+      "label": "Color Picker",
+      "description": "Control for picking a color — swatches, color wheel, sliders, or hex input."
+    },
+    {
+      "id": "element-combobox",
+      "type": "element",
+      "group": "Control",
+      "label": "Combobox",
+      "description": "Text field combined with a dropdown list of suggestions or selectable options (typeahead)."
+    },
+    {
+      "id": "element-date-picker",
+      "type": "element",
+      "group": "Control",
+      "label": "Date Picker",
+      "description": "Control for selecting a date — calendar grid, wheel picker, or date input."
+    },
+    {
+      "id": "element-editable-text",
+      "type": "element",
+      "group": "Control",
+      "label": "Editable Text",
+      "description": "Inline-editable text that becomes a text field when clicked — commonly seen for renaming titles in place."
+    },
+    {
+      "id": "element-file-upload",
+      "type": "element",
+      "group": "Control",
+      "label": "File Upload",
+      "description": "Control for uploading files — drag-and-drop zone, file chooser button, or upload area with file previews."
+    },
+    {
+      "id": "element-floating-action-button",
+      "type": "element",
+      "group": "Control",
+      "label": "Floating Action Button",
+      "description": "Circular button that floats above content in a fixed screen position, usually a '+' for a primary action."
+    },
+    {
+      "id": "element-link",
+      "type": "element",
+      "group": "Control",
+      "label": "Link",
+      "description": "Inline text link (typically underlined or colored) that navigates elsewhere when clicked."
+    },
+    {
+      "id": "element-page-control",
+      "type": "element",
+      "group": "Control",
+      "label": "Page Control",
+      "description": "Row of small dots indicating current page/position in a carousel or paginated content (dot indicators)."
+    },
+    {
+      "id": "element-pagination",
+      "type": "element",
+      "group": "Control",
+      "label": "Pagination",
+      "description": "Numbered page navigation control with Previous/Next and page numbers (e.g., < 1 2 3 >)."
+    },
+    {
+      "id": "element-radio-button",
+      "type": "element",
+      "group": "Control",
+      "label": "Radio Button",
+      "description": "Circular selector in a group where only one option can be selected at a time."
+    },
+    {
+      "id": "element-rating-control",
+      "type": "element",
+      "group": "Control",
+      "label": "Rating Control",
+      "description": "Star rating, thumbs-up/down, or emoji rating control used to capture a rating from the user."
+    },
+    {
+      "id": "element-search-bar",
+      "type": "element",
+      "group": "Control",
+      "label": "Search Bar",
+      "description": "Text input with a magnifying-glass icon for searching, often with a clear button and placeholder like 'Search'."
+    },
+    {
+      "id": "element-segmented-control",
+      "type": "element",
+      "group": "Control",
+      "label": "Segmented Control",
+      "description": "Pill-shaped row of 2+ mutually exclusive options where one is highlighted as selected (like iOS segmented control)."
+    },
+    {
+      "id": "element-select",
+      "type": "element",
+      "group": "Control",
+      "label": "Select",
+      "description": "Dropdown select control showing a single value with a caret that opens a list of options."
+    },
+    {
+      "id": "element-slider",
+      "type": "element",
+      "group": "Control",
+      "label": "Slider",
+      "description": "Horizontal track with a draggable thumb used to pick a value within a range."
+    },
+    {
+      "id": "element-stepper",
+      "type": "element",
+      "group": "Control",
+      "label": "Stepper",
+      "description": "+/- control for incrementing or decrementing a numeric value in small steps."
+    },
+    {
+      "id": "element-switch",
+      "type": "element",
+      "group": "Control",
+      "label": "Switch",
+      "description": "Toggle control (iOS-style switch) that flips a setting on or off, often with a colored background when on."
+    },
+    {
+      "id": "element-tab",
+      "type": "element",
+      "group": "Control",
+      "label": "Tab",
+      "description": "Horizontal row of tab labels where selecting one swaps the content area below it."
+    },
+    {
+      "id": "element-text-field",
+      "type": "element",
+      "group": "Control",
+      "label": "Text Field",
+      "description": "Single- or multi-line text input box for user-entered text, with a label, placeholder, or helper text."
+    },
+    {
+      "id": "element-tile",
+      "type": "element",
+      "group": "Control",
+      "label": "Tile",
+      "description": "Tappable rectangular block (larger than a chip, simpler than a card) used to present options in a grid."
+    },
+    {
+      "id": "element-time-picker",
+      "type": "element",
+      "group": "Control",
+      "label": "Time Picker",
+      "description": "Control for selecting a time of day — clock face, wheel picker, or hour/minute inputs."
+    },
+    {
+      "id": "element-badge",
+      "type": "element",
+      "group": "View",
+      "label": "Badge",
+      "description": "Small label or dot attached to an element showing a count or status (red notification dot, '99+' bubble)."
+    },
+    {
+      "id": "element-banner",
+      "type": "element",
+      "group": "View",
+      "label": "Banner",
+      "description": "Wide, full-width attention bar across a screen — announcements, alerts, or promotional banners."
+    },
+    {
+      "id": "element-card",
+      "type": "element",
+      "group": "View",
+      "label": "Card",
+      "description": "Contained rectangular unit (usually with a shadow or border) grouping related content like an image, title, and actions."
+    },
+    {
+      "id": "element-carousel",
+      "type": "element",
+      "group": "View",
+      "label": "Carousel",
+      "description": "Horizontally scrollable or swipeable row of cards/images, often paired with page dots."
+    },
+    {
+      "id": "element-chip",
+      "type": "element",
+      "group": "View",
+      "label": "Chip",
+      "description": "Small, pill-shaped element representing a tag, filter, selected option, or person (with optional close icon)."
+    },
+    {
+      "id": "element-divider",
+      "type": "element",
+      "group": "View",
+      "label": "Divider",
+      "description": "Thin horizontal or vertical line used to separate groups of content."
+    },
+    {
+      "id": "element-gallery",
+      "type": "element",
+      "group": "View",
+      "label": "Gallery",
+      "description": "Grid or mosaic of images — photo gallery, media library thumbnails."
+    },
+    {
+      "id": "element-grid-list",
+      "type": "element",
+      "group": "View",
+      "label": "Grid List",
+      "description": "A list presented in a grid of tiles or cards (as opposed to a vertical list)."
+    },
+    {
+      "id": "element-keyboard-key",
+      "type": "element",
+      "group": "View",
+      "label": "Keyboard Key",
+      "description": "Visual representation of a keyboard key or shortcut, like 'Cmd + K' badges in UI."
+    },
+    {
+      "id": "element-loading-indicator",
+      "type": "element",
+      "group": "View",
+      "label": "Loading Indicator",
+      "description": "Spinner or circular progress indicator showing that content is loading (indeterminate)."
+    },
+    {
+      "id": "element-map-pin",
+      "type": "element",
+      "group": "View",
+      "label": "Map Pin",
+      "description": "Marker or pin icon placed on a map to indicate a location."
+    },
+    {
+      "id": "element-progress-indicator",
+      "type": "element",
+      "group": "View",
+      "label": "Progress Indicator",
+      "description": "Determinate progress bar or circular progress showing percent complete, step count, or upload progress."
+    },
+    {
+      "id": "element-side-navigation",
+      "type": "element",
+      "group": "View",
+      "label": "Side Navigation",
+      "description": "Vertical navigation rail or sidebar down the left (or right) side of a screen with nav items and icons."
+    },
+    {
+      "id": "element-skeleton",
+      "type": "element",
+      "group": "View",
+      "label": "Skeleton",
+      "description": "Gray placeholder shapes mimicking the layout of loading content (skeleton screens)."
+    },
+    {
+      "id": "element-stacked-list",
+      "type": "element",
+      "group": "View",
+      "label": "Stacked List",
+      "description": "Vertical list of rows stacked top-to-bottom — list items, settings rows, inbox rows."
+    },
+    {
+      "id": "element-status-dot",
+      "type": "element",
+      "group": "View",
+      "label": "Status Dot",
+      "description": "Small colored dot indicating online/offline, live, or status (green/yellow/red dot)."
+    },
+    {
+      "id": "element-table",
+      "type": "element",
+      "group": "View",
+      "label": "Table",
+      "description": "Data table with rows and columns, column headers, and optionally sortable/filterable cells."
+    },
+    {
+      "id": "element-table-of-contents",
+      "type": "element",
+      "group": "View",
+      "label": "Table of Contents",
+      "description": "Outline or jump-to-section list indicating the structure of a long document or page."
+    },
+    {
+      "id": "element-toolbar",
+      "type": "element",
+      "group": "View",
+      "label": "Toolbar",
+      "description": "Compact bar of action icons/buttons, often at the top or bottom of a view (formatting toolbar, editor toolbar)."
+    },
+    {
+      "id": "element-top-navigation-bar",
+      "type": "element",
+      "group": "View",
+      "label": "Top Navigation Bar",
+      "description": "Horizontal bar at the top of a screen with title, back button, and action icons (app bar, nav bar, header)."
+    },
+    {
+      "id": "element-tree",
+      "type": "element",
+      "group": "View",
+      "label": "Tree",
+      "description": "Hierarchical tree view with expandable/collapsible parent-child nodes (file tree, org chart)."
+    },
+    {
+      "id": "element-coach-marks",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Coach Marks",
+      "description": "Tooltip-style annotations layered over the UI to explain elements during onboarding, often numbered."
+    },
+    {
+      "id": "element-context-menu",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Context Menu",
+      "description": "Right-click or long-press menu that appears next to an item with contextual actions."
+    },
+    {
+      "id": "element-dialog",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Dialog",
+      "description": "Modal dialog box centered over content with a title, body, and action buttons (OK/Cancel)."
+    },
+    {
+      "id": "element-drawer",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Drawer",
+      "description": "Panel that slides in from an edge of the screen (left, right, top, or bottom) — side drawer or bottom sheet."
+    },
+    {
+      "id": "element-dropdown-menu",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Dropdown Menu",
+      "description": "Menu that opens below a button or trigger with a list of selectable actions or options."
+    },
+    {
+      "id": "element-full-screen-overlay",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Full-Screen Overlay",
+      "description": "A full-screen modal overlay that takes over the entire viewport, often used for lightboxes or takeovers."
+    },
+    {
+      "id": "element-navigation-menu",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Navigation Menu",
+      "description": "Expanded navigation overlay (often the hamburger menu) that takes over part or all of the screen."
+    },
+    {
+      "id": "element-popover",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Popover",
+      "description": "Small overlay anchored to a trigger element, floating over content with arrow/tail pointing to its source."
+    },
+    {
+      "id": "element-toast",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Toast",
+      "description": "Short, auto-dismissing notification appearing briefly at the top or bottom of the screen (snackbar)."
+    },
+    {
+      "id": "element-tooltip",
+      "type": "element",
+      "group": "Overlay",
+      "label": "Tooltip",
+      "description": "Small hover/long-press hint showing a brief text label about an element."
+    },
+    {
+      "id": "element-avatar",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Avatar",
+      "description": "Circular (or squircle) profile image representing a person, account, or group — may show initials if no photo."
+    },
+    {
+      "id": "element-icon",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Icon",
+      "description": "Small, single-concept pictogram used in buttons, lists, and navigation (usually monochromatic line or filled icon)."
+    },
+    {
+      "id": "element-illustration",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Illustration",
+      "description": "Decorative, flat or stylized illustration — often used in empty states, onboarding, and marketing surfaces."
+    },
+    {
+      "id": "element-logo",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Logo",
+      "description": "Brand logo or wordmark for an app, product, or company."
+    },
+    {
+      "id": "element-photo",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Photo",
+      "description": "Photographic image — real-world photography as opposed to illustration or icon."
+    },
+    {
+      "id": "element-animation-and-video",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Animation & Video",
+      "description": "Animated content or video playing inline — Lottie animations, looping videos, GIFs embedded in the UI."
+    },
+    {
+      "id": "element-hero-image",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Hero Image",
+      "description": "Large, prominent image/graphic at the top of a screen used as a banner or header (hero/banner image)."
+    },
+    {
+      "id": "element-thumbnail",
+      "type": "element",
+      "group": "Imagery",
+      "label": "Thumbnail",
+      "description": "Small preview image representing a larger asset (video thumb, file preview, album art thumbnail)."
+    }
+  ],
+  "excludedLegacyLabels": [
+    {
+      "label": "Dark Mode",
+      "reason": "Moved to style facet"
+    },
+    {
+      "label": "Internal Tool",
+      "reason": "Too broad to be a reliable visual screen label"
+    },
+    {
+      "label": "Misc",
+      "reason": "Too broad to be a reliable visual screen label"
+    }
+  ]
+}
