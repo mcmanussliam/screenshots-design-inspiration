@@ -48,3 +48,23 @@ test('unverified dimensions stay null, not guessed from aspect ratio',()=>{
  assert.equal(data.products[0].screenshots[0].orientation,'unknown');
  assert.equal(data.products[0].category,'Website');
 });
+
+test('nested design screenshots remain in their parent product, not silently excluded',()=>{
+ const files=['design/web/bloomberg-terminal/index.html',
+  'design/web/bloomberg-terminal/industry-dashboards/screen-01.png'];
+ const d=createCatalog(files,()=> '');
+ assert.equal(d.products.length,1);
+ assert.equal(d.products[0].screenshots.length,1);
+ assert.match(d.products[0].screenshots[0].url,/industry-dashboards\\/screen-01\\.png$/);
+});
+test('migrated image paths retain verified native dimensions',()=>{
+ const files=[{path:'design/marketing/fellow-app/index.html',sizeBytes:20},
+ {path:'design/marketing/fellow-app/screen.png',sizeBytes:400}];
+ const reader=(path)=>path==='data/image-path-migrations.json'?
+  '{"files":{"design/marketing/fellow-app/screen.png":"design/marketing/screen.png"}}':
+  path==='data/image-dimensions.json'?
+  '{"images":{"design/marketing/screen.png":{"width":1280,"height":720}}}':'';
+ const d=createCatalog(files,reader);
+ assert.equal(d.products[0].screenshots[0].width,1280);
+ assert.equal(d.products[0].screenshots[0].height,720);
+});

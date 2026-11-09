@@ -37,8 +37,10 @@ function listFiles() {
   // ls-tree -l triggers lazy downloads of every blob in a sparse clone.
   // Keep the archive metadata-only: tracked byte sizes come from GitHub's tree API.
   const sizes=safeJson(readTracked('data/blob-sizes.json')).files || {};
+  const redirects=safeJson(readTracked('data/image-path-migrations.json')).files || {};
   return git('ls-tree','-r','--name-only','HEAD').split('\n').filter(Boolean)
-    .map(path=>({path,sizeBytes:Number.isSafeInteger(sizes[path])?sizes[path]:null}));
+    .map(path=>({path,sizeBytes:Number.isSafeInteger(sizes[path])?sizes[path]:
+      (Number.isSafeInteger(sizes[redirects[path]])?sizes[redirects[path]]:null)}));
 }
 function readTracked(path) {
   try { return git('show','HEAD:'+path); }catch{return '';}
@@ -49,15 +51,16 @@ const alpha = (a,b) => a.localeCompare(b,'en',{numeric:true});
 export function createCatalog(entries,readSource=readTracked) {
   const productMetadata=safeJson(readSource('data/product-metadata.json')).products || {};
   const imageMetadata=safeJson(readSource('data/image-dimensions.json')).images || {};
+  const imageRedirects=safeJson(readSource('data/image-path-migrations.json')).files || {};
   const sourceRecords=safeJson(readSource('data/source-provenance.json')).products || {};
   const groups=new Map();
   for(const entry of entries){
     const path=typeof entry==='string'?entry:entry.path;
     const parts=path.split('/');
-    if(parts.length!==4||parts[0]!=='design'||!platforms.has(parts[1]))continue;
+    if(parts.length<4||parts[0]!=='design'||!platforms.has(parts[1]))continue;
     const key=parts.slice(0,3).join('/');
     if(!groups.has(key))groups.set(key,{platform:parts[1],folder:parts[2],files:[]});
-    groups.get(key).files.push({name:parts[3],bytes:typeof entry==='string'?null:entry.sizeBytes});
+    groups.get(key).files.push({name:parts.slice(3).join('/'),bytes:typeof entry==='string'?null:entry.sizeBytes});
   }
   const products=[],seen=new Set();
   for(const [dir,group] of groups){
@@ -81,7 +84,7 @@ export function createCatalog(entries,readSource=readTracked) {
     const productsTags=classifyTags(front.tags);
     const screenshotMedia=images.map(file=>{
       const path=dir+'/'+file.name;
-      const dimensions=imageMetadata[path] || {};
+      const dimensions=imageMetadata[path] || imageMetadata[imageRedirects[path]] || {};
       const width=positiveInteger(dimensions.width)?dimensions.width:null;
       const height=positiveInteger(dimensions.height)?dimensions.height:null;
       const originals=Array.isArray(screenshotTags[file.name])?screenshotTags[file.name]:[];

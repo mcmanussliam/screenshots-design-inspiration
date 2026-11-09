@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "note": "Legacy original-image metadata path retained to preserve verified byte size and dimensions after moving the image to a product folder.",
+  "files": {
+    "design/marketing/fellow-app/fellow-app-desktop.png": "design/marketing/fellow-app-desktop.png"
+  }
+}
