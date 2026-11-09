@@ -1,7 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
-  <style>
-    path { fill: #171718; }
-    @media (prefers-color-scheme: dark) { path { fill: #f5f5f5; } }
-  </style>
-  <path transform="translate(6 9) skewX(-12)" d="M0 10.8 11 4v17H0zM13 10.4 24 2v21H13zM26 11.2 37 6v13H26z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>g { fill: #171718; } @media (prefers-color-scheme: dark) { g { fill: #f5f5f5; } }</style>
+  <g><path fill-rule="evenodd" d="M9 43C2 35 6 24 16 20 22 17 29 18 36 23L43 16C52 9 62 14 61 25 60 36 52 44 42 42 38 41 34 39 30 36L23 43C19 47 13 47 9 43ZM14 36C16 39 19 37 22 34L26 30C23 28 20 28 17 29 14 30 12 33 14 36ZM37 30C40 33 44 35 48 32 52 29 55 23 53 21 51 19 48 22 44 25Z"/></g>
 </svg>
