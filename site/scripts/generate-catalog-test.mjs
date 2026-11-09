@@ -55,7 +55,7 @@ test('nested design screenshots remain in their parent product, not silently exc
  const d=createCatalog(files,()=> '');
  assert.equal(d.products.length,1);
  assert.equal(d.products[0].screenshots.length,1);
- assert.match(d.products[0].screenshots[0].url,/industry-dashboards\\/screen-01\\.png$/);
+ assert.ok(d.products[0].screenshots[0].url.endsWith('/industry-dashboards/screen-01.png'));
 });
 test('migrated image paths retain verified native dimensions',()=>{
  const files=[{path:'design/marketing/fellow-app/index.html',sizeBytes:20},
