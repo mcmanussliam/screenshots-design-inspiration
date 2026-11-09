@@ -32,7 +32,7 @@ for(const [dir,paths] of folders){
  const tagsPath=dir+'/tags.json',indexPath=dir+'/index.html';
  if(!files.has(tagsPath)){unknown+=paths.length;continue;}
  let tags=JSON.parse(read(tagsPath)),updated=false;
- const existing=new Set(paths.map(basename));
+ const existing=new Set(paths.map(path=>basename(path)));
  for(const name of Object.keys(tags)){
   if(!existing.has(name)){delete tags[name];orphans++;updated=true;}
   else if(Array.isArray(tags[name])){
