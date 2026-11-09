@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contribution standards and image-rights policy
+    url: https://github.com/mcmanussliam/screenshots-design-inspiration/blob/main/contributing.md
+    about: Read the folder, tagging, licensing and dataset standards before contributing.

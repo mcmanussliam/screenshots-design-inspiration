@@ -1,0 +1,33 @@
+name: Report incorrect metadata or a broken image
+description: Flag a wrong tag, resolution, attribution, missing image or duplicate
+title: "[data-quality] "
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Open Screens page or dataset path
+      placeholder: https://mcmanussliam.github.io/screenshots-design-inspiration/apps/ios/example/
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Problem type
+      options:
+        - Incorrect screen tag
+        - Wrong product category or description
+        - Broken or mismatched image
+        - Incorrect dimensions
+        - Duplicate / low-quality image
+        - Source / attribution / rights concern
+        - Privacy or sensitive content
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What needs correcting?
+      description: Include the current value and the verified replacement if available.
+    validations:
+      required: true

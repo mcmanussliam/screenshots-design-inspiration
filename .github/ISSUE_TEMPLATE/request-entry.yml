@@ -1,0 +1,49 @@
+name: Request a new app or design reference
+description: Suggest an app, website, flow or UI pattern for the library
+title: "[request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for improving Open Screens. Requests do not require any screenshots or code.
+        Please give a public product page and describe which screens would be useful.
+  - type: input
+    id: product
+    attributes:
+      label: App or website name
+      placeholder: Example Product
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS
+        - Android
+        - Web
+        - Email
+        - Marketing
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: public-url
+    attributes:
+      label: Official website or public app URL
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: useful-screens
+    attributes:
+      label: Screens or user flows you want
+      description: Which journeys should contributors capture?
+      placeholder: Sign up, onboarding, dashboard, billing, search, checkout...
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Notes and potential sources
+      description: Optional. Include public source links and rights information if known.

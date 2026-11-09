@@ -1,0 +1,77 @@
+name: Submit screenshots or a design entry
+description: Offer a screenshot, product reference or recorded flow for review
+title: "[submission] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please upload images directly to this issue description or link to your GitHub pull request.
+        Contributions are human-reviewed before inclusion. Do not upload private information.
+        We preserve original image dimensions and store provenance and attribution.
+  - type: input
+    id: product
+    attributes:
+      label: Product or project name
+      placeholder: Product Name
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS
+        - Android
+        - Web
+        - Email
+        - Marketing
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Original public source URL
+      description: The product, project or page where the UI can be verified
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: rights
+    attributes:
+      label: Reason this can be redistributed
+      options:
+        - I created and own these screenshots and designs
+        - Permission from the rights holder
+        - Open licence with attribution
+        - Applicable copyright exception (please explain)
+        - Unsure - request review before publishing
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Permission or licence evidence URL
+      description: Required for permission or open-licence claims
+      placeholder: https://example.com/license
+  - type: textarea
+    id: assets
+    attributes:
+      label: Screenshots, recordings, or file links
+      description: Drag and drop PNG/JPEG/WebP or provide public URLs. Include capture date and viewport when known.
+    validations:
+      required: true
+  - type: textarea
+    id: tags
+    attributes:
+      label: Screen types, components, flows, styles
+      description: Use the canonical vocabulary from data/tag-vocabulary.json. Don't guess hidden interactions.
+      placeholder: "Login; Text Field; Social Login; Dark Mode"
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safety checks
+      options:
+        - label: The submission contains no passwords, tokens, or personal data.
+          required: true
+        - label: I provided accurate source attribution and a good-faith rights explanation.
+          required: true
