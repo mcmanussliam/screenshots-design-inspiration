@@ -22,12 +22,21 @@ test('catalogue includes image byte size and verified dimensions when supplied',
  ];
  const reader=p=>p==='data/image-dimensions.json'?JSON.stringify({images:{'design/ios/demo/01-login.png':{width:1080,height:1920}}}):
   p==='data/product-metadata.json'?JSON.stringify({products:{'ios:demo':{category:'Productivity',description:'Demo app'}}}):
+  p==='data/source-provenance.json'?JSON.stringify({products:{'ios:demo':{
+   source:'https://example.org',owner:'Example',license:'CC0-1.0',captureDate:'2026-11-09',
+   screens:[{file:'01-login.png',source:'https://example.org/demo',sha256:'a'.repeat(64)}]
+  }}}):
   p.endsWith('tags.json')?'{"01-login.png":["Log In","Text Field"],"02-home.png":["Home"]}':
   '---\ngallery-directory: Demo\ntags: [Dark Mode]\n---';
  const data=createCatalog(paths,reader),p=data.products[0],r=reportCatalog(data);
  assert.equal(p.category,'Productivity');assert.equal(p.description,'Demo app');
  assert.equal(p.screenshots[0].width,1080);assert.equal(p.screenshots[0].height,1920);
  assert.equal(p.screenshots[0].sizeBytes,1000);assert.equal(p.screenshots[1].width,null);
+ assert.equal(p.source.license,'CC0-1.0');
+ assert.equal(p.screenshots[0].reviewStatus,'source-documented');
+ assert.equal(p.screenshots[0].sourceUrl,'https://example.org/demo');
+ assert.equal(p.screenshots[1].reviewStatus,'legacy-unverified');
+ assert.equal(r.sourceDocumentedScreens,1);
  assert.deepEqual(p.screenshots[0].tagGroups.screen,['Login']);
  assert.deepEqual(p.screenshots[0].tagGroups.element,['Text Field']);
  assert.equal(p.videos.length,1);assert.equal(r.withDimensions,1);

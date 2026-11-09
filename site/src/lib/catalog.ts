@@ -8,12 +8,15 @@ export interface Screenshot {
   width:number|null;height:number|null;aspectRatio:number|null;
   orientation:'portrait'|'landscape'|'square'|'unknown';
   tags:string[];rawTags:string[];tagGroups:TagGroups;
+  reviewStatus:'source-documented'|'legacy-unverified';
+  sourceUrl:string|null;capturedAt:string|null;
 }
 export interface Recording {name:string;url:string;format:string;sizeBytes:number|null}
 export interface Product {
   id:string;name:string;slug:string;platform:string;kind:'app'|'site';path:string;
   category:string;description:string;domain:string;
   tags:string[];tagGroups:TagGroups;screenshots:Screenshot[];videos:Recording[];
+  source:{page:string|null;owner:string|null;license:string|null;licenseUrl:string|null;licenseEvidence:string|null;credit:string|null;method:string|null;captureDate:string|null}|null;
 }
 export const products=(catalog as {products:Product[]}).products;
 export const allTags=[...new Set(products.flatMap(p=>[...p.tags,...p.screenshots.flatMap(s=>s.tags)]))].sort();

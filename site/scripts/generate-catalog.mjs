@@ -49,6 +49,7 @@ const alpha = (a,b) => a.localeCompare(b,'en',{numeric:true});
 export function createCatalog(entries,readSource=readTracked) {
   const productMetadata=safeJson(readSource('data/product-metadata.json')).products || {};
   const imageMetadata=safeJson(readSource('data/image-dimensions.json')).images || {};
+  const sourceRecords=safeJson(readSource('data/source-provenance.json')).products || {};
   const groups=new Map();
   for(const entry of entries){
     const path=typeof entry==='string'?entry:entry.path;
@@ -73,6 +74,10 @@ export function createCatalog(entries,readSource=readTracked) {
     }
     const id=platform+':'+slug;seen.add(id);
     const info=productMetadata[id]||{};
+    const source=sourceRecords[id]||null;
+    const documented=new Map((Array.isArray(source?.screens)?source.screens:[])
+      .filter(screen=>typeof screen.file==='string' && typeof screen.source==='string' && /^[a-f0-9]{64}$/.test(screen.sha256||''))
+      .map(screen=>[screen.file,screen]));
     const productsTags=classifyTags(front.tags);
     const screenshotMedia=images.map(file=>{
       const path=dir+'/'+file.name;
@@ -81,12 +86,16 @@ export function createCatalog(entries,readSource=readTracked) {
       const height=positiveInteger(dimensions.height)?dimensions.height:null;
       const originals=Array.isArray(screenshotTags[file.name])?screenshotTags[file.name]:[];
       const groups=classifyTags(originals);
+      const evidence=documented.get(file.name);
       return {
         name:file.name,url:urlFor(path),format:file.name.split('.').at(-1).toLowerCase(),
         sizeBytes:Number.isSafeInteger(file.bytes)?file.bytes:null,
         width,height,aspectRatio:width&&height?Math.round(width/height*10000)/10000:null,
         orientation:width&&height?(width>height?'landscape':width<height?'portrait':'square'):'unknown',
-        tags:groupedTags(originals),tagGroups:groups,rawTags:originals
+        tags:groupedTags(originals),tagGroups:groups,rawTags:originals,
+        reviewStatus:evidence?'source-documented':'legacy-unverified',
+        sourceUrl:evidence?.source||null,
+        capturedAt:evidence?source.captureDate||null:null
       };
     });
     const videos=group.files.filter(file=>videoRE.test(file.name)).sort((a,b)=>alpha(a.name,b.name))
@@ -97,6 +106,12 @@ export function createCatalog(entries,readSource=readTracked) {
       category:typeof info.category==='string'&&info.category.trim()?info.category:(kind==='app'?'Mobile app':'Website'),
       description:typeof info.description==='string'?info.description:'',
       domain:typeof info.domain==='string'?info.domain:'',
+      source:source?{
+        page:source.source||null,owner:source.owner||null,
+        license:source.license||null,licenseUrl:source.licenseUrl||null,
+        licenseEvidence:source.licenseEvidence||null,credit:source.credit||null,
+        method:source.method||null,captureDate:source.captureDate||null
+      }:null,
       tags:groupedTags(front.tags),tagGroups:productsTags,
       screenshots:screenshotMedia,videos
     });
@@ -107,12 +122,15 @@ export function createCatalog(entries,readSource=readTracked) {
 export function reportCatalog(data) {
   const summary={version:1,products:data.products.length,screenshots:0,videos:0,
     withDimensions:0,withScreenTags:0,unreviewedTagInstances:0,
+    sourceDocumentedScreens:0,legacyWithoutProvenance:0,
     orientation:{portrait:0,landscape:0,square:0,unknown:0},formats:{},sourceBytes:0,
     allTags:{screen:{},element:{},flow:{},pattern:{},style:{},unreviewed:{}}};
   for(const product of data.products){
     summary.screenshots+=product.screenshots.length;summary.videos+=product.videos.length;
     for(const screen of product.screenshots){
       if(screen.width&&screen.height)summary.withDimensions++;
+      if(screen.reviewStatus==='source-documented')summary.sourceDocumentedScreens++;
+      else summary.legacyWithoutProvenance++;
       if(screen.tags.length)summary.withScreenTags++;
       summary.orientation[screen.orientation]++;
       summary.formats[screen.format]=(summary.formats[screen.format]||0)+1;

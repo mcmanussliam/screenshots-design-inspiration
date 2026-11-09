@@ -27,6 +27,14 @@ const screenTypeOptions=[...new Set(product.screenshots.flatMap(s=>s.tagGroups.s
    <div class="detail-actions"><button class="white-button" type="button" data-save={product.id}>♡ Save</button>
     <a class="ghost-button" href={base('saved/')}>My collections</a></div>
   </div>
+  {product.source&&<details class="detail-patterns source-provenance"><summary>Source, attribution &amp; licence</summary>
+    <p>{product.source.credit||'Captured from a documented source.'}</p>
+    <div class="source-links">
+      {product.source.page&&<a href={product.source.page} target="_blank" rel="noopener noreferrer">Original reference ↗</a>}
+      {product.source.licenseEvidence&&<a href={product.source.licenseEvidence} target="_blank" rel="noopener noreferrer">Licence evidence ↗</a>}
+    </div>
+  </details>}
+  {!product.source&&<p class="source-undocumented">Historical reference · Capture provenance and reuse rights not verified</p>}
   {product.tags.length>0&&<details class="detail-patterns"><summary>Explore {product.tags.length} tagged patterns</summary>
     <div class="detail-tags">{product.tags.map(t=><span>{t}</span>)}</div>
    </details>}
