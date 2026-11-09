@@ -70,6 +70,85 @@
             "Avatar",
             "Button"
           ]
+        },
+        {
+          "filename": "headers.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/headers/",
+          "tags": [
+            "Navigation Bar",
+            "Button"
+          ]
+        },
+        {
+          "filename": "features.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/features/",
+          "tags": [
+            "Card",
+            "Button"
+          ]
+        },
+        {
+          "filename": "footers.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/footers/",
+          "tags": [
+            "Link",
+            "Navigation Bar"
+          ]
+        },
+        {
+          "filename": "dropdowns.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/dropdowns/",
+          "tags": [
+            "Dropdown Menu",
+            "Button"
+          ]
+        },
+        {
+          "filename": "list-groups.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/list-groups/",
+          "tags": [
+            "Stacked List",
+            "Button"
+          ]
+        },
+        {
+          "filename": "modals.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/modals/",
+          "tags": [
+            "Modal",
+            "Button"
+          ]
+        },
+        {
+          "filename": "buttons.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/buttons/",
+          "tags": [
+            "Button"
+          ]
+        },
+        {
+          "filename": "navbars.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/navbars/",
+          "tags": [
+            "Navigation Bar",
+            "Button"
+          ]
+        },
+        {
+          "filename": "jumbotron.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/jumbotron/",
+          "tags": [
+            "Button",
+            "Card"
+          ]
+        },
+        {
+          "filename": "badges.png",
+          "url": "https://getbootstrap.com/docs/5.3/examples/badges/",
+          "tags": [
+            "Badge",
+            "Button"
+          ]
         }
       ]
     }
