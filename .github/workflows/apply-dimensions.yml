@@ -27,7 +27,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run download 42537777526 --repo "$GITHUB_REPOSITORY" -n image-dimensions -D data
+          mkdir -p audit-download
+          gh run download 42537777526 --repo "$GITHUB_REPOSITORY" -n image-dimensions -D audit-download
+          mv audit-download/image-dimensions.json data/image-dimensions.json
       - name: Publish verified metadata as a remote Git commit
         env:
           GH_TOKEN: ${{ github.token }}
