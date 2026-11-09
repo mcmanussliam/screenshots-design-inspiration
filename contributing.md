@@ -41,4 +41,6 @@ Builds publish catalog.json (v2) plus dataset-report.json, including tag and dim
 
 ## Reviewing existing data
 
-See the live Dataset quality page for remaining untagged screenshots. Report mislabelled images using the **Report data quality** issue template, with screenshot filename and corrected canonical tags. The repository's `data/curation-report.json` retains the cross-product duplicate review list. Never guess the correct app from a filename alone; verify the visual and product source. For new screenshots, document provenance and rights in `data/source-provenance.json`.
+Use the [Dataset quality dashboard](https://mcmanussliam.github.io/screenshots-design-inspiration/quality/) to see coverage. To correct a tag or other metadata, [open a pull request](https://github.com/mcmanussliam/screenshots-design-inspiration/pulls) with the affected screenshot filename, your proposed change, and evidence where available.
+
+The repository's `data/curation-report.json` retains the cross-product duplicate review list. Verify the visual and product source before reassigning an image. For new screenshots, document provenance and rights in `data/source-provenance.json`.
