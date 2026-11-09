@@ -38432,6 +38432,26 @@
     "design/web/zoho-people/screen-shot-2018-06-19-at-9-35-53-am.png": {
       "width": 3100,
       "height": 2690
+    },
+    "design/web/bootstrap-examples/dashboard.png": {
+      "width": 1440,
+      "height": 900
+    },
+    "design/web/bootstrap-examples/sign-in.png": {
+      "width": 1440,
+      "height": 900
+    },
+    "design/web/bootstrap-examples/checkout.png": {
+      "width": 1440,
+      "height": 900
+    },
+    "design/web/bootstrap-examples/pricing.png": {
+      "width": 1440,
+      "height": 900
+    },
+    "design/web/bootstrap-examples/sidebars.png": {
+      "width": 1440,
+      "height": 900
     }
   }
 }

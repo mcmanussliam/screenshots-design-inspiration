@@ -1,0 +1,29 @@
+{
+  "dashboard.png": [
+    "Dashboard",
+    "Side Navigation",
+    "Table",
+    "Charts"
+  ],
+  "sign-in.png": [
+    "Login",
+    "Text Field",
+    "Checkbox",
+    "Button"
+  ],
+  "checkout.png": [
+    "Checkout",
+    "Text Field",
+    "Button"
+  ],
+  "pricing.png": [
+    "Pricing",
+    "Card",
+    "Button"
+  ],
+  "sidebars.png": [
+    "Side Navigation",
+    "Avatar",
+    "Button"
+  ]
+}

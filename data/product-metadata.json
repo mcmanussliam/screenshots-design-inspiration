@@ -125,6 +125,11 @@
       "category": "Entertainment",
       "description": "Video and creators",
       "domain": "youtube.com"
+    },
+    "web:bootstrap-examples": {
+      "category": "Design Tools",
+      "description": "Open-source reference templates for common web interfaces",
+      "domain": "getbootstrap.com"
     }
   }
 }

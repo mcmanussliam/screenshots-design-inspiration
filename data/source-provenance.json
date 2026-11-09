@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "products": {
+    "web:bootstrap-examples": {
+      "source": "https://getbootstrap.com/docs/5.3/examples/",
+      "owner": "Bootstrap Authors",
+      "license": "CC-BY-3.0",
+      "licenseEvidence": "https://github.com/twbs/bootstrap#copyright-and-license",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "© Bootstrap Authors, docs CC BY 3.0. Independent screenshot capture by Open Screens; no endorsement implied.",
+      "method": "independent-screenshot-of-approved-public-page",
+      "captureDate": "2026-11-09",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "scale": 1
+      },
+      "screens": [
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/dashboard/",
+          "file": "dashboard.png",
+          "sha256": "29e08779f4e7269528c73d1181813f62571a1ce667e30ff7d42178ab3617beff",
+          "bytes": 90763
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/sign-in/",
+          "file": "sign-in.png",
+          "sha256": "7fe2632e7ec684865957a06ac8c0ccc4178d0fa8bcfd5f3e015299850707c013",
+          "bytes": 24462
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/checkout/",
+          "file": "checkout.png",
+          "sha256": "7f932371d1934293301501bf446b782aaa4fcd83b731d3dd27d5218abe10ede7",
+          "bytes": 92166
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/pricing/",
+          "file": "pricing.png",
+          "sha256": "7385bb2c41445df91391c979a5bee53df337d3f82deeb5a838619f0045c76f72",
+          "bytes": 93135
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/sidebars/",
+          "file": "sidebars.png",
+          "sha256": "eb1dad2ffd66779f026c5fd34ce95e4ee72834e1935f19ca91d63d4fc30a5592",
+          "bytes": 142571
+        }
+      ]
+    }
+  }
+}
