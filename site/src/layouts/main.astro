@@ -15,7 +15,7 @@ const {title='Browse interfaces',description='Community-maintained design refere
 </head>
 <body>
  <Header/><main id="main"><slot/></main>
- <footer><span>Open Screens · Free, community-maintained UI references</span><span>Independent project. Not affiliated with Mobbin or screenshot owners.</span></footer>
+ <footer><span>Open Screens · Free, community-maintained UI references</span><span><a href={base('quality/')} class="footer-quality">Dataset quality</a> · Independent project. Not affiliated with Mobbin or screenshot owners.</span></footer>
  <dialog id="preview" class="preview"><button type="button" data-close-preview aria-label="Close preview">✕</button><img id="preview-image" alt=""/><p id="preview-caption"></p></dialog>
  <script>import '../scripts/browser.ts';</script>
 </body></html>

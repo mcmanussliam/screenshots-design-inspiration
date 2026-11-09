@@ -38,3 +38,7 @@ Tag only visible, supportable features; prefer specific meaningful labels and av
     node site/scripts/validate-dataset.mjs
 
 Builds publish catalog.json (v2) plus dataset-report.json, including tag and dimension coverage; the local MCP server consumes the same catalogue.
+
+## Reviewing existing data
+
+See the live Dataset quality page for remaining untagged screenshots. Report mislabelled images using the **Report data quality** issue template, with screenshot filename and corrected canonical tags. The repository's `data/curation-report.json` retains the cross-product duplicate review list. Never guess the correct app from a filename alone; verify the visual and product source. For new screenshots, document provenance and rights in `data/source-provenance.json`.

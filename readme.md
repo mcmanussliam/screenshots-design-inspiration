@@ -39,3 +39,7 @@ The Pages deployment builds only source metadata, linking actual image files thr
 The MCP package under mcp/ runs locally in an AI client; GitHub Pages is only the static website and public catalogue.
 
 This project is independent and not affiliated with Mobbin or any referenced app. Copyright in third-party designs may belong to the original creators.
+
+## Quality and provenance
+
+Browse the public <https://mcmanussliam.github.io/screenshots-design-inspiration/quality/> dashboard to review tagging, verified dimensions and documentation coverage. Each screen is either `source-documented` (explicit captured source, rights evidence and date) or `legacy-unverified`. The latter status is a curation backlog, not proof of any rights violation. `data/curation-report.json` tracks identical images shared between products, which require manual review before reassignment. Contributors can use the GitHub Issue forms and PR template.

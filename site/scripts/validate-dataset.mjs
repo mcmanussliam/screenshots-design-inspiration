@@ -18,6 +18,10 @@ for(const product of catalogue.products){
   errors.push('Design tags must not be product categories: '+product.id);
  for(const shot of product.screenshots){
   screenCount++;
+  if(!['source-documented','legacy-unverified'].includes(shot.reviewStatus))
+    errors.push('Invalid provenance review status: '+product.id+' '+shot.name);
+  if(shot.reviewStatus==='source-documented'&&(!product.source||!shot.sourceUrl))
+    errors.push('Documented screenshot has no source URL: '+product.id+' '+shot.name);
   if(!shot.url.includes('/design/'+product.platform+'/'+product.slug+'/'))
     errors.push('Invalid screenshot path '+product.id+' '+shot.name);
   if(shot.width!==null&&(!Number.isSafeInteger(shot.width)||shot.width<=0))
