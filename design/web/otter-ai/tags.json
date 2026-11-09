@@ -318,7 +318,8 @@
   "z-extras-image1-1.png": [
     "Article Detail",
     "Text Field",
-    "Button"
+    "Button",
+    "Link"
   ],
   "z-extras-image1-2.png": [
     "Action Option",
@@ -469,11 +470,6 @@
     "Dropdown Menu",
     "Button"
   ],
-  "z-extras-image9-1.png": [
-    "Article Detail",
-    "Text Field",
-    "Link"
-  ],
   "z-extras-image9-2.png": [
     "Account Setup",
     "Button",
@@ -489,15 +485,7 @@
     "Divider",
     "Avatar",
     "Icon",
-    "Toast"
-  ],
-  "z-extras-image9.png": [
-    "Note Detail",
-    "Text Field",
-    "Button",
-    "Divider",
-    "Avatar",
-    "Icon",
+    "Toast",
     "Progress Indicator"
   ],
   "z-extras-otter-hero-screens-2.png": [

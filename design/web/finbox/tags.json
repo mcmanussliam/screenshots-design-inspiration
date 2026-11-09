@@ -55,7 +55,10 @@
     "Checkbox",
     "Date Picker",
     "Dropdown Menu",
-    "Search Bar"
+    "Search Bar",
+    "Slider",
+    "Text Field",
+    "Tile"
   ],
   "screenshot-2024-04-10-at-11-10-07-am.png": [
     "Confirmation",
@@ -116,15 +119,6 @@
     "Text Field",
     "Dropdown Menu",
     "Icon"
-  ],
-  "screenshot-2024-04-10-at-11-11-43-am.png": [
-    "Browse & Discover",
-    "Accordion",
-    "Card",
-    "Search Bar",
-    "Slider",
-    "Text Field",
-    "Tile"
   ],
   "screenshot-2024-04-10-at-11-11-48-am.png": [
     "Dashboard",

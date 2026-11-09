@@ -168,16 +168,9 @@
     "Table",
     "Icon",
     "Progress Indicator",
-    "Button"
-  ],
-  "mapps-2x.png": [
-    "Article Detail",
-    "Text Field",
-    "Table",
     "Button",
     "Link",
-    "Avatar",
-    "Icon"
+    "Avatar"
   ],
   "moba1.png": [
     "News Feed",

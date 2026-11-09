@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "originalImages": 9613,
+  "removedIntraProductDuplicates": 45,
+  "retainedCrossProductDuplicateGroups": 16,
+  "crossProductReviewQueue": [
+    [
+      "design/ios/amazon-photos/2021-03-11-07-35-52-000.png",
+      "design/ios/linkedin/2021-03-11-07-35-52-000.png"
+    ],
+    [
+      "design/ios/amazon-photos/2021-03-11-07-35-54-000.png",
+      "design/ios/linkedin/2021-03-11-07-35-54-000.png"
+    ],
+    [
+      "design/ios/amazon-photos/2021-03-11-07-35-56-000.png",
+      "design/ios/linkedin/2021-03-11-07-35-56-000.png"
+    ],
+    [
+      "design/ios/amazon-photos/2021-03-11-07-35-58-000.png",
+      "design/ios/linkedin/2021-03-11-07-35-58-000.png"
+    ],
+    [
+      "design/ios/amazon-photos/2021-03-11-07-36-02-000.png",
+      "design/ios/linkedin/2021-03-11-07-36-02-000.png"
+    ],
+    [
+      "design/ios/coople-business/20180210-195446000-ios.png",
+      "design/ios/coople/20180210-195446000-ios.png"
+    ],
+    [
+      "design/ios/coople-business/20180210-195451000-ios.png",
+      "design/ios/coople/20180210-195451000-ios.png"
+    ],
+    [
+      "design/ios/coople-business/20180210-195457000-ios.png",
+      "design/ios/coople/20180210-195457000-ios.png"
+    ],
+    [
+      "design/ios/coople-business/20180210-195507000-ios.png",
+      "design/ios/coople/20180210-195507000-ios.png"
+    ],
+    [
+      "design/ios/coople-business/20180210-195514000-ios.png",
+      "design/ios/coople/20180210-195514000-ios.png"
+    ],
+    [
+      "design/ios/coople-business/20180210-195538000-ios.png",
+      "design/ios/coople/20180210-195538000-ios.png"
+    ],
+    [
+      "design/ios/wonolo-business/20171205-165017000-ios.png",
+      "design/ios/wonolo/20171205-165017000-ios.png"
+    ],
+    [
+      "design/ios/wonolo-business/20171205-165025000-ios.png",
+      "design/ios/wonolo/20171205-165025000-ios.png"
+    ],
+    [
+      "design/ios/wonolo-business/20171205-165033000-ios.png",
+      "design/ios/wonolo/20171205-165033000-ios.png"
+    ],
+    [
+      "design/ios/wonolo-business/20171205-165037000-ios.png",
+      "design/ios/wonolo/20171205-165037000-ios.png"
+    ],
+    [
+      "design/ios/wonolo-business/20171205-165045000-ios.png",
+      "design/ios/wonolo/20171205-165045000-ios.png"
+    ]
+  ],
+  "simplifiedLegacyIndexes": 435,
+  "tagFilesCorrected": 22,
+  "orphanTagKeysRemoved": 0,
+  "remainingScreensMissingTags": 15
+}

@@ -167,16 +167,8 @@
     "Badge",
     "Card",
     "Progress Indicator",
-    "Icon"
-  ],
-  "screenshot-maze-design-2020-04-21-15-00-31.png": [
-    "Dashboard",
-    "Button",
-    "Text Field",
-    "Badge",
-    "Card",
-    "Table",
-    "Progress Indicator"
+    "Icon",
+    "Table"
   ],
   "screenshot-maze-design-2020-04-21-15-00-38.png": [
     "Dashboard",
@@ -240,15 +232,6 @@
     "Icon",
     "Progress Indicator"
   ],
-  "screenshot-maze-design-2020-04-21-15-12-32.png": [
-    "Home",
-    "Hero Image",
-    "Text Field",
-    "Button",
-    "Badge",
-    "Progress Indicator",
-    "Icon"
-  ],
   "screenshot-maze-design-2020-04-21-15-15-42.png": [
     "Home",
     "Accordion",
@@ -265,11 +248,6 @@
     "Button"
   ],
   "screenshot-t-maze-design-2020-04-21-14-54-25.png": [
-    "Guided Tour & Tutorial",
-    "Button",
-    "Text Field"
-  ],
-  "screenshot-t-maze-design-2020-04-21-14-55-33.png": [
     "Guided Tour & Tutorial",
     "Button",
     "Text Field"

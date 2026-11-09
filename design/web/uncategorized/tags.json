@@ -19,17 +19,6 @@
     "Button",
     "Badge"
   ],
-  "19ef45329c327aa947e7fec0ca5143ab.jpg": [
-    "Dashboard",
-    "Calendar",
-    "Product Detail",
-    "Card",
-    "Table",
-    "Progress Indicator",
-    "Text Field",
-    "Button",
-    "Badge"
-  ],
   "1-sdfm4e98ugzgq-u5xoa83g.png": [
     "User / Group Profile",
     "Avatar",
@@ -226,7 +215,8 @@
     "Checkbox",
     "Date Picker",
     "Dropdown Menu",
-    "Text Field"
+    "Text Field",
+    "Page Control"
   ],
   "dashboard-component-francis-otuogbai.png": [
     "Dashboard",
@@ -236,15 +226,6 @@
     "Table",
     "Tile",
     "Avatar"
-  ],
-  "dashboard.png": [
-    "Goal & Task",
-    "Accordion",
-    "Button",
-    "Checkbox",
-    "Date Picker",
-    "Dropdown Menu",
-    "Page Control"
   ],
   "dashboard-1x.png": [
     "Account Setup",
@@ -549,15 +530,6 @@
     "Icon"
   ],
   "user-profile-1.jpg": [
-    "User / Group Profile",
-    "Avatar",
-    "Text Field",
-    "Button",
-    "Divider",
-    "Rating Control",
-    "Icon"
-  ],
-  "user-profile.jpg": [
     "User / Group Profile",
     "Avatar",
     "Text Field",

@@ -8,24 +8,7 @@
     "Badge",
     "Avatar"
   ],
-  "screen-shot-2018-03-05-at-10-12-00-am.png": [
-    "Dashboard",
-    "Table",
-    "Progress Indicator",
-    "Text Field",
-    "Button",
-    "Badge",
-    "Avatar"
-  ],
   "screen-shot-2018-03-05-at-10-12-09-am-1.png": [
-    "Home",
-    "Icon",
-    "Text Field",
-    "Button",
-    "Avatar",
-    "Hero Image"
-  ],
-  "screen-shot-2018-03-05-at-10-12-09-am.png": [
     "Home",
     "Icon",
     "Text Field",
@@ -39,13 +22,6 @@
     "Text Field",
     "Button",
     "Accordion",
-    "Table"
-  ],
-  "screen-shot-2018-03-05-at-10-12-18-am.png": [
-    "Dashboard",
-    "Button",
-    "Text Field",
-    "Accordion",
     "Table",
     "Progress Indicator"
   ],
@@ -54,18 +30,7 @@
     "Text Field",
     "Divider"
   ],
-  "screen-shot-2018-03-05-at-10-12-32-am.png": [
-    "Feature Info",
-    "Text Field",
-    "Divider"
-  ],
   "screen-shot-2018-03-05-at-10-12-45-am-1.png": [
-    "Feature Info",
-    "Text Field",
-    "Card",
-    "Icon"
-  ],
-  "screen-shot-2018-03-05-at-10-12-45-am.png": [
     "Feature Info",
     "Text Field",
     "Card",
@@ -78,20 +43,7 @@
     "Table",
     "Text Field"
   ],
-  "screen-shot-2018-03-05-at-10-13-52-am.png": [
-    "Home",
-    "Banner",
-    "Card",
-    "Table"
-  ],
   "screen-shot-2018-03-05-at-10-14-38-am-1.png": [
-    "Dashboard",
-    "Card",
-    "Icon",
-    "Text Field",
-    "Divider"
-  ],
-  "screen-shot-2018-03-05-at-10-14-38-am.png": [
     "Dashboard",
     "Card",
     "Icon",
@@ -105,24 +57,10 @@
     "Card",
     "Checkbox",
     "Text Field",
-    "Table"
-  ],
-  "screen-shot-2018-03-05-at-10-15-38-am.png": [
-    "Home",
-    "Avatar",
-    "Banner",
-    "Card",
-    "Checkbox",
-    "Text Field",
+    "Table",
     "Button"
   ],
   "screen-shot-2018-03-05-at-10-16-04-am-1.png": [
-    "Feature Info",
-    "Table",
-    "Text Field",
-    "Icon"
-  ],
-  "screen-shot-2018-03-05-at-10-16-04-am.png": [
     "Feature Info",
     "Table",
     "Text Field",
@@ -133,18 +71,7 @@
     "Table",
     "Text Field"
   ],
-  "screen-shot-2018-03-05-at-10-16-13-am.png": [
-    "Dashboard",
-    "Table",
-    "Text Field"
-  ],
   "screen-shot-2018-03-05-at-10-16-47-am-1.png": [
-    "Dashboard",
-    "Table",
-    "Text Field",
-    "Button"
-  ],
-  "screen-shot-2018-03-05-at-10-16-47-am.png": [
     "Dashboard",
     "Table",
     "Text Field",
@@ -318,15 +245,6 @@
     "Logo",
     "Photo"
   ],
-  "screen-shot-2018-03-05-at-9-57-36-am.png": [
-    "Home",
-    "Avatar",
-    "Banner",
-    "Hero Image",
-    "Icon",
-    "Logo",
-    "Photo"
-  ],
   "screen-shot-2018-03-05-at-9-58-38-am-1.png": [
     "Home",
     "Logo",
@@ -347,12 +265,8 @@
     "Home",
     "Hero Image",
     "Text Field",
-    "Button"
-  ],
-  "screen-shot-2018-03-05-at-9-58-53-am.png": [
-    "Home",
+    "Button",
     "Banner",
-    "Text Field",
     "Table",
     "Avatar"
   ],
@@ -364,26 +278,12 @@
     "Avatar",
     "Icon"
   ],
-  "screen-shot-2018-03-05-at-9-58-59-am.png": [
+  "screen-shot-2018-03-05-at-9-59-08-am-1.png": [
     "Home",
     "Banner",
     "Text Field",
     "Table",
     "Avatar",
     "Icon"
-  ],
-  "screen-shot-2018-03-05-at-9-59-08-am-1.png": [
-    "Home",
-    "Banner",
-    "Text Field",
-    "Table"
-  ],
-  "screen-shot-2018-03-05-at-9-59-08-am.png": [
-    "Home",
-    "Text Field",
-    "Table",
-    "Avatar",
-    "Icon",
-    "Banner"
   ]
 }

@@ -6,15 +6,7 @@
     "Text Field",
     "Button",
     "Accordion",
-    "Segmented Control"
-  ],
-  "screen-shot-2020-10-19-at-2-00-34-pm.png": [
-    "Browse & Discover",
-    "Card",
-    "Tile",
-    "Text Field",
-    "Button",
-    "Accordion",
+    "Segmented Control",
     "Search Bar"
   ],
   "screen-shot-2020-11-10-at-10-31-29-am.png": [
@@ -96,13 +88,6 @@
     "Button",
     "Tile",
     "Banner",
-    "Avatar"
-  ],
-  "screen-shot-2020-11-17-at-3-11-44-pm.png": [
-    "Browse & Discover",
-    "Card",
-    "Text Field",
-    "Button",
     "Avatar",
     "Icon",
     "Badge"
