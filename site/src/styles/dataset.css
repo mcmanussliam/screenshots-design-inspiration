@@ -3,7 +3,6 @@
 html{scrollbar-gutter:stable}body{background:#111112}
 .topbar{height:80px;border-bottom:0;padding:0 clamp(24px,4.65vw,74px);grid-template-columns:minmax(280px,1fr) minmax(310px,470px) minmax(215px,1fr)}
 .topbar .top-search{height:45px;background:#252526}
-.topbar .brand-name{font-size:13px;letter-spacing:-.045em}
 .topbar .top-link{font-size:14px}
 .topbar .saved-link{gap:9px}
 .topbar-right{gap:15px}
@@ -85,7 +84,6 @@ html{scrollbar-gutter:stable}body{background:#111112}
 .empty-state p{line-height:1.6}
 @media(max-width:1200px){
  .topbar{grid-template-columns:1fr minmax(230px,410px) 1fr}
- .topbar .brand-name{display:none}
  .screens-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
  .saved-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
  .screen-toolbar-right .screen-total{display:none}

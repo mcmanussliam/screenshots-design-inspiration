@@ -1,0 +1,15 @@
+---
+import { base } from '../lib/catalog';
+---
+<span class="stamp" aria-hidden="true" style={{ '--stamp-image': `url("${base('stamp.svg')}")` }}></span>
+
+<style>
+ .stamp {
+  display: block;
+  flex: none;
+  width: var(--stamp-size, 40px);
+  aspect-ratio: 1;
+  background: currentColor;
+  mask: var(--stamp-image) center / contain no-repeat;
+ }
+</style>

@@ -164,7 +164,7 @@ function setupSaved(){
   document.getElementById('export-collections')?.addEventListener('click',()=>{
     const file=new Blob([JSON.stringify(readSaved(),null,2)],{type:'application/json'});
     const href=URL.createObjectURL(file),link=document.createElement('a');
-    link.href=href;link.download='open-screens-collections.json';link.click();
+    link.href=href;link.download='saved-collections.json';link.click();
     setTimeout(()=>URL.revokeObjectURL(href),1000);
   });
   document.getElementById('import-collections')?.addEventListener('change',async(event)=>{

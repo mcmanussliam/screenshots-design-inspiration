@@ -1,4 +1,4 @@
-# Open Screens
+# UI screenshot library
 
 A community-maintained UI screenshot library powered by Astro, GitHub Pages, and a local read-only MCP server. No account or hosted database is required.
 

@@ -1,4 +1,4 @@
-# Contributing to Open Screens
+# Contributing to the screenshot library
 
 Keep original design assets unmodified, metadata accurate, and changes reviewable.
 
