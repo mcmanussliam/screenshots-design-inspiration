@@ -1,89 +1,44 @@
 ---
 import Layout from '../layouts/main.astro';
-import { base, products, productUrl, formatBytes } from '../lib/catalog';
-
-const screens = products.flatMap(product => product.screenshots.map(screen => ({ product, screen })));
-const total = screens.length;
-const dimensioned = screens.filter(({ screen }) => screen.width && screen.height).length;
-const documented = screens.filter(({ screen }) => screen.reviewStatus === 'source-documented').length;
-const review = screens.filter(({ screen }) => !screen.tags.length);
-const formatted = (count: number) => count.toLocaleString('en');
-const percent = (count: number) => total ? Math.round(count / total * 1000) / 10 : 0;
-const coverage = [
-  { label: 'Verified dimensions', count: dimensioned },
-  { label: 'Usable tags', count: total - review.length },
-  { label: 'Documented sources', count: documented },
-];
-const repo = 'https://github.com/mcmanussliam/screenshots-design-inspiration';
+import {products,productUrl,formatBytes} from '../lib/catalog';
+const screens=products.flatMap(product=>product.screenshots.map(screen=>({product,screen})));
+const total=screens.length;
+const dimensioned=screens.filter(x=>x.screen.width&&x.screen.height).length;
+const tagged=screens.filter(x=>x.screen.tags.length).length;
+const documented=screens.filter(x=>x.screen.reviewStatus==='source-documented').length;
+const review=screens.filter(x=>!x.screen.tags.length);
+const formatted=(n:number)=>n.toLocaleString('en');
+const pct=(a:number,b:number)=>b?Math.round(a/b*1000)/10:0;
+const forms='https://github.com/mcmanussliam/screenshots-design-inspiration/issues/new/choose';
 ---
-<Layout title="Dataset quality" description="Screenshot coverage, provenance and curation priorities for Open Screens.">
- <div class="quality-dashboard">
-  <section class="quality-masthead" aria-labelledby="quality-title">
-   <div>
-    <h1 id="quality-title">Dataset quality</h1>
-    <p class="archive-deck">See how much of the archive has verified dimensions, useful tags, and a documented source.</p>
-   </div>
-   <a class="archive-action" href={base('') + '#browse'}>Browse the archive <span class="archive-arrow" aria-hidden="true"></span></a>
-  </section>
-
-  <section class="audit-overview" aria-labelledby="coverage-title">
-   <div class="audit-inventory">
-    <h2>Inventory</h2>
-    <dl>
-     <div><dt>Original screenshots</dt><dd>{formatted(total)}</dd></div>
-     <div><dt>Products</dt><dd>{formatted(products.length)}</dd></div>
-    </dl>
-    <p>Original files retain their native resolution.</p>
-   </div>
-   <div class="audit-coverage">
-    <h2 id="coverage-title">Metadata coverage</h2>
-    {coverage.map(metric => (
-     <div class="coverage-row">
-      <div class="coverage-label">
-       <span>{metric.label}</span>
-       <strong>{percent(metric.count)}%</strong>
-      </div>
-      <meter min="0" max={total || 1} value={metric.count} aria-label={metric.label}></meter>
-      <p>{formatted(metric.count)} of {formatted(total)} screenshots</p>
-     </div>
-    ))}
-   </div>
-  </section>
-
-  <div class="audit-lower">
-   <section class="audit-queue" id="review-queue" aria-labelledby="queue-title">
-    <h2 id="queue-title">Review queue</h2>
-    <p>{formatted(review.length)} screenshots need a usable tag. {review.length > 24 && 'Showing the first 24.'}</p>
-    {review.length > 0 && (
-     <table>
-      <thead><tr><th scope="col">Product</th><th scope="col">Screenshot</th><th scope="col">Original file</th></tr></thead>
-      <tbody>{review.slice(0, 24).map(({ product, screen }) => (
-       <tr>
-        <td><a href={productUrl(product)}>{product.name}</a></td>
-        <td>{screen.name}</td>
-        <td>
-         {screen.width && screen.height && <span>{screen.width} × {screen.height} px</span>}
-         <span>{formatBytes(screen.sizeBytes)}</span>
-        </td>
-       </tr>
-      ))}</tbody>
-     </table>
-    )}
-    <a class="archive-action" href={repo + '/issues/new/choose'} target="_blank" rel="noopener noreferrer">Suggest an entry or report a problem <span class="archive-arrow" aria-hidden="true"></span></a>
-   </section>
-
-   <aside class="audit-notes" aria-label="Archive standards">
-    <section id="provenance">
-     <h2>Image provenance</h2>
-     <p><strong>{formatted(documented)}</strong> screenshots have documented capture sources and rights evidence. The other <strong>{formatted(total - documented)}</strong> are historical references with unverified provenance.</p>
-     <p>Technical metadata records the original pixel dimensions, format, and file size. The repository’s <a href={repo + '/blob/main/data/curation-report.json'}>curation report</a> lists identical images across products for manual review.</p>
-    </section>
-    <section id="tagging-standards">
-     <h2>Tagging standards</h2>
-     <p>We group tags by screen type, UI element, flow, UX pattern, and visual style. Unknown legacy labels stay in review. Automatically classified tags need a person to check the underlying screenshot.</p>
-     <a class="audit-guide" href={repo + '/blob/main/contributing.md'}>Read the contribution guide <span class="archive-arrow" aria-hidden="true"></span></a>
-    </section>
-   </aside>
-  </div>
- </div>
+<Layout title="Dataset quality" description="Transparent information about screenshot coverage, provenance and curation priorities.">
+ <section class="quality-hero">
+  <p class="eyebrow">OPEN DATA GOVERNANCE</p>
+  <h1>Dataset quality</h1>
+  <p>Every original image is preserved at native resolution. We surface verified technical metadata, keep UI tags in separate facets, and label historical references whose sourcing still needs review.</p>
+ </section>
+ <section class="quality-metrics" aria-label="Current dataset statistics">
+  <div><strong>{formatted(products.length)}</strong><span>Products</span></div>
+  <div><strong>{formatted(total)}</strong><span>Original screens</span></div>
+  <div><strong>{pct(dimensioned,total)}%</strong><span>With verified dimensions</span></div>
+  <div><strong>{pct(tagged,total)}%</strong><span>With usable tags</span></div>
+ </section>
+ <section class="quality-section">
+  <h2>What the metadata tells us</h2>
+  <p><b>{formatted(documented)} screenshots</b> have individually documented capture sources and rights evidence. The remaining <b>{formatted(total-documented)}</b> historical images are retained as legacy references, not automatically presented as openly licensed. This is a provenance audit gap, not a claim that any specific screenshot infringes copyright.</p>
+  <p>Technical metadata includes actual original pixel width and height, file format and stored byte size. The gallery uses consistent aspect-aware frames while preserving the originals.</p>
+ </section>
+ <section class="quality-section">
+  <h2>Help improve the library</h2>
+  <p>{review.length} screenshots are currently missing a usable screen or component tag. These are good candidates for a manual classification pass.</p>
+  {review.length>0&&<div class="quality-review-list">{review.slice(0,24).map(({product,screen})=>
+   <div class="quality-review-item"><a href={productUrl(product)}>{product.name}</a><span>{screen.name}</span><span>{screen.width&&screen.height?screen.width+' × '+screen.height+' px':''} {formatBytes(screen.sizeBytes)}</span></div>)}</div>}
+  <p>The curation report in the repository also records cross-product duplicate images for human review. We deliberately do not guess which product owns identical imagery.</p>
+  <a class="white-button" href={forms} target="_blank" rel="noopener noreferrer">Suggest an entry or report a problem ↗</a>
+ </section>
+ <section class="quality-section">
+  <h2>Tagging standards</h2>
+  <p>Tags are separated into <b>screen types</b>, <b>UI elements</b>, <b>flows</b>, <b>UX patterns</b>, and <b>visual styles</b>. Synonyms are normalised and unknown legacy labels remain flagged for review. An automatically classified label is not considered human-verified without reviewing the underlying screenshot.</p>
+  <p>Read <a href="https://github.com/mcmanussliam/screenshots-design-inspiration/blob/main/contributing.md" target="_blank" rel="noopener noreferrer">the contribution guide</a> for evidence, resolution, naming and image-rights requirements.</p>
+ </section>
 </Layout>

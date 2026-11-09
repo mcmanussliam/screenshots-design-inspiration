@@ -4,18 +4,16 @@ import { base } from '../lib/catalog';
 import '../styles/global.css';
 import '../styles/browse-tuning.css';
 import '../styles/dataset.css';
-import '../styles/archive.css';
 const {title='Browse interfaces',description='Community-maintained design references from real apps and websites.'}=Astro.props;
 ---
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#f7f5ef"/>
+ <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#121212"/>
  <meta name="description" content={description}/><title>{title} — Open Screens</title><link rel="icon" type="image/svg+xml" href={base('favicon.svg')}/>
  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin="anonymous"/>
 </head>
 <body>
- <a class="skip-link" href="#main">Skip to content</a>
  <Header/><main id="main"><slot/></main>
  <footer><span>Open Screens · Free, community-maintained UI references</span><span><a href={base('quality/')} class="footer-quality">Dataset quality</a> · Independent project. Not affiliated with Mobbin or screenshot owners.</span></footer>
  <dialog id="preview" class="preview"><button type="button" data-close-preview aria-label="Close preview">✕</button><img id="preview-image" alt=""/><p id="preview-caption"></p></dialog>

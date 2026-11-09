@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Open Screens</title>
-  <rect width="64" height="64" rx="6" fill="#272520"/>
-  <path fill="none" stroke="#f7f5ef" stroke-width="4" d="M14 26V14h12m12 0h12v12m0 12v12H38m-12 0H14V38"/>
-  <path fill="#e7836c" d="M24 36h24v5H24z" transform="rotate(-35 32 32)"/>
-</svg>
