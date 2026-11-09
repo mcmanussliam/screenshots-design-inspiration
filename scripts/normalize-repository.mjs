@@ -31,6 +31,8 @@ const unnecessary = new Set([
 const legacyDirectories = ['crawler/', 'scripts/'];
 const keepLegacyScripts = new Set(['scripts/normalize-repository.mjs']);
 const specialFiles = new Set(['.gitignore', '.gitattributes', '.gitkeep', '.nojekyll']);
+// GitHub recognises this conventional filename; renaming it breaks the PR template.
+const githubRequiredNames = new Set(['.github/pull_request_template.md']);
 
 export function kebabSegment(segment, isFile=false) {
   if (specialFiles.has(segment) || segment === '.github' || /^\[[a-z][a-z0-9-]*\](?:\.[a-z0-9]+)?$/.test(segment)) return segment;
@@ -118,7 +120,7 @@ const invalidPaths=[...mapping.values()].filter(p=>!p.split('/').every(s=>specia
 if(invalidPaths.length)throw new Error('Invalid output paths:\n'+invalidPaths.slice(0,15).join('\n'));
 
 if(mode==='--check'){
-  const bad=entries.filter(e=>e.path!==kebabPath(e.path));
+  const bad=entries.filter(e=>!githubRequiredNames.has(e.path)&&e.path!==kebabPath(e.path));
   const junk=entries.filter(e=>e.path.split('/').includes('.DS_Store'));
   if(bad.length||junk.length){
     console.error(`Paths not normalized: ${bad.length} bad, ${junk.length} junk. Examples:\n`+bad.slice(0,10).map(e=>e.path).join('\n'));
