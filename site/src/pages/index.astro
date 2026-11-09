@@ -18,54 +18,35 @@ const screenCount = products.reduce((count, product) => count + product.screensh
 const patterns=allTags.filter(x=>/login|dashboard|onboarding|signup|filter|form|modal|setting|home|search|card|button/i.test(x)).slice(0,70);
 ---
 <Layout title="Browse interfaces">
- <section class="archive-hero" aria-labelledby="archive-title">
-  <div class="archive-intro">
-   <p class="archive-kicker"><span class="index-dot" aria-hidden="true"></span> The interface archive</p>
-   <h1 id="archive-title">Look closer.<br/><em>Design better.</em></h1>
-   <p class="archive-deck">A community-built library of real interfaces. Study the details, trace a flow, or find a new starting point.</p>
-   <a class="archive-action" href="#browse">Explore the archive <span aria-hidden="true">↓</span></a>
+ <section class="gallery-intro" aria-labelledby="archive-title">
+  <div>
+   <h1 id="archive-title">Open Screens</h1>
+   <p>Interface screenshots from real apps and websites.</p>
   </div>
-  <div class="archive-plate">
-   <div class="plate-label" aria-hidden="true"><span>Open Screens</span><span>Fig. 01</span></div>
-   <svg class="plate-art" viewBox="0 0 460 286" fill="none" aria-hidden="true">
-    <defs>
-     <pattern id="plate-grid" width="19" height="19" patternUnits="userSpaceOnUse"><path d="M19 0H0v19" stroke="#3d3153" stroke-opacity=".15"/></pattern>
-    </defs>
-    <rect x="1" y="1" width="458" height="284" fill="url(#plate-grid)" stroke="#3d3153" stroke-opacity=".35"/>
-    <path d="M230 9v268M10 143h440M33 252 425 30" stroke="#473959" stroke-opacity=".46" stroke-dasharray="3 5"/>
-    <path d="M17 14v12m-6-6h12m420-6v12m-6-6h12M17 260v12m-6-6h12m420-6v12m-6-6h12" stroke="#514466"/>
-    <path d="m92 86 171-54v26L118 104v112l-26 8z" fill="#231c31"/>
-    <path d="m140 122 171-54v138l-171 54z" fill="#af9be5" stroke="#231c31" stroke-width="2"/>
-    <path d="m163 139 124-39v86l-124 39z" fill="#d9cdff" stroke="#231c31" stroke-width="2"/>
-    <path d="m180 153 89-28m-89 43 54-17m-54 32 69-22" stroke="#55466e" stroke-width="1.5"/>
-    <path d="m244 148 111-35v94l-111 35z" fill="#e5f0b7" stroke="#231c31" stroke-width="2"/>
-    <path d="m254 219 27-36 18 11 27-36 19 10m-91 59 91-29" stroke="#393246" stroke-width="1.6"/>
-    <path d="m361 114 37-12v101l-37 12zm0 110 37-12" stroke="#514466" stroke-dasharray="3 4"/>
-    <circle cx="326" cy="158" r="4" fill="#393246"/>
-   </svg>
-   <p class="plate-caption"><strong>{screenCount.toLocaleString('en')}</strong> screenshots <span aria-hidden="true">/</span> <strong>{products.length.toLocaleString('en')}</strong> products</p>
-  </div>
+  <dl class="gallery-inventory">
+   <div><dt>Screenshots</dt><dd>{screenCount.toLocaleString('en')}</dd></div>
+   <div><dt>Products</dt><dd>{products.length.toLocaleString('en')}</dd></div>
+  </dl>
  </section>
- <section class="taxonomy taxonomy-landing" id="taxonomy-apps" aria-label="Browse apps by categories and patterns">
-  {appCategories.map(c=><div class="taxonomy-col"><p class="taxonomy-title">{c.title}</p>{c.items.map(item=><button type="button" data-quick-search={item}>{item}</button>)}</div>)}
- </section>
- <section class="taxonomy taxonomy-landing" id="taxonomy-sites" aria-label="Browse websites by categories and patterns" hidden>
-  {siteCategories.map(c=><div class="taxonomy-col"><p class="taxonomy-title">{c.title}</p>{c.items.map(item=><button type="button" data-quick-search={item}>{item}</button>)}</div>)}
- </section>
- <section class="browse-section" id="browse" aria-labelledby="browse-title">
-  <div class="archive-section-head">
-   <h2 id="browse-title">The collection</h2>
-   <p class="archive-kicker">01 / Browse interfaces</p>
-  </div>
+ <section class="browse-section" id="browse" aria-label="Screenshot library">
   <div class="browse-toolbar">
    <div class="browse-left"><div class="pill-group" role="group" aria-label="Type"><button type="button" data-kind="all" class="selected">All</button><button type="button" data-kind="app">Apps</button><button type="button" data-kind="site">Sites</button></div>
     <div class="pill-group" role="group" aria-label="Platform"><button type="button" data-platform="all" class="selected">All platforms</button><button type="button" data-platform="ios">iOS</button><button type="button" data-platform="android">Android</button><button type="button" data-platform="web">Web</button><button type="button" data-platform="email">Email</button></div>
     <span class="toolbar-sep"></span><button class="subtle-tab selected" type="button" data-sort="featured">Featured</button><button class="subtle-tab" type="button" data-sort="alpha">A–Z</button>
    </div>
-   <button class="filter-button" type="button" id="toggle-filters" aria-expanded="false" aria-controls="filter-panel">☷ <span>Filter</span></button>
+   <button class="filter-button" type="button" id="toggle-filters" aria-expanded="false" aria-controls="filter-panel"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 4h12M4 8h8m-6 4h4"/></svg><span>Filter</span></button>
   </div>
   <div class="filter-panel" id="filter-panel" hidden><label for="tag-select">Screen or UI pattern</label><select id="tag-select"><option value="">All patterns</option>{patterns.map(tag=><option value={tag}>{tag}</option>)}</select><button type="button" id="reset-filters">Clear all filters</button></div>
-  <div class="browse-summary"><span id="results-counter" aria-live="polite">{products.length} products</span><span>Browse every screenshot, free.</span></div>
+  <details class="taxonomy-disclosure">
+   <summary>Browse by category or pattern</summary>
+    <section class="taxonomy taxonomy-landing" id="taxonomy-apps" aria-label="Browse apps by categories and patterns">
+     {appCategories.map(c=><div class="taxonomy-col"><p class="taxonomy-title">{c.title}</p>{c.items.map(item=><button type="button" data-quick-search={item}>{item}</button>)}</div>)}
+    </section>
+    <section class="taxonomy taxonomy-landing" id="taxonomy-sites" aria-label="Browse websites by categories and patterns" hidden>
+     {siteCategories.map(c=><div class="taxonomy-col"><p class="taxonomy-title">{c.title}</p>{c.items.map(item=><button type="button" data-quick-search={item}>{item}</button>)}</div>)}
+    </section>
+  </details>
+  <div class="browse-summary"><span id="results-counter" aria-live="polite">{products.length} products</span><span>Design reference library</span></div>
   <div class="product-grid" id="product-grid">{products.map(product=><ProductCard product={product}/>)}</div>
   <div id="no-matches" class="empty-state" hidden><div class="empty-illustration">⌕</div><h2>No interfaces found</h2><p>Try another search term or filter.</p></div>
  </section>

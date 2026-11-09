@@ -10,9 +10,9 @@ const review = screens.filter(({ screen }) => !screen.tags.length);
 const formatted = (count: number) => count.toLocaleString('en');
 const percent = (count: number) => total ? Math.round(count / total * 1000) / 10 : 0;
 const coverage = [
-  { label: 'Verified dimensions', count: dimensioned, tone: 'lavender' },
-  { label: 'Usable tags', count: total - review.length, tone: 'lime' },
-  { label: 'Documented sources', count: documented, tone: 'peach' },
+  { label: 'Verified dimensions', count: dimensioned },
+  { label: 'Usable tags', count: total - review.length },
+  { label: 'Documented sources', count: documented },
 ];
 const repo = 'https://github.com/mcmanussliam/screenshots-design-inspiration';
 ---
@@ -20,16 +20,15 @@ const repo = 'https://github.com/mcmanussliam/screenshots-design-inspiration';
  <div class="quality-dashboard">
   <section class="quality-masthead" aria-labelledby="quality-title">
    <div>
-    <p class="archive-kicker"><span class="index-dot" aria-hidden="true"></span> Open Screens / Archive audit</p>
-    <h1 id="quality-title">Dataset <em>quality.</em></h1>
+    <h1 id="quality-title">Dataset quality</h1>
     <p class="archive-deck">See how much of the archive has verified dimensions, useful tags, and a documented source.</p>
    </div>
-   <a class="archive-action" href={base('') + '#browse'}>Browse the archive <span aria-hidden="true">↗</span></a>
+   <a class="archive-action" href={base('') + '#browse'}>Browse the archive <span class="archive-arrow" aria-hidden="true"></span></a>
   </section>
 
   <section class="audit-overview" aria-labelledby="coverage-title">
    <div class="audit-inventory">
-    <p class="archive-kicker">01 / Inventory</p>
+    <h2>Inventory</h2>
     <dl>
      <div><dt>Original screenshots</dt><dd>{formatted(total)}</dd></div>
      <div><dt>Products</dt><dd>{formatted(products.length)}</dd></div>
@@ -37,10 +36,9 @@ const repo = 'https://github.com/mcmanussliam/screenshots-design-inspiration';
     <p>Original files retain their native resolution.</p>
    </div>
    <div class="audit-coverage">
-    <p class="archive-kicker">02 / Metadata</p>
-    <h2 id="coverage-title">Coverage at a glance</h2>
+    <h2 id="coverage-title">Metadata coverage</h2>
     {coverage.map(metric => (
-     <div class:list={['coverage-row', metric.tone]}>
+     <div class="coverage-row">
       <div class="coverage-label">
        <span>{metric.label}</span>
        <strong>{percent(metric.count)}%</strong>
@@ -54,7 +52,6 @@ const repo = 'https://github.com/mcmanussliam/screenshots-design-inspiration';
 
   <div class="audit-lower">
    <section class="audit-queue" id="review-queue" aria-labelledby="queue-title">
-    <p class="archive-kicker">03 / Curation</p>
     <h2 id="queue-title">Review queue</h2>
     <p>{formatted(review.length)} screenshots need a usable tag. {review.length > 24 && 'Showing the first 24.'}</p>
     {review.length > 0 && (
@@ -72,21 +69,19 @@ const repo = 'https://github.com/mcmanussliam/screenshots-design-inspiration';
       ))}</tbody>
      </table>
     )}
-    <a class="archive-action" href={repo + '/issues/new/choose'} target="_blank" rel="noopener noreferrer">Suggest an entry or report a problem <span aria-hidden="true">↗</span></a>
+    <a class="archive-action" href={repo + '/issues/new/choose'} target="_blank" rel="noopener noreferrer">Suggest an entry or report a problem <span class="archive-arrow" aria-hidden="true"></span></a>
    </section>
 
    <aside class="audit-notes" aria-label="Archive standards">
     <section id="provenance">
-     <p class="archive-kicker">04 / Provenance</p>
-     <h2>Where the images came from</h2>
+     <h2>Image provenance</h2>
      <p><strong>{formatted(documented)}</strong> screenshots have documented capture sources and rights evidence. The other <strong>{formatted(total - documented)}</strong> are historical references with unverified provenance.</p>
      <p>Technical metadata records the original pixel dimensions, format, and file size. The repository’s <a href={repo + '/blob/main/data/curation-report.json'}>curation report</a> lists identical images across products for manual review.</p>
     </section>
     <section id="tagging-standards">
-     <p class="archive-kicker">05 / Classification</p>
-     <h2>How we tag screens</h2>
+     <h2>Tagging standards</h2>
      <p>We group tags by screen type, UI element, flow, UX pattern, and visual style. Unknown legacy labels stay in review. Automatically classified tags need a person to check the underlying screenshot.</p>
-     <a class="audit-guide" href={repo + '/blob/main/contributing.md'}>Read the contribution guide <span aria-hidden="true">↗</span></a>
+     <a class="audit-guide" href={repo + '/blob/main/contributing.md'}>Read the contribution guide <span class="archive-arrow" aria-hidden="true"></span></a>
     </section>
    </aside>
   </div>
