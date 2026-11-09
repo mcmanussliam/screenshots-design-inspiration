@@ -15,7 +15,7 @@
       "license": "CC-BY-3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
       "licenseEvidence": "https://github.com/twbs/bootstrap#copyright-and-license",
-      "credit": "© Bootstrap Authors, docs CC BY 3.0. Independent screenshot capture by Open Screens; no endorsement implied.",
+      "credit": "© Bootstrap Authors, docs CC BY 3.0. Independently captured screenshot.",
       "allowedHost": "getbootstrap.com",
       "allowedPrefix": "/docs/5.3/examples/",
       "viewport": {
