@@ -25,5 +25,44 @@
     "Side Navigation",
     "Avatar",
     "Button"
+  ],
+  "headers.png": [
+    "Navigation Bar",
+    "Button"
+  ],
+  "features.png": [
+    "Card",
+    "Button"
+  ],
+  "footers.png": [
+    "Link",
+    "Navigation Bar"
+  ],
+  "dropdowns.png": [
+    "Dropdown Menu",
+    "Button"
+  ],
+  "list-groups.png": [
+    "Stacked List",
+    "Button"
+  ],
+  "modals.png": [
+    "Modal",
+    "Button"
+  ],
+  "buttons.png": [
+    "Button"
+  ],
+  "navbars.png": [
+    "Navigation Bar",
+    "Button"
+  ],
+  "jumbotron.png": [
+    "Button",
+    "Card"
+  ],
+  "badges.png": [
+    "Badge",
+    "Button"
   ]
 }

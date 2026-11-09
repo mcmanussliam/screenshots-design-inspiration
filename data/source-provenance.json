@@ -19,8 +19,8 @@
         {
           "source": "https://getbootstrap.com/docs/5.3/examples/dashboard/",
           "file": "dashboard.png",
-          "sha256": "29e08779f4e7269528c73d1181813f62571a1ce667e30ff7d42178ab3617beff",
-          "bytes": 90763
+          "sha256": "8d61cca69e4e4e6076938cd2812d70a4a58eafee4528a78b0a7268763b6aefcb",
+          "bytes": 89844
         },
         {
           "source": "https://getbootstrap.com/docs/5.3/examples/sign-in/",
@@ -45,6 +45,66 @@
           "file": "sidebars.png",
           "sha256": "eb1dad2ffd66779f026c5fd34ce95e4ee72834e1935f19ca91d63d4fc30a5592",
           "bytes": 142571
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/headers/",
+          "file": "headers.png",
+          "sha256": "1c30831904002b53a2e2ba1495ff775607eef7880fdbce61a333fc4ea034a400",
+          "bytes": 56711
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/features/",
+          "file": "features.png",
+          "sha256": "a757b4a081cd765e46ad9c6d4623d31bc2aa61c05d886a97b35b9165dd4a91f9",
+          "bytes": 68260
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/footers/",
+          "file": "footers.png",
+          "sha256": "0931830c15dee81f94fbe2a5bde7094803d59dec7b942e84847eae18e3abc6de",
+          "bytes": 41465
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/dropdowns/",
+          "file": "dropdowns.png",
+          "sha256": "0b605b4287d20a91c65f2f02cb985d97ebcba1b4057f0255fe15395402a9bc8a",
+          "bytes": 61889
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/list-groups/",
+          "file": "list-groups.png",
+          "sha256": "e7da046ba4b1a28c887c3b7808290737d793ff4d0cc8d43aca58260fd1ef9186",
+          "bytes": 71100
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/modals/",
+          "file": "modals.png",
+          "sha256": "132009c43cfa7a67bbbd66a0d6047a850d05a71a0c9c53d5aa59a8deaf32296c",
+          "bytes": 46380
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/buttons/",
+          "file": "buttons.png",
+          "sha256": "667b71e9c396d481be0797858fe3b697bdedcea6f7f091325f9a21f3c9fadb2a",
+          "bytes": 40994
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/navbars/",
+          "file": "navbars.png",
+          "sha256": "cf5f008f6bcaeb60636496ab84183d3d160d8b5306adbef91441dea9f58e3e4a",
+          "bytes": 78234
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/jumbotron/",
+          "file": "jumbotron.png",
+          "sha256": "0cb62f3b097f5a9c7a8b3f9858a328391010b93aab277126f3fe600669a24cb4",
+          "bytes": 104271
+        },
+        {
+          "source": "https://getbootstrap.com/docs/5.3/examples/badges/",
+          "file": "badges.png",
+          "sha256": "0436e5a6eafd7be5674a14ebf2f708c75c5138de8ae47b1ceb613d3841fca494",
+          "bytes": 62505
         }
       ]
     }
