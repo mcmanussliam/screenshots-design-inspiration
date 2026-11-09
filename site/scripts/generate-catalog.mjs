@@ -34,12 +34,11 @@ function git(...args) {
   });
 }
 function listFiles() {
-  return git('ls-tree','-r','-l','HEAD').split('\n').filter(Boolean).map(row=>{
-    const i=row.indexOf('\t');
-    if(i<0)return null;
-    const parts=row.slice(0,i).trim().split(/\s+/);
-    return {path:row.slice(i+1),sizeBytes:parts[3]==='-'?null:Number(parts[3])};
-  }).filter(Boolean);
+  // ls-tree -l triggers lazy downloads of every blob in a sparse clone.
+  // Keep the archive metadata-only: tracked byte sizes come from GitHub's tree API.
+  const sizes=safeJson(readTracked('data/blob-sizes.json')).files || {};
+  return git('ls-tree','-r','--name-only','HEAD').split('\n').filter(Boolean)
+    .map(path=>({path,sizeBytes:Number.isSafeInteger(sizes[path])?sizes[path]:null}));
 }
 function readTracked(path) {
   try { return git('show','HEAD:'+path); }catch{return '';}
