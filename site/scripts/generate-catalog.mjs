@@ -108,7 +108,7 @@ export function reportCatalog(data) {
   const summary={version:1,products:data.products.length,screenshots:0,videos:0,
     withDimensions:0,withScreenTags:0,unreviewedTagInstances:0,
     orientation:{portrait:0,landscape:0,square:0,unknown:0},formats:{},sourceBytes:0,
-    allTags:{screen:{},element:{},flow:{},style:{},unreviewed:{}}};
+    allTags:{screen:{},element:{},flow:{},pattern:{},style:{},unreviewed:{}}};
   for(const product of data.products){
     summary.screenshots+=product.screenshots.length;summary.videos+=product.videos.length;
     for(const screen of product.screenshots){

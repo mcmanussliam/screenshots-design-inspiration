@@ -1,7 +1,7 @@
 import catalog from '../data/catalog.json';
 
 export interface TagGroups {
-  screen:string[]; element:string[]; flow:string[]; style:string[]; unreviewed:string[];
+  screen:string[]; element:string[]; flow:string[]; pattern:string[]; style:string[]; unreviewed:string[];
 }
 export interface Screenshot {
   name:string;url:string;format:string;sizeBytes:number|null;

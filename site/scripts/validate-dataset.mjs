@@ -31,7 +31,7 @@ for(const product of catalogue.products){
     errors.push('Invalid bytes: '+product.id+' '+shot.name);
   bytes+=shot.sizeBytes||0;
   const groups=shot.tagGroups||{};
-  if(!['screen','element','flow','style','unreviewed'].every(key=>Array.isArray(groups[key])))
+  if(!['screen','element','flow','pattern','style','unreviewed'].every(key=>Array.isArray(groups[key])))
    errors.push('Missing tag taxonomy: '+product.id+' '+shot.name);
   if(shot.tags.length)tagCount++;
   unknown+=(groups.unreviewed||[]).length;
