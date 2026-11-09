@@ -8,36 +8,169 @@ const dimensioned = screens.filter(screen => screen.width && screen.height).leng
 const tagged = screens.filter(screen => screen.tags.length).length;
 const documented = screens.filter(screen => screen.reviewStatus === 'source-documented').length;
 const formatted = (count: number) => count.toLocaleString('en');
-const percent = (count: number) => total ? Math.round(count / total * 1000) / 10 : 0;
-const metrics = [
- { label: 'Products', value: formatted(products.length) },
- { label: 'Original screens', value: formatted(total) },
- { label: 'With verified dimensions', value: percent(dimensioned) + '%' },
- { label: 'With usable tags', value: percent(tagged) + '%' },
+const coverage = [
+ { label: 'Verified dimensions', count: dimensioned },
+ { label: 'Usable tags', count: tagged },
+ { label: 'Documented sources', count: documented },
 ];
 const guide = 'https://github.com/mcmanussliam/screenshots-design-inspiration/blob/main/contributing.md';
 ---
-<Layout title="Dataset quality" description="Transparent information about screenshot coverage, provenance and curation priorities.">
- <section class="quality-hero">
-  <h1>Dataset quality</h1>
-  <p>See how much of the library has verified dimensions, usable tags and documented sources.</p>
- </section>
- <dl class="quality-metrics" aria-label="Current dataset statistics">
-  {metrics.map(({ label, value }) => <div><dt>{label}</dt><dd>{value}</dd></div>)}
- </dl>
- <section class="quality-section">
-  <h2>What the metadata tells us</h2>
-  <p><b>{formatted(documented)} screenshots</b> have individually documented capture sources and rights evidence. The remaining <b>{formatted(total-documented)}</b> historical images are retained as legacy references, not automatically presented as openly licensed. This is a provenance audit gap, not a claim that any specific screenshot infringes copyright.</p>
-  <p>Technical metadata includes actual original pixel width and height, file format and stored byte size. The gallery uses consistent aspect-aware frames while preserving the originals.</p>
- </section>
- <section class="quality-section">
-  <h2>Help improve the library</h2>
-  <p>Help verify tags, correct product metadata or document where a screenshot came from.</p>
-  <a class="white-button" href={guide + '#reviewing-existing-data'}>How to contribute a correction</a>
- </section>
- <section class="quality-section">
-  <h2>Tagging standards</h2>
-  <p>Tags are separated into <b>screen types</b>, <b>UI elements</b>, <b>flows</b>, <b>UX patterns</b>, and <b>visual styles</b>. Synonyms are normalised and unknown legacy labels remain flagged for review. An automatically classified label is not considered human-verified without reviewing the underlying screenshot.</p>
-  <p>Read <a href={guide + '#screen-tagging'}>the contribution guide</a> for evidence, resolution, naming and image-rights requirements.</p>
- </section>
+<Layout title="Dataset quality" description="Screenshot coverage, provenance and tagging standards for Open Screens.">
+ <div class="quality-page">
+  <header class="quality-hero">
+   <h1>Dataset quality</h1>
+   <p>How much of the collection has verified dimensions, usable tags and a documented source?</p>
+  </header>
+
+  <div class="quality-overview">
+   <section class="quality-inventory" aria-labelledby="inventory-title">
+    <h2 id="inventory-title">Library inventory</h2>
+    <dl>
+     <div>
+      <dt>Original screenshots</dt>
+      <dd>{formatted(total)}</dd>
+     </div>
+     <div>
+      <dt>Products</dt>
+      <dd>{formatted(products.length)}</dd>
+     </div>
+    </dl>
+   </section>
+
+   <section class="quality-coverage" aria-labelledby="coverage-title">
+    <h2 id="coverage-title">Metadata coverage</h2>
+    <ul class="coverage-list">
+     {coverage.map(({ label, count }) => {
+      const share = total ? count / total * 100 : 0;
+      return (
+       <li class="coverage-row">
+        <span class="coverage-label">{label}</span>
+        <span class="coverage-value">
+         <strong>{share.toLocaleString('en', { maximumFractionDigits: 1 })}%</strong>
+         <span>{formatted(count)} of {formatted(total)}</span>
+        </span>
+        <span class="coverage-track" aria-hidden="true"><span style={{ width: share + '%' }}></span></span>
+       </li>
+      );
+     })}
+    </ul>
+    <div class="coverage-scale" aria-hidden="true">
+     <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+    </div>
+   </section>
+  </div>
+
+  <div class="quality-notes">
+   <div>
+    <section class="quality-section">
+     <h2>What the metadata tells us</h2>
+     <p>Documented screenshots have a recorded capture source and rights evidence. The rest are historical references with unverified provenance.</p>
+     <p>Technical metadata records original pixel dimensions, file format and file size. Gallery previews preserve the full image.</p>
+    </section>
+    <section class="quality-section">
+     <h2>Tagging standards</h2>
+     <p>Tags describe screen types, UI elements, flows, UX patterns and visual styles. The library normalises synonyms and flags unknown labels for review. Human verification requires checking the screenshot itself.</p>
+     <a class="quality-text-link" href={guide + '#screen-tagging'}>Read the tagging standards</a>
+    </section>
+   </div>
+   <section class="quality-contribute">
+    <h2>Help improve the library</h2>
+    <p>Help verify tags, correct product metadata or document where a screenshot came from.</p>
+    <a class="white-button" href={guide + '#reviewing-existing-data'}>How to contribute a correction
+     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8"/></svg>
+    </a>
+   </section>
+  </div>
+ </div>
 </Layout>
+
+<style>
+ .quality-page { max-width: 1320px; margin-inline: auto; }
+ .quality-hero { padding: clamp(38px, 6vw, 80px) 0 27px; border-bottom: 1px solid var(--stroke); }
+ .quality-hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 5.1vw, 68px);
+  font-weight: 740;
+  line-height: 1;
+  letter-spacing: -.065em;
+ }
+ .quality-page p { max-width: 61ch; color: #adadaf; font-size: 14px; line-height: 1.65; }
+ .quality-hero p { margin: 13px 0 0; font-size: 15px; }
+ .quality-overview { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.75fr); gap: 12px; margin: 18px 0 30px; }
+ .quality-overview section, .quality-contribute { padding: clamp(18px, 3vw, 37px); border-radius: 12px; }
+ .quality-inventory { background: #e8e8e6; color: #171718; }
+ .quality-inventory h2 {
+  margin: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #bdbdbb;
+  font-size: 13px;
+  font-weight: 650;
+ }
+ .quality-inventory dl { margin: 12px 0 0; }
+ .quality-inventory dl div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
+  padding: 14px 0;
+ }
+ .quality-inventory dl div + div { border-top: 1px solid #bdbdbb; }
+ .quality-inventory dl div:last-child { padding-bottom: 0; }
+ .quality-inventory dd {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 69px);
+  font-weight: 730;
+  line-height: 1;
+  letter-spacing: -.07em;
+  font-variant-numeric: tabular-nums;
+ }
+ .quality-inventory dt { color: #4d4d4f; font-size: 13px; }
+ .quality-coverage, .quality-contribute { border: 1px solid var(--stroke); background: #1b1b1d; }
+ .quality-coverage h2, .quality-notes h2 { margin: 0; font-size: 21px; letter-spacing: -.035em; }
+ .coverage-list { display: grid; gap: 17px; margin: 17px 0 0; padding: 0; list-style: none; }
+ .coverage-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 7px 10px; }
+ .coverage-label { font-size: 13px; font-weight: 650; }
+ .coverage-value {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 0;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+ }
+ .coverage-value span { color: #adadaf; font-size: 11px; }
+ .coverage-track {
+  grid-column: 1 / -1;
+  height: 13px;
+  background: repeating-linear-gradient(135deg, #242426 0 3px, #39393b 3px 4px, #242426 4px 7px);
+ }
+ .coverage-track span { display: block; height: 100%; background: #e8e8e6; }
+ .coverage-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #adadaf;
+  font: 10px/1.4 ui-monospace, monospace;
+ }
+ .quality-notes { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: start; gap: clamp(16px, 3vw, 36px); }
+ .quality-section { padding: 21px 0; border-top: 1px solid var(--stroke); }
+ .quality-section p, .quality-contribute p { margin: 9px 0 0; }
+ .quality-text-link {
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+ }
+ .quality-contribute .white-button { margin-top: 17px; }
+ .quality-contribute .white-button svg { flex: none; }
+
+ @media (max-width: 760px) {
+  .quality-overview, .quality-notes { grid-template-columns: 1fr; }
+  .quality-inventory dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quality-inventory dl div { padding: 5px 0 0; }
+  .quality-inventory dl div + div { padding-left: 18px; border-top: 0; border-left: 1px solid #bdbdbb; }
+ }
+ @media (max-width: 420px) {
+  .coverage-value { flex-direction: column; align-items: flex-end; gap: 2px; }
+ }
+</style>
