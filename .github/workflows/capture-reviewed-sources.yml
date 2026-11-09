@@ -1,0 +1,44 @@
+name: Capture reviewed public UI examples
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/capture-reviewed-sources.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /data/
+            /site/scripts/tag-taxonomy.mjs
+            /.github/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test source constraints and robots policy
+        run: node --test scripts/capture-approved-sources-test.mjs
+      - name: Install headless browser
+        run: |
+          npm install --prefix scripts --no-save --no-audit --no-fund playwright@1.56.1
+          ./scripts/node_modules/.bin/playwright install --with-deps chromium
+      - name: Capture only approved sources
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/capture-approved-sources.mjs --capture
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reviewed-source-captures
+          path: capture-output/
+          retention-days: 7
