@@ -2,7 +2,9 @@ name: Stage legacy dataset cleanup
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/curate-dataset.yml']
+    paths:
+      - '.github/workflows/curate-dataset.yml'
+      - 'scripts/curate-legacy-data.mjs'
   workflow_dispatch:
 permissions:
   contents: write
